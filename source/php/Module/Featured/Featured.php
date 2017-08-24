@@ -22,6 +22,8 @@ class Featured extends \Modularity\Module
             'mod_section_content' => 'content',
             'mod_section_height' => 'height',
             'mod_section_padding' => 'padding',
+            'mod_section_image_position' => 'imagePosition',
+            'mod_section_content_position' => 'contentPosition',
             'mod_section_bg_position_vertical' => 'backgroundVertical',
             'mod_section_bg_position_horizontal' => 'backgroundHorizontal',
             'mod_section_effect' => 'effects'
@@ -52,6 +54,12 @@ class Featured extends \Modularity\Module
 
         //Create section padding class
         $data['classes']['section-padding'] = "padding-" . $data['padding'];
+
+        //Create section padding class
+        $data['classes']['section-image'] = "image-" . $data['imagePosition'];
+
+        //Create section padding class
+        $data['classes']['section-content'] = "text-" . $data['contentPosition'];
 
         //Implode classes (filterable)
         $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args));

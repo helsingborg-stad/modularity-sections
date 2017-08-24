@@ -119,6 +119,80 @@
             "layout": "vertical",
             "toggle": 0,
             "return_format": "value"
+        },
+        {
+            "key": "field_599ec93c4b4b7",
+            "label": "Image position",
+            "name": "mod_section_image_position",
+            "type": "radio",
+            "instructions": "Select on what side of the screen that the image should be placed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "right": "Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "left",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_599ecb18ef407",
+            "label": "Content position",
+            "name": "mod_section_content_position",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Top",
+                "middle": "Middle",
+                "bottom": "Bottom"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_599ecc223a4f6",
+            "label": "Section margin",
+            "name": "mod_section_padding",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sm": "Small",
+                "md": "Medium",
+                "lg": "Large"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
         }
     ],
     "location": [

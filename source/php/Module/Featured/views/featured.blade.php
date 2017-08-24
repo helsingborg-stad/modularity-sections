@@ -1,4 +1,4 @@
-<section class="section section-featured background-4 section-md padding-md text-md image-right {{ $classes }}" style="background-image: url(https://unsplash.it/1250/1250?image=1005); ">
+<section class="section section-featured background-4 {{ $classes }}" style="background-image: url(https://unsplash.it/1250/1250?image=1005); ">
     <div class="container">
      <div class="grid">
          <div class="grid-xs-12">
