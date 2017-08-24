@@ -21,6 +21,7 @@ if (! defined('WPINC')) {
 define('MODULARITYSECTIONS_PATH', plugin_dir_path(__FILE__));
 define('MODULARITYSECTIONS_URL', plugins_url('', __FILE__));
 define('MODULARITYSECTIONS_TEMPLATE_PATH', MODULARITYSECTIONS_PATH . 'templates/');
+define('MODULARITYSECTIONS_MODULE_PATH', MODULARITYSECTIONS_PATH . 'source/php/Module');
 
 load_plugin_textdomain('modularity-sections', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
@@ -35,3 +36,34 @@ $loader->register();
 
 // Start application
 new ModularitySections\App();
+
+// Acf auto import and export
+add_action('plugins_loaded', function () {
+    $acfExportManager = new \AcfExportManager\AcfExportManager();
+    $acfExportManager->setTextdomain('modularity-form-builder');
+    $acfExportManager->setExportFolder(MODULARITYSECTIONS_PATH . 'acf-fields/');
+    /*$acfExportManager->autoExport(array(
+        'form' => 'group_58eb301ecb36a'
+    ));*/
+    $acfExportManager->import();
+});
+
+/**
+ * Registers the module
+ */
+add_action('plugins_loaded', function () {
+    if (function_exists('modularity_register_module')) {
+        modularity_register_module(
+            MODULARITYSECTIONS_MODULE_PATH ."/Split/",
+            'Split'
+        );
+        modularity_register_module(
+            MODULARITYSECTIONS_MODULE_PATH ."/Full/",
+            'Full'
+        );
+        modularity_register_module(
+            MODULARITYSECTIONS_MODULE_PATH ."/Featured/",
+            'Featured'
+        );
+    }
+});
