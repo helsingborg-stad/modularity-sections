@@ -20,13 +20,22 @@ class Featured extends \Modularity\Module
         //Mapping table
         $metaMapper = array(
             'mod_section_content' => 'content',
+
             'mod_section_height' => 'height',
             'mod_section_padding' => 'padding',
+
             'mod_section_image_position' => 'imagePosition',
             'mod_section_content_position' => 'contentPosition',
+
             'mod_section_bg_position_vertical' => 'backgroundVertical',
             'mod_section_bg_position_horizontal' => 'backgroundHorizontal',
-            'mod_section_effect' => 'effects'
+
+            'mod_section_effect_parallax' => 'effectParallax',
+            'mod_section_effect_multiply' => 'effectMultiply',
+
+            'mod_section_background_image' => 'backgroundImage',
+
+            'mod_section_submodules' => 'submodules',
         );
 
         //Create data structure
@@ -35,15 +44,6 @@ class Featured extends \Modularity\Module
         //Get meta fields & remap
         foreach ($metaMapper as $meta => $variable) {
             $data[$variable] = get_field($meta, $this->ID, true);
-        }
-
-        //Create efx class
-        if (is_array($data['effects'])) {
-            $data['classes']['effect'] = implode(" ", array_map(function ($item) {
-                return 'effect-' . $item;
-            }, $data['effects']));
-        } else {
-            $data['effects'] = array();
         }
 
         //Create background position
@@ -55,11 +55,35 @@ class Featured extends \Modularity\Module
         //Create section padding class
         $data['classes']['section-padding'] = "padding-" . $data['padding'];
 
-        //Create section padding class
+        //Create section disposition class
         $data['classes']['section-image'] = "image-" . $data['imagePosition'];
 
-        //Create section padding class
+        //Create section vertical-position class
         $data['classes']['section-content'] = "text-" . $data['contentPosition'];
+
+        //Add parallax effect
+        if ($data['effectParallax']) {
+            $data['classes']['section-parallax'] = "effect-parallax";
+        }
+
+        //Add multiply effect
+        if ($data['effectMultiply']) {
+            $data['classes']['section-multiply'] = "effect-multiply";
+        }
+
+        //Get background image
+        if (is_numeric($data['backgroundImage'])) {
+            $data['backgroundImage'] = wp_get_attachment_image_src($data['backgroundImage'], array(1000, 1000), false);
+            $data['backgroundImage'] = $data['backgroundImage'][0];
+        }
+
+        //Runshortcodes
+        $data['submoduleRendered'] = "";
+        if (is_array($data['submodules']) && !empty($data['submodules'])) {
+            foreach ($data['submodules'] as $submodule) {
+                $data['submoduleRendered'] .= do_shortcode('[modularity id="' . $submodule . '"]');
+            }
+        }
 
         //Implode classes (filterable)
         $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args));

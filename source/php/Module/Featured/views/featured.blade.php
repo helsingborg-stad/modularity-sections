@@ -1,4 +1,4 @@
-<section class="section section-featured background-4 {{ $classes }}" style="background-image: url(https://unsplash.it/1250/1250?image=1005); ">
+<section class="section section-featured background-4 {{ $classes }}" style="background-image: url({{ $backgroundImage }}); ">
     <div class="container">
      <div class="grid">
          <div class="grid-xs-12">
@@ -14,5 +14,6 @@
                  </article>
          </div>
      </div>
+     {!! $submoduleRendered !!}
     </div>
 </section>

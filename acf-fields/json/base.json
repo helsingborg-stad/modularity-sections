@@ -98,9 +98,9 @@
         },
         {
             "key": "field_599eaf20c6db6",
-            "label": "Effects",
-            "name": "mod_section_effect",
-            "type": "checkbox",
+            "label": "Parallax effect",
+            "name": "mod_section_effect_parallax",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -109,16 +109,30 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "multiply": "Multiply - Blend the background image with the background color to make the background image more coherence to your overall profile.",
-                "parallax": "Parallax - Create some depth with a fixed background in the section. This option creates a illusion that indicates that the content floats on-top of the background."
+            "message": "Yes, use parallax to create some depth with a fixed background in the section. This option creates a illusion that indicates that the content floats on-top of the background.",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_599ed4d2dc77b",
+            "label": "Multiply effect",
+            "name": "mod_section_effect_multiply",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            "allow_custom": 0,
-            "save_custom": 0,
-            "default_value": [],
-            "layout": "vertical",
-            "toggle": 0,
-            "return_format": "value"
+            "message": "Yes, blend the background image with the background color to make the background image more coherence to your overall profile.",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_599ec93c4b4b7",
@@ -193,6 +207,56 @@
             "default_value": "",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_599ed8d854523",
+            "label": "Background image",
+            "name": "mod_section_background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, jpg, jpeg"
+        },
+        {
+            "key": "field_599edec7a0587",
+            "label": "Submodules",
+            "name": "mod_section_submodules",
+            "type": "post_object",
+            "instructions": "Select modules that you like to display below the content of this section. A limited types are compatible with this function.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "mod-posts",
+                "mod-gallery",
+                "mod-image",
+                "mod-iframe",
+                "mod-contacts"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
