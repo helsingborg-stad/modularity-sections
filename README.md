@@ -1,7 +1,7 @@
-# Wordpress Plugin Boilderplate
+# Modularity sections
 
-Copy the contents of the folder and run the below command, from the plugin folder, in your terminal to run the setup guide.
+Provides graphical sections intended for full-width usage
 
 ```
-sh setup.sh
+No code examples
 ```
