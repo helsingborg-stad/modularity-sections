@@ -42,9 +42,10 @@ add_action('plugins_loaded', function () {
     $acfExportManager = new \AcfExportManager\AcfExportManager();
     $acfExportManager->setTextdomain('modularity-form-builder');
     $acfExportManager->setExportFolder(MODULARITYSECTIONS_PATH . 'acf-fields/');
-    /*$acfExportManager->autoExport(array(
-        'form' => 'group_58eb301ecb36a'
-    ));*/
+    $acfExportManager->autoExport(array(
+        'base' => 'group_599eaa60c0e79',
+        'featured' => 'group_599ea0d1d160b'
+    ));
     $acfExportManager->import();
 });
 

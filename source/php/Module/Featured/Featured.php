@@ -16,8 +16,47 @@ class Featured extends \Modularity\Module
 
     public function data() : array
     {
-        $data = array();
-        $data['embed'] = get_post_meta($this->ID, 'embed_code', true);
+
+        //Mapping table
+        $metaMapper = array(
+            'mod_section_content' => 'content',
+            'mod_section_height' => 'height',
+            'mod_section_padding' => 'padding',
+            'mod_section_bg_position_vertical' => 'backgroundVertical',
+            'mod_section_bg_position_horizontal' => 'backgroundHorizontal',
+            'mod_section_effect' => 'effects'
+        );
+
+        //Create data structure
+        $data = array('classes' => array());
+
+        //Get meta fields & remap
+        foreach ($metaMapper as $meta => $variable) {
+            $data[$variable] = get_field($meta, $this->ID, true);
+        }
+
+        //Create efx class
+        if (is_array($data['effects'])) {
+            $data['classes']['effect'] = implode(" ", array_map(function ($item) {
+                return 'effect-' . $item;
+            }, $data['effects']));
+        } else {
+            $data['effects'] = array();
+        }
+
+        //Create background position
+        $data['classes']['image-focus'] = "image-focus-". $data['backgroundHorizontal'] . "-" . $data['backgroundVertical'];
+
+        //Create section size
+        $data['classes']['section-height'] = "section-" . $data['height'];
+
+        //Create section padding class
+        $data['classes']['section-padding'] = "padding-" . $data['padding'];
+
+        //Implode classes (filterable)
+        $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args));
+
+        //Send to view
         return $data;
     }
 

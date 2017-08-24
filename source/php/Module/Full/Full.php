@@ -17,6 +17,10 @@ class Full extends \Modularity\Module
     public function data() : array
     {
         $data = array();
+
+
+        $data['content'] = get_field('mod_section_content');
+
         $data['embed'] = get_post_meta($this->ID, 'embed_code', true);
         return $data;
     }
