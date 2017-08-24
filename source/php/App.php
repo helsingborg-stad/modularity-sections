@@ -1,6 +1,6 @@
 <?php
 
-namespace (#plugin_namespace#);
+namespace ModularitySections;
 
 class App
 {
