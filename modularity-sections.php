@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name:       Modularity sections
- * Plugin URI:        (#plugin_url#)
+ * Plugin URI:        https://github.com/helsingborg-stad/modularity-sections
  * Description:       Provides graphical sections intended for full-width usage
  * Version:           1.0.0
  * Author:            Sebastian Thulin
- * Author URI:        (#plugin_author_url#)
+ * Author URI:        https://github.com/sebastianthulin
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       modularity-sections
