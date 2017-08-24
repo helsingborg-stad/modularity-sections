@@ -21,6 +21,11 @@ class Split extends \Modularity\Module
         return $data;
     }
 
+    public function template()
+    {
+        return "split.blade.php";
+    }
+
     /**
      * Available "magic" methods for modules:
      * init()            What to do on initialization

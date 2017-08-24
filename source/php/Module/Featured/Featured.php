@@ -21,6 +21,11 @@ class Featured extends \Modularity\Module
         return $data;
     }
 
+    public function template()
+    {
+        return "featured.blade.php";
+    }
+
     /**
      * Available "magic" methods for modules:
      * init()            What to do on initialization

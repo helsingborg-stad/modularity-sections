@@ -21,6 +21,12 @@ class Full extends \Modularity\Module
         return $data;
     }
 
+
+    public function template()
+    {
+        return "full.blade.php";
+    }
+
     /**
      * Available "magic" methods for modules:
      * init()            What to do on initialization
