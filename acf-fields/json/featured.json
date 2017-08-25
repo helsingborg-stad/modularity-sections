@@ -271,7 +271,8 @@
             },
             "clone": [
                 "field_599eaf20c6db6",
-                "field_599ed4d2dc77b"
+                "field_599ed4d2dc77b",
+                "field_599fed3fec804"
             ],
             "display": "seamless",
             "layout": "block",

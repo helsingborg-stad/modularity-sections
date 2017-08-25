@@ -138,6 +138,25 @@
             'ui_off_text' => '',
         ),
         6 => array(
+            'key' => 'field_599fed3fec804',
+            'label' => __('Blur effect', 'modularity-form-builder'),
+            'name' => 'mod_section_effect_blur',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => __('Yes, make the background image blurred to let the content stand out.', 'modularity-form-builder'),
+            'default_value' => 1,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
+        7 => array(
             'key' => 'field_599ec93c4b4b7',
             'label' => __('Image position', 'modularity-form-builder'),
             'name' => 'mod_section_image_position',
@@ -161,7 +180,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        7 => array(
+        8 => array(
             'key' => 'field_599ed8d854523',
             'label' => __('Background image', 'modularity-form-builder'),
             'name' => 'mod_section_background_image',
@@ -185,7 +204,7 @@
             'max_size' => '',
             'mime_types' => 'png, jpg, jpeg',
         ),
-        8 => array(
+        9 => array(
             'key' => 'field_599fce6fc2c2c',
             'label' => __('Background color', 'modularity-form-builder'),
             'name' => 'mod_section_background_color',
@@ -200,7 +219,7 @@
             ),
             'default_value' => '',
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_599ecb18ef407',
             'label' => __('Content position', 'modularity-form-builder'),
             'name' => 'mod_section_content_position',
@@ -225,7 +244,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_599ecc223a4f6',
             'label' => __('Section margin', 'modularity-form-builder'),
             'name' => 'mod_section_padding',
@@ -250,7 +269,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599edec7a0587',
             'label' => __('Submodules', 'modularity-form-builder'),
             'name' => 'mod_section_submodules',
@@ -277,7 +296,7 @@
             'return_format' => 'id',
             'ui' => 1,
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_599fd58984f01',
             'label' => __('Foreground image', 'modularity-form-builder'),
             'name' => 'mod_section_image',

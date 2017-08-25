@@ -135,6 +135,25 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_599fed3fec804",
+            "label": "Blur effect",
+            "name": "mod_section_effect_blur",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes, make the background image blurred to let the content stand out.",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_599ec93c4b4b7",
             "label": "Image position",
             "name": "mod_section_image_position",

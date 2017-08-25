@@ -34,6 +34,7 @@ class Featured extends \Modularity\Module
 
             'mod_section_effect_parallax' => 'effectParallax',
             'mod_section_effect_multiply' => 'effectMultiply',
+            'mod_section_effect_blur' => 'effectBlur',
 
             'mod_section_background_image' => 'backgroundImage',
             'mod_section_background_color' => 'backgroundColor',
@@ -72,6 +73,11 @@ class Featured extends \Modularity\Module
         //Add multiply effect
         if ($data['effectMultiply']) {
             $data['classes']['section-multiply'] = "effect-multiply";
+        }
+
+        //Add blur effect
+        if ($data['effectBlur']) {
+            $data['classes']['section-blur'] = "effect-blur";
         }
 
         //Get background image

@@ -275,6 +275,7 @@
             'clone' => array(
                 0 => 'field_599eaf20c6db6',
                 1 => 'field_599ed4d2dc77b',
+                2 => 'field_599fed3fec804',
             ),
             'display' => 'seamless',
             'layout' => 'block',

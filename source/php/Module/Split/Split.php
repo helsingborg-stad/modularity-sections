@@ -64,11 +64,6 @@ class Split extends \Modularity\Module
         //Create section vertical-position class
         $data['classes']['section-content'] = "text-" . $data['contentPosition'];
 
-        //Add parallax effect
-        if ($data['effectParallax']) {
-            $data['classes']['section-parallax'] = "effect-parallax";
-        }
-
         //Add multiply effect
         if ($data['effectMultiply']) {
             $data['classes']['section-multiply'] = "effect-multiply";
@@ -76,7 +71,7 @@ class Split extends \Modularity\Module
 
         //Get background image
         if (is_numeric($data['backgroundImage'])) {
-            $data['backgroundImage'] = wp_get_attachment_image_src($data['backgroundImage'], array(1300, 731), false);
+            $data['backgroundImage'] = wp_get_attachment_image_src($data['backgroundImage'], array(650, 365), false);
             $data['backgroundImage'] = $data['backgroundImage'][0];
         }
 
