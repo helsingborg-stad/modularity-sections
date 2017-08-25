@@ -11,16 +11,16 @@
                  <div class="section-text">
                     {!! $content !!}
                  </div>
+
+                @if(is_array($submodules) && !empty($submodules))
+                    <div class="section-submodules">
+                        {!! $submoduleRendered !!}
+                    </div>
+                @endif
              </article>
          </div>
      </div>
     </div>
     </div>
     <div class="section-image hidden-xs hidden-sm" style="background-image: url({{ $backgroundImage }});" data-equal-item></div>
-
-    @if(is_array($submodules) && !empty($submodules))
-        <div class="container section-submodules">
-            {!! $submoduleRendered !!}
-        </div>
-    @endif
 </section>
