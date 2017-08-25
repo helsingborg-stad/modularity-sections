@@ -43,8 +43,29 @@
             'prefix_name' => 0,
         ),
         2 => array(
+            'key' => 'field_599fd5fb527c2',
+            'label' => '',
+            'name' => '',
+            'type' => 'clone',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'clone' => array(
+                0 => 'field_599fd58984f01',
+            ),
+            'display' => 'seamless',
+            'layout' => 'block',
+            'prefix_label' => 0,
+            'prefix_name' => 0,
+        ),
+        3 => array(
             'key' => 'field_599ed837efd03',
-            'label' => __('Background (apparence)', 'modularity-form-builder'),
+            'label' => __('Background', 'modularity-form-builder'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -58,7 +79,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        3 => array(
+        4 => array(
             'key' => 'field_599eac3fc1d85',
             'label' => '',
             'name' => '',
@@ -75,12 +96,33 @@
                 0 => 'field_599eabaeaad08',
                 1 => 'field_599eac93ead36',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        4 => array(
+        5 => array(
+            'key' => 'field_599fd236f9084',
+            'label' => '',
+            'name' => '',
+            'type' => 'clone',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'clone' => array(
+                0 => 'field_599fce6fc2c2c',
+            ),
+            'display' => 'seamless',
+            'layout' => 'block',
+            'prefix_label' => 0,
+            'prefix_name' => 0,
+        ),
+        6 => array(
             'key' => 'field_599ed90b13e88',
             'label' => '',
             'name' => '',
@@ -96,14 +138,14 @@
             'clone' => array(
                 0 => 'field_599ed8d854523',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        5 => array(
+        7 => array(
             'key' => 'field_599ea10abdd05',
-            'label' => __('Margins, size & direction (apparence)', 'modularity-form-builder'),
+            'label' => __('Margins & size', 'modularity-form-builder'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -117,7 +159,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        6 => array(
+        8 => array(
             'key' => 'field_599eaad2d0150',
             'label' => '',
             'name' => '',
@@ -133,12 +175,12 @@
             'clone' => array(
                 0 => 'field_599eab01559ea',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        7 => array(
+        9 => array(
             'key' => 'field_599eca29c646c',
             'label' => '',
             'name' => '',
@@ -154,12 +196,12 @@
             'clone' => array(
                 0 => 'field_599ec93c4b4b7',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        8 => array(
+        10 => array(
             'key' => 'field_599ecb712c5a4',
             'label' => '',
             'name' => '',
@@ -175,12 +217,12 @@
             'clone' => array(
                 0 => 'field_599ecb18ef407',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        9 => array(
+        11 => array(
             'key' => 'field_599ecc51d8aca',
             'label' => '',
             'name' => '',
@@ -196,12 +238,12 @@
             'clone' => array(
                 0 => 'field_599ecc223a4f6',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        10 => array(
+        12 => array(
             'key' => 'field_599ea123bdd06',
             'label' => __('Effects', 'modularity-form-builder'),
             'name' => '',
@@ -217,7 +259,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        11 => array(
+        13 => array(
             'key' => 'field_599eb0127b917',
             'label' => '',
             'name' => '',
@@ -234,12 +276,12 @@
                 0 => 'field_599eaf20c6db6',
                 1 => 'field_599ed4d2dc77b',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        12 => array(
+        14 => array(
             'key' => 'field_599edf6a51fd5',
             'label' => __('Submodules', 'modularity-form-builder'),
             'name' => '',
@@ -255,7 +297,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        13 => array(
+        15 => array(
             'key' => 'field_599edf7a51fd6',
             'label' => '',
             'name' => '',
@@ -271,7 +313,7 @@
             'clone' => array(
                 0 => 'field_599edec7a0587',
             ),
-            'display' => 'group',
+            'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,

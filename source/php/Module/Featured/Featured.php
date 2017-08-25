@@ -21,6 +21,8 @@ class Featured extends \Modularity\Module
         $metaMapper = array(
             'mod_section_content' => 'content',
 
+            'mod_section_image' => 'foregroundImage',
+
             'mod_section_height' => 'height',
             'mod_section_padding' => 'padding',
 
@@ -34,6 +36,7 @@ class Featured extends \Modularity\Module
             'mod_section_effect_multiply' => 'effectMultiply',
 
             'mod_section_background_image' => 'backgroundImage',
+            'mod_section_background_color' => 'backgroundColor',
 
             'mod_section_submodules' => 'submodules',
         );
@@ -73,11 +76,11 @@ class Featured extends \Modularity\Module
 
         //Get background image
         if (is_numeric($data['backgroundImage'])) {
-            $data['backgroundImage'] = wp_get_attachment_image_src($data['backgroundImage'], array(1000, 1000), false);
+            $data['backgroundImage'] = wp_get_attachment_image_src($data['backgroundImage'], array(1300, 731), false);
             $data['backgroundImage'] = $data['backgroundImage'][0];
         }
 
-        //Runshortcodes
+        //Run shortcodes
         $data['submoduleRendered'] = "";
         if (is_array($data['submodules']) && !empty($data['submodules'])) {
             foreach ($data['submodules'] as $submodule) {

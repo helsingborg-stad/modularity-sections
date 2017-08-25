@@ -40,8 +40,29 @@
             "prefix_name": 0
         },
         {
+            "key": "field_599fd5fb527c2",
+            "label": "",
+            "name": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_599fd58984f01"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_599ed837efd03",
-            "label": "Background (apparence)",
+            "label": "Background",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -72,7 +93,28 @@
                 "field_599eabaeaad08",
                 "field_599eac93ead36"
             ],
-            "display": "group",
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_599fd236f9084",
+            "label": "",
+            "name": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_599fce6fc2c2c"
+            ],
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
@@ -93,14 +135,14 @@
             "clone": [
                 "field_599ed8d854523"
             ],
-            "display": "group",
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
         },
         {
             "key": "field_599ea10abdd05",
-            "label": "Margins, size & direction (apparence)",
+            "label": "Margins & size",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -130,7 +172,7 @@
             "clone": [
                 "field_599eab01559ea"
             ],
-            "display": "group",
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
@@ -151,7 +193,7 @@
             "clone": [
                 "field_599ec93c4b4b7"
             ],
-            "display": "group",
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
@@ -172,7 +214,7 @@
             "clone": [
                 "field_599ecb18ef407"
             ],
-            "display": "group",
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
@@ -193,7 +235,7 @@
             "clone": [
                 "field_599ecc223a4f6"
             ],
-            "display": "group",
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
@@ -231,7 +273,7 @@
                 "field_599eaf20c6db6",
                 "field_599ed4d2dc77b"
             ],
-            "display": "group",
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
@@ -268,7 +310,7 @@
             "clone": [
                 "field_599edec7a0587"
             ],
-            "display": "group",
+            "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0

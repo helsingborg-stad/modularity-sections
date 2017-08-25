@@ -55,7 +55,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -80,7 +80,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -159,6 +159,45 @@
             "return_format": "value"
         },
         {
+            "key": "field_599ed8d854523",
+            "label": "Background image",
+            "name": "mod_section_background_image",
+            "type": "image",
+            "instructions": "Select a good background image for this section. Choose one that is large enough to cover the whole screen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, jpg, jpeg"
+        },
+        {
+            "key": "field_599fce6fc2c2c",
+            "label": "Background color",
+            "name": "mod_section_background_color",
+            "type": "color_picker",
+            "instructions": "Select a background coolor for this section. This is important to choose eaven if you are using a background image as this will show during rendering and in combination with some effects.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
             "key": "field_599ecb18ef407",
             "label": "Content position",
             "name": "mod_section_content_position",
@@ -209,35 +248,11 @@
             "return_format": "value"
         },
         {
-            "key": "field_599ed8d854523",
-            "label": "Background image",
-            "name": "mod_section_background_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "png, jpg, jpeg"
-        },
-        {
             "key": "field_599edec7a0587",
             "label": "Submodules",
             "name": "mod_section_submodules",
             "type": "post_object",
-            "instructions": "Select modules that you like to display below the content of this section. A limited types are compatible with this function.",
+            "instructions": "Select modules that you like to display below the content of this section. A limited types are compatible with this function. For now, you cannot create new ones from this UI or edit them (you have to go trough the modularity tab to the left).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -257,6 +272,30 @@
             "multiple": 1,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_599fd58984f01",
+            "label": "Foreground image",
+            "name": "mod_section_image",
+            "type": "image",
+            "instructions": "Add an image to this section, placed in the foreground. Often svg images or transparent png images looks best.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, jpg, jpeg, svg"
         }
     ],
     "location": [
