@@ -273,8 +273,7 @@
                 'id' => '',
             ),
             'clone' => array(
-                0 => 'field_599eaf20c6db6',
-                1 => 'field_599ed4d2dc77b',
+                0 => 'field_599ed4d2dc77b',
             ),
             'display' => 'seamless',
             'layout' => 'block',

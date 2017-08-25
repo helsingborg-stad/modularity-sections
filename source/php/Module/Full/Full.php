@@ -58,9 +58,6 @@ class Full extends \Modularity\Module
         //Create section padding class
         $data['classes']['section-padding'] = "padding-" . $data['padding'];
 
-        //Create section disposition class
-        $data['classes']['section-image'] = "image-" . $data['imagePosition'];
-
         //Create section vertical-position class
         $data['classes']['section-content'] = "text-" . $data['contentPosition'];
 
