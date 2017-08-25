@@ -44,7 +44,9 @@ add_action('plugins_loaded', function () {
     $acfExportManager->setExportFolder(MODULARITYSECTIONS_PATH . 'acf-fields/');
     $acfExportManager->autoExport(array(
         'base' => 'group_599eaa60c0e79',
-        'featured' => 'group_599ea0d1d160b'
+        'featured' => 'group_599ea0d1d160b',
+        'full' => 'group_599fdc072e961',
+        'split' => 'group_599fddb1da69a',
     ));
     $acfExportManager->import();
 });
