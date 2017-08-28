@@ -36,6 +36,7 @@
             ),
             'clone' => array(
                 0 => 'field_599eaa6a6c354',
+                1 => 'field_59a0236d0a74e',
             ),
             'display' => 'seamless',
             'layout' => 'block',
@@ -43,6 +44,27 @@
             'prefix_name' => 0,
         ),
         2 => array(
+            'key' => 'field_59a028c998f96',
+            'label' => '',
+            'name' => '',
+            'type' => 'clone',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'clone' => array(
+                0 => 'field_59a02632ed6f6',
+            ),
+            'display' => 'seamless',
+            'layout' => 'block',
+            'prefix_label' => 0,
+            'prefix_name' => 0,
+        ),
+        3 => array(
             'key' => 'field_599fdc073260a',
             'label' => __('Background', 'modularity-form-builder'),
             'name' => '',
@@ -58,7 +80,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        3 => array(
+        4 => array(
             'key' => 'field_599fdc0732664',
             'label' => '',
             'name' => '',
@@ -80,7 +102,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        4 => array(
+        5 => array(
             'key' => 'field_599fdc07326c4',
             'label' => '',
             'name' => '',
@@ -101,7 +123,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        5 => array(
+        6 => array(
             'key' => 'field_599fdc0732771',
             'label' => '',
             'name' => '',
@@ -122,7 +144,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        6 => array(
+        7 => array(
             'key' => 'field_599fdc07327d0',
             'label' => __('Margins & size', 'modularity-form-builder'),
             'name' => '',
@@ -138,7 +160,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        7 => array(
+        8 => array(
             'key' => 'field_599fdc0732863',
             'label' => '',
             'name' => '',
@@ -159,7 +181,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        8 => array(
+        9 => array(
             'key' => 'field_599fdc0732987',
             'label' => '',
             'name' => '',
@@ -180,7 +202,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_599fdc07329fc',
             'label' => '',
             'name' => '',
@@ -201,7 +223,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_599fdc0732a8d',
             'label' => __('Effects', 'modularity-form-builder'),
             'name' => '',
@@ -217,7 +239,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599fdc0732b43',
             'label' => '',
             'name' => '',
@@ -234,13 +256,14 @@
                 0 => 'field_599eaf20c6db6',
                 1 => 'field_599ed4d2dc77b',
                 2 => 'field_599fed3fec804',
+                3 => 'field_59a00dad5a07f',
             ),
             'display' => 'seamless',
             'layout' => 'block',
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_599fdc0732bc5',
             'label' => __('Submodules', 'modularity-form-builder'),
             'name' => '',
@@ -256,7 +279,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        13 => array(
+        14 => array(
             'key' => 'field_599fdc0732c47',
             'label' => '',
             'name' => '',

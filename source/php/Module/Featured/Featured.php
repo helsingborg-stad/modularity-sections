@@ -21,6 +21,8 @@ class Featured extends \Modularity\Module
         $metaMapper = array(
             'mod_section_content' => 'content',
 
+            'mod_section_justify_text' => 'justifyText',
+
             'mod_section_image' => 'foregroundImage',
 
             'mod_section_height' => 'height',
@@ -35,6 +37,7 @@ class Featured extends \Modularity\Module
             'mod_section_effect_parallax' => 'effectParallax',
             'mod_section_effect_multiply' => 'effectMultiply',
             'mod_section_effect_blur' => 'effectBlur',
+            'mod_section_effect_inset' => 'effectInsetShadow',
 
             'mod_section_background_image' => 'backgroundImage',
             'mod_section_background_color' => 'backgroundColor',
@@ -78,6 +81,16 @@ class Featured extends \Modularity\Module
         //Add blur effect
         if ($data['effectBlur']) {
             $data['classes']['section-blur'] = "effect-blur";
+        }
+
+        //Add inset shadow effect
+        if ($data['effectInsetShadow']) {
+            $data['classes']['section-shadow'] = "effect-inner-shadow";
+        }
+
+        //Add justify text
+        if ($data['justifyText']) {
+            $data['classes']['section-justify'] = "justify-text";
         }
 
         //Get background image

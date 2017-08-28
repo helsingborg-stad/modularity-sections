@@ -157,6 +157,25 @@
             'ui_off_text' => '',
         ),
         7 => array(
+            'key' => 'field_59a00dad5a07f',
+            'label' => __('Inner shadow effect', 'modularity-form-builder'),
+            'name' => 'mod_section_effect_inset',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => __('Yes, overlay the image with a soft inner shadow.', 'modularity-form-builder'),
+            'default_value' => 1,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
+        8 => array(
             'key' => 'field_599ec93c4b4b7',
             'label' => __('Image position', 'modularity-form-builder'),
             'name' => 'mod_section_image_position',
@@ -180,7 +199,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        8 => array(
+        9 => array(
             'key' => 'field_599ed8d854523',
             'label' => __('Background image', 'modularity-form-builder'),
             'name' => 'mod_section_background_image',
@@ -204,7 +223,7 @@
             'max_size' => '',
             'mime_types' => 'png, jpg, jpeg',
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_599fce6fc2c2c',
             'label' => __('Background color', 'modularity-form-builder'),
             'name' => 'mod_section_background_color',
@@ -219,7 +238,7 @@
             ),
             'default_value' => '',
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_599ecb18ef407',
             'label' => __('Content position', 'modularity-form-builder'),
             'name' => 'mod_section_content_position',
@@ -244,7 +263,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599ecc223a4f6',
             'label' => __('Section margin', 'modularity-form-builder'),
             'name' => 'mod_section_padding',
@@ -269,7 +288,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_599edec7a0587',
             'label' => __('Submodules', 'modularity-form-builder'),
             'name' => 'mod_section_submodules',
@@ -296,7 +315,7 @@
             'return_format' => 'id',
             'ui' => 1,
         ),
-        13 => array(
+        14 => array(
             'key' => 'field_599fd58984f01',
             'label' => __('Foreground image', 'modularity-form-builder'),
             'name' => 'mod_section_image',
@@ -319,6 +338,50 @@
             'max_height' => '',
             'max_size' => '',
             'mime_types' => 'png, jpg, jpeg, svg',
+        ),
+        15 => array(
+            'key' => 'field_59a0236d0a74e',
+            'label' => __('Columns', 'modularity-form-builder'),
+            'name' => 'mod_section_columns',
+            'type' => 'radio',
+            'instructions' => __('Select the number of columns you do want to use for the body text.', 'modularity-form-builder'),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                1 => __('One column', 'modularity-form-builder'),
+                2 => __('Two columns', 'modularity-form-builder'),
+                3 => __('Three columns', 'modularity-form-builder'),
+            ),
+            'allow_null' => 0,
+            'other_choice' => 0,
+            'save_other_choice' => 0,
+            'default_value' => 1,
+            'layout' => 'horizontal',
+            'return_format' => 'value',
+        ),
+        16 => array(
+            'key' => 'field_59a02632ed6f6',
+            'label' => __('Justify text', 'modularity-form-builder'),
+            'name' => 'mod_section_justify_text',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => __('Yes, even the space between words to fill up whole container', 'modularity-form-builder'),
+            'default_value' => 0,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
         ),
     ),
     'location' => array(

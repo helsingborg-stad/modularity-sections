@@ -21,6 +21,8 @@ class Split extends \Modularity\Module
         $metaMapper = array(
             'mod_section_content' => 'content',
 
+            'mod_section_justify_text' => 'justifyText',
+
             'mod_section_image' => 'foregroundImage',
 
             'mod_section_height' => 'height',
@@ -67,6 +69,11 @@ class Split extends \Modularity\Module
         //Add multiply effect
         if ($data['effectMultiply']) {
             $data['classes']['section-multiply'] = "effect-multiply";
+        }
+
+        //Add justify text
+        if ($data['justifyText']) {
+            $data['classes']['section-justify'] = "justify-text";
         }
 
         //Get background image

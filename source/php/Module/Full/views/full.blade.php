@@ -3,12 +3,15 @@
         <div class="grid">
             <div class="grid-xs-12">
                 <article class="section-article">
-                    @if (!$hideTitle && !empty($post_title))
-                        <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
-                    @endif
-
-                    <div class="section-text">
-                        {!! $content !!}
+                    <div class="grid content-grid">
+                        <div class="section-text grid-xs-12">
+                            @if (!$hideTitle && !empty($post_title))
+                                <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
+                            @endif
+                            <div class="column-enabler">
+                                {!! $content !!}
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>

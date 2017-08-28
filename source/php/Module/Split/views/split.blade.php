@@ -3,12 +3,12 @@
     <div class="container">
     <div class="grid">
      <div class="grid-xs-12 grid-md-7 grid-lg-6">
-         <div class="vertical-alignment-wrapper">
              <article class="section-article">
-                  @if (!$hideTitle && !empty($post_title))
-                    <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
-                  @endif
+                <div class="grid content-grid">
                  <div class="section-text">
+                    @if (!$hideTitle && !empty($post_title))
+                        <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
+                    @endif
                     {!! $content !!}
                  </div>
 
@@ -17,8 +17,8 @@
                         {!! $submoduleRendered !!}
                     </div>
                 @endif
-             </article>
-         </div>
+                </div>
+       </article>
      </div>
     </div>
     </div>

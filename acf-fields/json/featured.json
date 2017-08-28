@@ -61,6 +61,27 @@
             "prefix_name": 0
         },
         {
+            "key": "field_59a027afffd46",
+            "label": "",
+            "name": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_59a02632ed6f6"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_599ed837efd03",
             "label": "Background",
             "name": "",
@@ -272,7 +293,8 @@
             "clone": [
                 "field_599eaf20c6db6",
                 "field_599ed4d2dc77b",
-                "field_599fed3fec804"
+                "field_599fed3fec804",
+                "field_59a00dad5a07f"
             ],
             "display": "seamless",
             "layout": "block",

@@ -154,6 +154,25 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_59a00dad5a07f",
+            "label": "Inner shadow effect",
+            "name": "mod_section_effect_inset",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes, overlay the image with a soft inner shadow.",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_599ec93c4b4b7",
             "label": "Image position",
             "name": "mod_section_image_position",
@@ -315,6 +334,50 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "png, jpg, jpeg, svg"
+        },
+        {
+            "key": "field_59a0236d0a74e",
+            "label": "Columns",
+            "name": "mod_section_columns",
+            "type": "radio",
+            "instructions": "Select the number of columns you do want to use for the body text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "One column",
+                "2": "Two columns",
+                "3": "Three columns"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": 1,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59a02632ed6f6",
+            "label": "Justify text",
+            "name": "mod_section_justify_text",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes, even the space between words to fill up whole container",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [

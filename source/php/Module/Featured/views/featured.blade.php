@@ -6,10 +6,14 @@
                      <div class="grid content-grid">
                          <div class="section-image grid-xs-12 grid-lg-4 text-center">
                             @if(is_numeric($foregroundImage))
-                                {!! wp_get_attachment_image($foregroundImage, 'large', "", array( "class" => "img-responsive" )) !!}
+                                {!! wp_get_attachment_image($foregroundImage, 'large', "") !!}
                             @endif
                          </div>
                          <div class="section-text grid-xs-12 grid-lg-8">
+                            @if (!$hideTitle && !empty($post_title))
+                                <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
+                            @endif
+
                             {!! $content !!}
                          </div>
                      </div>
