@@ -46,6 +46,9 @@ class Split extends \Modularity\Module
         //Create data structure
         $data = array('classes' => array());
 
+        //Id
+        $data['sectionID'] = sanitize_title($this->post_title);
+
         //Get meta fields & remap
         foreach ($metaMapper as $meta => $variable) {
             $data[$variable] = get_field($meta, $this->ID, true);

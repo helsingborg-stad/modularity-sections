@@ -16,6 +16,7 @@ class Full extends \Modularity\Module
 
     public function data() : array
     {
+
         //Mapping table
         $metaMapper = array(
             'mod_section_content' => 'content',
@@ -47,6 +48,9 @@ class Full extends \Modularity\Module
 
         //Create data structure
         $data = array('classes' => array());
+
+        //Id
+        $data['sectionID'] = sanitize_title($this->post_title);
 
         //Get meta fields & remap
         foreach ($metaMapper as $meta => $variable) {

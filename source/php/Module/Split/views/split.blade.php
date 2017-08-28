@@ -1,4 +1,4 @@
-<section class="section section-split background-4 {{ $classes }}" style="background-color: {{ $backgroundColor }};">
+<section id="{{ $sectionID }}" class="section section-split background-4 {{ $classes }}" style="background-color: {{ $backgroundColor }};">
     <div class="section-image-mobile hidden-md hidden-lg ratio-16-9" style="background-image: url({{ $backgroundImage }}"></div>
     <div class="container">
     <div class="grid">
