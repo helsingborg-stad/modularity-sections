@@ -17,6 +17,38 @@ class App
             }
             return $paths;
         });
+
+        //Add sections menu to municipio
+        add_filter('Municipio/Menu/Vertical/Items', array($this, 'renderSectionsMenu'));
+    }
+
+
+    public function renderSectionsMenu($items)
+    {
+        global $post;
+
+        //Create array if it isen't
+        if (!is_array($items)) {
+            $items = array();
+        }
+
+        //Get modules
+        if ($archiveSlug = \Modularity\Helper\Wp::getArchiveSlug()) {
+            $modules = \Modularity\Editor::getPostModules($archiveSlug);
+        } else {
+            $modules = \Modularity\Editor::getPostModules($post->ID);
+        }
+
+        //Add all modules to array
+        foreach (array('top-sidebar', 'bottom-sidebar') as $sidebar) {
+            if (isset($modules[$sidebar]) && is_array($modules[$sidebar]) && !empty($modules[$sidebar])) {
+                foreach ($modules[$sidebar]['modules'] as $module) {
+                    $items[] = array('title' => $module->post_title, 'link' => '#' . sanitize_title($module->post_title));
+                }
+            }
+        }
+
+        return $items;
     }
 
     /**
@@ -25,7 +57,6 @@ class App
      */
     public function enqueueStyles()
     {
-
     }
 
     /**
@@ -34,6 +65,5 @@ class App
      */
     public function enqueueScripts()
     {
-
     }
 }
