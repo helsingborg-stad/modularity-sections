@@ -128,7 +128,10 @@ class ModuleData
         return $data;
     }
 
-
+    /**
+     * Create background classes
+     * @return array
+     */
     public function createBackgroundProperties($data)
     {
 
@@ -144,6 +147,10 @@ class ModuleData
         return $data;
     }
 
+    /**
+     * Create text classes
+     * @return array
+     */
     public function createTextLayoutProperties($data)
     {
         //Add justify text
@@ -154,9 +161,18 @@ class ModuleData
         //Create section text columns
         $data['classes']['section-columns'] = "columnize-" . $data['numberOfColumns'];
 
+        //Add justify text
+        if ($this->calculateContrastColor($data['backgroundColor']) == "dark") {
+            $data['classes']['section-text-color'] = "text-color-dark";
+        }
+
         return $data;
     }
 
+    /**
+     * Render shortcodes
+     * @return array
+     */
     public function renderShortCodes($data)
     {
 
@@ -169,5 +185,42 @@ class ModuleData
         }
 
         return $data;
+    }
+
+    /**
+     * Calulate contrast color depending on background solid color
+     * @return string
+     */
+    public function calculateContrastColor($hexColor)
+    {
+        $R1 = hexdec(substr($hexColor, 0, 2));
+        $G1 = hexdec(substr($hexColor, 2, 2));
+        $B1 = hexdec(substr($hexColor, 4, 2));
+
+        $blackColor = "#000000";
+        $R2BlackColor = hexdec(substr($blackColor, 0, 2));
+        $G2BlackColor = hexdec(substr($blackColor, 2, 2));
+        $B2BlackColor = hexdec(substr($blackColor, 4, 2));
+
+        $L1 = 0.2126 * pow($R1 / 255, 2.2) +
+               0.7152 * pow($G1 / 255, 2.2) +
+               0.0722 * pow($B1 / 255, 2.2);
+
+        $L2 = 0.2126 * pow($R2BlackColor / 255, 2.2) +
+              0.7152 * pow($G2BlackColor / 255, 2.2) +
+              0.0722 * pow($B2BlackColor / 255, 2.2);
+
+        $contrastRatio = 0;
+        if ($L1 > $L2) {
+            $contrastRatio = (int)(($L1 + 0.05) / ($L2 + 0.05));
+        } else {
+            $contrastRatio = (int)(($L2 + 0.05) / ($L1 + 0.05));
+        }
+
+        if ($contrastRatio > 5) {
+            return 'dark';
+        } else {
+            return 'light';
+        }
     }
 }
