@@ -201,8 +201,19 @@ class ModuleData
         $imageSize = $this->imageSize[$this->module->post_type];
 
         //Make image "tall"
-        if ($this->module->post_type == "mod-section-split" && ($data['height'] == "lg"||strlen($data['content']) > 1000 )) {
+        if ($this->module->post_type == "mod-section-split" && ($data['height'] == "lg"||strlen($data['content']) > 1000)) {
             $imageSize[1] = $imageSize[1]*2;
+        }
+
+        if (in_array($this->module->post_type, array('mod-section-full', 'mod-section-featured')) && ($data['height'] == "sm"||strlen($data['content']) < 1000) && !$data['effectParallax']) {
+            $imageSize[1] = $imageSize[1]/2;
+        }
+
+        //Normalize
+        if (is_array($imageSize) && !empty($imageSize)) {
+            foreach ($imageSize as $key => $value) {
+                $imageSize[$key] = floor($value);
+            }
         }
 
         return $imageSize;
