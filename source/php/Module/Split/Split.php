@@ -27,7 +27,7 @@ class Split extends \Modularity\Module
         return $data;
     }
 
-    public function template()
+    public function template() : string
     {
         return "split.blade.php";
     }

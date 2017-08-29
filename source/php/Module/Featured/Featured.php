@@ -27,7 +27,7 @@ class Featured extends \Modularity\Module
         return $data;
     }
 
-    public function template()
+    public function template() : string
     {
         return "featured.blade.php";
     }

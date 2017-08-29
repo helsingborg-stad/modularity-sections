@@ -28,7 +28,7 @@ class Full extends \Modularity\Module
     }
 
 
-    public function template()
+    public function template() : string
     {
         return "full.blade.php";
     }

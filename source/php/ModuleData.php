@@ -201,7 +201,7 @@ class ModuleData
         $imageSize = $this->imageSize[$this->module->post_type];
 
         //Make image "tall"
-        if ($this->module->post_type == "mod-section-split" && $data['height'] == "lg") {
+        if ($this->module->post_type == "mod-section-split" && ($data['height'] == "lg"||strlen($data['content']) > 1000 )) {
             $imageSize[1] = $imageSize[1]*2;
         }
 
@@ -240,7 +240,7 @@ class ModuleData
             $contrastRatio = (int)(($L2 + 0.05) / ($L1 + 0.05));
         }
 
-        if ($contrastRatio > 5) {
+        if ($contrastRatio > 11) {
             return 'dark';
         } else {
             return 'light';
