@@ -6,7 +6,7 @@
                      <div class="grid content-grid">
                          <div class="section-image grid-xs-12 grid-lg-4 text-center">
                             @if(is_numeric($foregroundImage))
-                                {!! wp_get_attachment_image($foregroundImage, 'large', "") !!}
+                                <img src="{!! wp_get_attachment_image_src($foregroundImage, 'large', "")[0] !!}"/>
                             @endif
                          </div>
                          <div class="section-text grid-xs-12 grid-lg-8">
