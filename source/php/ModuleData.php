@@ -5,8 +5,13 @@ namespace ModularitySections;
 class ModuleData
 {
 
-    private $module;
+    public $module;
     public $data = array();
+    public $imageSize = array(
+        'mod-section-split' => array(650, 365),
+        'mod-section-full' => array(1300, 731),
+        'mod-section-featured' => array(1300, 731),
+    );
 
     public function __construct($module)
     {
@@ -28,15 +33,13 @@ class ModuleData
         $this->data = $this->createBackgroundProperties($this->data);
         $this->data = $this->createTextLayoutProperties($this->data);
         $this->data = $this->renderShortCodes($this->data);
-
-        return $this->data;
     }
 
     /**
      * Init data
      * @return array
      */
-    public function init($data)
+    public function init($data) : array
     {
         //Mapping table
         $metaMapper = array(
@@ -81,7 +84,7 @@ class ModuleData
      * Create effect classes
      * @return array
      */
-    public function createEffectProperties($data)
+    public function createEffectProperties($data) : array
     {
         //Add parallax effect
         if ($data['effectParallax']) {
@@ -110,7 +113,7 @@ class ModuleData
      * Create layout classes
      * @return array
      */
-    public function createLayoutProperties($data)
+    public function createLayoutProperties($data) : array
     {
 
         //Create section size
@@ -132,7 +135,7 @@ class ModuleData
      * Create background classes
      * @return array
      */
-    public function createBackgroundProperties($data)
+    public function createBackgroundProperties($data) : array
     {
 
         //Create background position
@@ -140,7 +143,7 @@ class ModuleData
 
         //Get background image
         if (is_numeric($data['backgroundImage'])) {
-            $data['backgroundImage'] = wp_get_attachment_image_src($data['backgroundImage'], array(1300, 731), false);
+            $data['backgroundImage'] = wp_get_attachment_image_src($data['backgroundImage'], $this->calculateBackgroundSize($this->module, $data), false);
             $data['backgroundImage'] = $data['backgroundImage'][0];
         }
 
@@ -151,7 +154,7 @@ class ModuleData
      * Create text classes
      * @return array
      */
-    public function createTextLayoutProperties($data)
+    public function createTextLayoutProperties($data) : array
     {
         //Add justify text
         if ($data['justifyText']) {
@@ -159,11 +162,13 @@ class ModuleData
         }
 
         //Create section text columns
-        $data['classes']['section-columns'] = "columnize-" . $data['numberOfColumns'];
+        $data['classes']['section-columns'] = !empty($data['numberOfColumns']) ? "columnize-" .$data['numberOfColumns'] : "";
 
         //Add justify text
         if ($this->calculateContrastColor($data['backgroundColor']) == "dark") {
             $data['classes']['section-text-color'] = "text-color-dark";
+        } else {
+            $data['classes']['section-text-color'] = "text-color-light";
         }
 
         return $data;
@@ -173,7 +178,7 @@ class ModuleData
      * Render shortcodes
      * @return array
      */
-    public function renderShortCodes($data)
+    public function renderShortCodes($data) : array
     {
 
         //Run shortcodes
@@ -188,11 +193,29 @@ class ModuleData
     }
 
     /**
+     * Calulate the size of the background image
+     * @return array
+     */
+    public function calculateBackgroundSize($module, $data) : array
+    {
+        $imageSize = $this->imageSize[$this->module->post_type];
+
+        //Make image "tall"
+        if ($this->module->post_type == "mod-section-split" && $data['height'] == "lg") {
+            $imageSize[1] = $imageSize[1]*2;
+        }
+
+        return $imageSize;
+    }
+
+    /**
      * Calulate contrast color depending on background solid color
      * @return string
      */
-    public function calculateContrastColor($hexColor)
+    public function calculateContrastColor($hexColor) : string
     {
+        $hexColor = str_replace("#", "", $hexColor);
+
         $R1 = hexdec(substr($hexColor, 0, 2));
         $G1 = hexdec(substr($hexColor, 2, 2));
         $B1 = hexdec(substr($hexColor, 4, 2));
