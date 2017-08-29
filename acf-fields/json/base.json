@@ -87,7 +87,7 @@
             "choices": {
                 "left": "Left",
                 "center": "Center",
-                "bottom": "Right"
+                "right": "Right"
             },
             "allow_null": 0,
             "other_choice": 0,

@@ -139,6 +139,9 @@ class ModuleData
     {
 
         //Create background position
+        $data['backgroundHorizontal'] = empty($data['backgroundHorizontal']) ? "center" : $data['backgroundHorizontal'];
+        $data['backgroundVertical'] = empty($data['backgroundVertical']) ? "center" : $data['backgroundVertical'];
+
         $data['classes']['image-focus'] = "image-focus-". $data['backgroundHorizontal'] . "-" . $data['backgroundVertical'];
 
         //Get background image

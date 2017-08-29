@@ -90,7 +90,7 @@
             'choices' => array(
                 'left' => __('Left', 'modularity-form-builder'),
                 'center' => __('Center', 'modularity-form-builder'),
-                'bottom' => __('Right', 'modularity-form-builder'),
+                'right' => __('Right', 'modularity-form-builder'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
