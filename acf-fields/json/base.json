@@ -303,7 +303,10 @@
                 "mod-gallery",
                 "mod-image",
                 "mod-iframe",
-                "mod-contacts"
+                "mod-contacts",
+                "mod-script",
+                "mod-social",
+                "mod-video"
             ],
             "taxonomy": [],
             "allow_null": 1,

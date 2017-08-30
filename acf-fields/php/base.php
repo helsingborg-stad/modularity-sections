@@ -307,6 +307,9 @@
                 2 => 'mod-image',
                 3 => 'mod-iframe',
                 4 => 'mod-contacts',
+                5 => 'mod-script',
+                6 => 'mod-social',
+                7 => 'mod-video',
             ),
             'taxonomy' => array(
             ),
