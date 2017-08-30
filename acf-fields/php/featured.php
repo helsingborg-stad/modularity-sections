@@ -202,6 +202,27 @@
             'prefix_name' => 0,
         ),
         10 => array(
+            'key' => 'field_599ecc51d8aca',
+            'label' => '',
+            'name' => '',
+            'type' => 'clone',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'clone' => array(
+                0 => 'field_599ecc223a4f6',
+            ),
+            'display' => 'seamless',
+            'layout' => 'block',
+            'prefix_label' => 0,
+            'prefix_name' => 0,
+        ),
+        11 => array(
             'key' => 'field_599eca29c646c',
             'label' => '',
             'name' => '',
@@ -222,7 +243,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599ecb712c5a4',
             'label' => '',
             'name' => '',
@@ -237,27 +258,6 @@
             ),
             'clone' => array(
                 0 => 'field_599ecb18ef407',
-            ),
-            'display' => 'seamless',
-            'layout' => 'block',
-            'prefix_label' => 0,
-            'prefix_name' => 0,
-        ),
-        12 => array(
-            'key' => 'field_599ecc51d8aca',
-            'label' => '',
-            'name' => '',
-            'type' => 'clone',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'clone' => array(
-                0 => 'field_599ecc223a4f6',
             ),
             'display' => 'seamless',
             'layout' => 'block',

@@ -30,7 +30,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -38,6 +38,31 @@
                 "sm": "Small (Adapt to content)",
                 "md": "Medium (Minimum 40 % height)",
                 "lg": "Large (Minimum 100% height)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_599ecc223a4f6",
+            "label": "Section margin",
+            "name": "mod_section_padding",
+            "type": "radio",
+            "instructions": "Select a margin to the top\/bottom of this section. The margin will respect the size of the section.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sm": "Small",
+                "md": "Medium",
+                "lg": "Large"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -178,10 +203,10 @@
             "name": "mod_section_image_position",
             "type": "radio",
             "instructions": "Select on what side of the screen that the image should be placed.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -226,7 +251,7 @@
             "name": "mod_section_background_color",
             "type": "color_picker",
             "instructions": "Select a background coolor for this section. This is important to choose eaven if you are using a background image as this will show during rendering and in combination with some effects.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "50",
@@ -241,10 +266,10 @@
             "name": "mod_section_content_position",
             "type": "radio",
             "instructions": "How to justify the content vertically when there is space left in either column.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -252,31 +277,6 @@
                 "top": "Top",
                 "middle": "Middle",
                 "bottom": "Bottom"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
-            "key": "field_599ecc223a4f6",
-            "label": "Section margin",
-            "name": "mod_section_padding",
-            "type": "radio",
-            "instructions": "Select a margin to the top\/bottom of this section. The margin will respect the size of the section.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "sm": "Small",
-                "md": "Medium",
-                "lg": "Large"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -320,12 +320,12 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "return_format": "id",
-            "preview_size": "medium",
+            "preview_size": "thumbnail",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -365,11 +365,11 @@
             "label": "Justify text",
             "name": "mod_section_justify_text",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "This may cause some light readability issues. Use with caution and review the results on the page displayed (in both mobile and desktop version).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },

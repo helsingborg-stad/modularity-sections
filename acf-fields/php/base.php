@@ -33,7 +33,7 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '',
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),
@@ -50,6 +50,31 @@
             'return_format' => 'value',
         ),
         2 => array(
+            'key' => 'field_599ecc223a4f6',
+            'label' => __('Section margin', 'modularity-form-builder'),
+            'name' => 'mod_section_padding',
+            'type' => 'radio',
+            'instructions' => __('Select a margin to the top/bottom of this section. The margin will respect the size of the section.', 'modularity-form-builder'),
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                'sm' => __('Small', 'modularity-form-builder'),
+                'md' => __('Medium', 'modularity-form-builder'),
+                'lg' => __('Large', 'modularity-form-builder'),
+            ),
+            'allow_null' => 0,
+            'other_choice' => 0,
+            'save_other_choice' => 0,
+            'default_value' => '',
+            'layout' => 'horizontal',
+            'return_format' => 'value',
+        ),
+        3 => array(
             'key' => 'field_599eabaeaad08',
             'label' => __('Background focus (vertical)', 'modularity-form-builder'),
             'name' => 'mod_section_bg_position_vertical',
@@ -74,7 +99,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        3 => array(
+        4 => array(
             'key' => 'field_599eac93ead36',
             'label' => __('Background focus (horizontal)', 'modularity-form-builder'),
             'name' => 'mod_section_bg_position_horizontal',
@@ -99,7 +124,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        4 => array(
+        5 => array(
             'key' => 'field_599eaf20c6db6',
             'label' => __('Parallax effect', 'modularity-form-builder'),
             'name' => 'mod_section_effect_parallax',
@@ -118,7 +143,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        5 => array(
+        6 => array(
             'key' => 'field_599ed4d2dc77b',
             'label' => __('Multiply effect', 'modularity-form-builder'),
             'name' => 'mod_section_effect_multiply',
@@ -137,7 +162,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        6 => array(
+        7 => array(
             'key' => 'field_599fed3fec804',
             'label' => __('Blur effect', 'modularity-form-builder'),
             'name' => 'mod_section_effect_blur',
@@ -156,7 +181,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        7 => array(
+        8 => array(
             'key' => 'field_59a00dad5a07f',
             'label' => __('Inner shadow effect', 'modularity-form-builder'),
             'name' => 'mod_section_effect_inset',
@@ -175,16 +200,16 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        8 => array(
+        9 => array(
             'key' => 'field_599ec93c4b4b7',
             'label' => __('Image position', 'modularity-form-builder'),
             'name' => 'mod_section_image_position',
             'type' => 'radio',
             'instructions' => __('Select on what side of the screen that the image should be placed.', 'modularity-form-builder'),
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '',
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),
@@ -199,7 +224,7 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_599ed8d854523',
             'label' => __('Background image', 'modularity-form-builder'),
             'name' => 'mod_section_background_image',
@@ -223,13 +248,13 @@
             'max_size' => '',
             'mime_types' => 'png, jpg, jpeg',
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_599fce6fc2c2c',
             'label' => __('Background color', 'modularity-form-builder'),
             'name' => 'mod_section_background_color',
             'type' => 'color_picker',
             'instructions' => __('Select a background coolor for this section. This is important to choose eaven if you are using a background image as this will show during rendering and in combination with some effects.', 'modularity-form-builder'),
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '50',
@@ -238,16 +263,16 @@
             ),
             'default_value' => '',
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599ecb18ef407',
             'label' => __('Vertical content position', 'modularity-form-builder'),
             'name' => 'mod_section_content_position',
             'type' => 'radio',
             'instructions' => __('How to justify the content vertically when there is space left in either column.', 'modularity-form-builder'),
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '',
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),
@@ -255,31 +280,6 @@
                 'top' => __('Top', 'modularity-form-builder'),
                 'middle' => __('Middle', 'modularity-form-builder'),
                 'bottom' => __('Bottom', 'modularity-form-builder'),
-            ),
-            'allow_null' => 0,
-            'other_choice' => 0,
-            'save_other_choice' => 0,
-            'default_value' => '',
-            'layout' => 'horizontal',
-            'return_format' => 'value',
-        ),
-        12 => array(
-            'key' => 'field_599ecc223a4f6',
-            'label' => __('Section margin', 'modularity-form-builder'),
-            'name' => 'mod_section_padding',
-            'type' => 'radio',
-            'instructions' => __('Select a margin to the top/bottom of this section. The margin will respect the size of the section.', 'modularity-form-builder'),
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'choices' => array(
-                'sm' => __('Small', 'modularity-form-builder'),
-                'md' => __('Medium', 'modularity-form-builder'),
-                'lg' => __('Large', 'modularity-form-builder'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -324,12 +324,12 @@
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '',
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),
             'return_format' => 'id',
-            'preview_size' => 'medium',
+            'preview_size' => 'thumbnail',
             'library' => 'all',
             'min_width' => '',
             'min_height' => '',
@@ -369,11 +369,11 @@
             'label' => __('Justify text', 'modularity-form-builder'),
             'name' => 'mod_section_justify_text',
             'type' => 'true_false',
-            'instructions' => '',
+            'instructions' => __('This may cause some light readability issues. Use with caution and review the results on the page displayed (in both mobile and desktop version).', 'modularity-form-builder'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '',
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),

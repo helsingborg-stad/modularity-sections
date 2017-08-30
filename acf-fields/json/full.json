@@ -179,27 +179,6 @@
             "prefix_name": 0
         },
         {
-            "key": "field_599fdc0732987",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_599ecb18ef407"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
             "key": "field_599fdc07329fc",
             "label": "",
             "name": "",
@@ -214,6 +193,27 @@
             },
             "clone": [
                 "field_599ecc223a4f6"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_599fdc0732987",
+            "label": "",
+            "name": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_599ecb18ef407"
             ],
             "display": "seamless",
             "layout": "block",
