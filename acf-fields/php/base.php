@@ -383,6 +383,31 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
+        17 => array(
+            'key' => 'field_59a6861f61302',
+            'label' => __('Font size', 'modularity-form-builder'),
+            'name' => 'mod_section_fontsize',
+            'type' => 'radio',
+            'instructions' => __('How large should the font render? This affects both the content and the title.', 'modularity-form-builder'),
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                'normal' => __('Normal', 'modularity-form-builder'),
+                'large' => __('Large', 'modularity-form-builder'),
+                'xlarge' => __('Extra large', 'modularity-form-builder'),
+            ),
+            'allow_null' => 0,
+            'other_choice' => 0,
+            'save_other_choice' => 0,
+            'default_value' => 'normal',
+            'layout' => 'horizontal',
+            'return_format' => 'value',
+        ),
     ),
     'location' => array(
         0 => array(

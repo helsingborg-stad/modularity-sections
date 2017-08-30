@@ -74,7 +74,8 @@
                 "id": ""
             },
             "clone": [
-                "field_59a02632ed6f6"
+                "field_59a02632ed6f6",
+                "field_59a6861f61302"
             ],
             "display": "seamless",
             "layout": "block",

@@ -46,6 +46,7 @@ class ModuleData
             'mod_section_content' => 'content',
 
             'mod_section_justify_text' => 'justifyText',
+            'mod_section_fontsize' => 'fontSize',
 
             'mod_section_image' => 'foregroundImage',
 
@@ -164,6 +165,9 @@ class ModuleData
         if ($data['justifyText']) {
             $data['classes']['section-justify'] = "justify-text";
         }
+
+        //Add font size
+        $data['classes']['section-fontsize'] = "fontsize" . $data['fontSize'];
 
         //Create section text columns
         $data['classes']['section-columns'] = !empty($data['numberOfColumns']) ? "columnize-" .$data['numberOfColumns'] : "";

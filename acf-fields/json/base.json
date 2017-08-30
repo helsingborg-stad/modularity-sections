@@ -378,6 +378,31 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_59a6861f61302",
+            "label": "Font size",
+            "name": "mod_section_fontsize",
+            "type": "radio",
+            "instructions": "How large should the font render? This affects both the content and the title.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "normal": "Normal",
+                "large": "Large",
+                "xlarge": "Extra large"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "normal",
+            "layout": "horizontal",
+            "return_format": "value"
         }
     ],
     "location": [

@@ -58,6 +58,7 @@
             ),
             'clone' => array(
                 0 => 'field_59a02632ed6f6',
+                1 => 'field_59a6861f61302',
             ),
             'display' => 'seamless',
             'layout' => 'block',
