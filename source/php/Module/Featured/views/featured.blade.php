@@ -25,12 +25,13 @@
             </article>
          </div>
       </div>
-        @if(is_array($submodules) && !empty($submodules))
-          <div class="grid section-submodules">
-             <div class="grid-xs-12">
-                {!! $submoduleRendered !!}
-             </div>
-          </div>
-        @endif
+      @if(is_array($submodules) && !empty($submodules))
+        <div class="grid section-submodules">
+           <div class="grid-xs-12">
+              {!! $submoduleRendered !!}
+           </div>
+        </div>
+      @endif
    </div>
 </section>
+
