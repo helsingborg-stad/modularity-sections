@@ -384,7 +384,7 @@
             "label": "Font size",
             "name": "mod_section_fontsize",
             "type": "radio",
-            "instructions": "How large should the font render? This affects both the content and the title.",
+            "instructions": "How large should the font render? This only affects the header size, normal content will render as usual.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {

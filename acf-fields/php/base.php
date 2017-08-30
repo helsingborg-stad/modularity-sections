@@ -388,7 +388,7 @@
             'label' => __('Font size', 'modularity-form-builder'),
             'name' => 'mod_section_fontsize',
             'type' => 'radio',
-            'instructions' => __('How large should the font render? This affects both the content and the title.', 'modularity-form-builder'),
+            'instructions' => __('How large should the font render? This only affects the header size, normal content will render as usual.', 'modularity-form-builder'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
