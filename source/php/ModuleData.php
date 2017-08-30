@@ -208,6 +208,7 @@ class ModuleData
             $imageSize[1] = $imageSize[1]*2;
         }
 
+        //Make image "wide" on small section sizes
         if (in_array($this->module->post_type, array('mod-section-full', 'mod-section-featured')) && ($data['height'] == "sm"||strlen($data['content']) < 1000) && !$data['effectParallax']) {
             $imageSize[1] = $imageSize[1]/2;
         }
