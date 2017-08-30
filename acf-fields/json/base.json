@@ -237,10 +237,10 @@
         },
         {
             "key": "field_599ecb18ef407",
-            "label": "Content position",
+            "label": "Vertical content position",
             "name": "mod_section_content_position",
             "type": "radio",
-            "instructions": "",
+            "instructions": "How to justify the content vertically when there is space left in either column.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -265,7 +265,7 @@
             "label": "Section margin",
             "name": "mod_section_padding",
             "type": "radio",
-            "instructions": "",
+            "instructions": "Select a margin to the top\/bottom of this section. The margin will respect the size of the section.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {

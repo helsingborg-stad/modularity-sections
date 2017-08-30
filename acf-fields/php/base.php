@@ -240,10 +240,10 @@
         ),
         11 => array(
             'key' => 'field_599ecb18ef407',
-            'label' => __('Content position', 'modularity-form-builder'),
+            'label' => __('Vertical content position', 'modularity-form-builder'),
             'name' => 'mod_section_content_position',
             'type' => 'radio',
-            'instructions' => '',
+            'instructions' => __('How to justify the content vertically when there is space left in either column.', 'modularity-form-builder'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -268,7 +268,7 @@
             'label' => __('Section margin', 'modularity-form-builder'),
             'name' => 'mod_section_padding',
             'type' => 'radio',
-            'instructions' => '',
+            'instructions' => __('Select a margin to the top/bottom of this section. The margin will respect the size of the section.', 'modularity-form-builder'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
