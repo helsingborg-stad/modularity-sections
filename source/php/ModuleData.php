@@ -167,7 +167,7 @@ class ModuleData
         }
 
         //Add font size
-        $data['classes']['section-fontsize'] = "fontsize" . $data['fontSize'];
+        $data['classes']['section-fontsize'] = "fontsize-" . $data['fontSize'];
 
         //Create section text columns
         $data['classes']['section-columns'] = !empty($data['numberOfColumns']) ? "columnize-" .$data['numberOfColumns'] : "";
