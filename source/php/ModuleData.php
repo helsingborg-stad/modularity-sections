@@ -54,6 +54,7 @@ class ModuleData
 
             'mod_section_image_position' => 'imagePosition',
             'mod_section_content_position' => 'contentPosition',
+            'mod_section_columns' => 'numberOfColumns',
 
             'mod_section_bg_position_vertical' => 'backgroundVertical',
             'mod_section_bg_position_horizontal' => 'backgroundHorizontal',
