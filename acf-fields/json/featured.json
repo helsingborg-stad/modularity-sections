@@ -53,7 +53,10 @@
                 "id": ""
             },
             "clone": [
-                "field_599fd58984f01"
+                "field_599fd58984f01",
+                "field_59a929fbc4f6e",
+                "field_59a92a77de529",
+                "field_59a92accde52a"
             ],
             "display": "seamless",
             "layout": "block",

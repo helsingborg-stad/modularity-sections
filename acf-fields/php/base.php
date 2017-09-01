@@ -411,6 +411,84 @@
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
+        18 => array(
+            'key' => 'field_59a929fbc4f6e',
+            'label' => __('Frame fourgound image', 'modularity-form-builder'),
+            'name' => 'mod_section_image_frame',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => __('Yes, add a frame to the foreground image', 'modularity-form-builder'),
+            'default_value' => 0,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
+        19 => array(
+            'key' => 'field_59a92a77de529',
+            'label' => __('Fourground image frame width', 'modularity-form-builder'),
+            'name' => 'mod_section_image_frame_width',
+            'type' => 'select',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_59a929fbc4f6e',
+                        'operator' => '==',
+                        'value' => '1',
+                    ),
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                'sm' => __('Small', 'modularity-form-builder'),
+                'md' => __('Medium', 'modularity-form-builder'),
+                'lg' => __('Large', 'modularity-form-builder'),
+            ),
+            'default_value' => array(
+                0 => 'md',
+            ),
+            'allow_null' => 0,
+            'multiple' => 0,
+            'ui' => 1,
+            'ajax' => 0,
+            'return_format' => 'value',
+            'placeholder' => '',
+        ),
+        20 => array(
+            'key' => 'field_59a92accde52a',
+            'label' => __('Fourground image frame color', 'modularity-form-builder'),
+            'name' => 'mod_section_image_frame_color',
+            'type' => 'color_picker',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_59a929fbc4f6e',
+                        'operator' => '==',
+                        'value' => '1',
+                    ),
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '#FFFFFF',
+        ),
     ),
     'location' => array(
         0 => array(
