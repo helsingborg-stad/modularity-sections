@@ -146,7 +146,7 @@
         ),
         7 => array(
             'key' => 'field_599fddb1de8f6',
-            'label' => __('Margins & size', 'modularity-form-builder'),
+            'label' => __('Margins', 'modularity-form-builder'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -245,43 +245,6 @@
             'prefix_name' => 0,
         ),
         12 => array(
-            'key' => 'field_599fddb1deb7c',
-            'label' => __('Effects', 'modularity-form-builder'),
-            'name' => '',
-            'type' => 'tab',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'placement' => 'top',
-            'endpoint' => 0,
-        ),
-        13 => array(
-            'key' => 'field_599fddb1dec0d',
-            'label' => '',
-            'name' => '',
-            'type' => 'clone',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'clone' => array(
-                0 => 'field_599ed4d2dc77b',
-            ),
-            'display' => 'seamless',
-            'layout' => 'block',
-            'prefix_label' => 0,
-            'prefix_name' => 0,
-        ),
-        14 => array(
             'key' => 'field_599fddb1decc3',
             'label' => __('Submodules', 'modularity-form-builder'),
             'name' => '',
@@ -297,7 +260,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        15 => array(
+        13 => array(
             'key' => 'field_599fddb1ded24',
             'label' => '',
             'name' => '',

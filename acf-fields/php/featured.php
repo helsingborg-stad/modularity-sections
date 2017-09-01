@@ -57,6 +57,9 @@
             ),
             'clone' => array(
                 0 => 'field_599fd58984f01',
+                1 => 'field_59a929fbc4f6e',
+                2 => 'field_59a92a77de529',
+                3 => 'field_59a92accde52a',
             ),
             'display' => 'seamless',
             'layout' => 'block',
@@ -166,8 +169,34 @@
             'prefix_name' => 0,
         ),
         8 => array(
+            'key' => 'field_599eb0127b917',
+            'label' => '',
+            'name' => '',
+            'type' => 'clone',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'clone' => array(
+                0 => 'field_599eaf20c6db6',
+                1 => 'field_599fed3fec804',
+                2 => 'field_59a00dad5a07f',
+                3 => 'field_599ed4d2dc77b',
+                4 => 'field_59a93c8131933',
+                5 => 'field_59a93ca631934',
+            ),
+            'display' => 'seamless',
+            'layout' => 'block',
+            'prefix_label' => 0,
+            'prefix_name' => 0,
+        ),
+        9 => array(
             'key' => 'field_599ea10abdd05',
-            'label' => __('Margins & size', 'modularity-form-builder'),
+            'label' => __('Margins', 'modularity-form-builder'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -181,7 +210,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_599eaad2d0150',
             'label' => '',
             'name' => '',
@@ -202,7 +231,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_599ecc51d8aca',
             'label' => '',
             'name' => '',
@@ -223,7 +252,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599eca29c646c',
             'label' => '',
             'name' => '',
@@ -244,7 +273,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_599ecb712c5a4',
             'label' => '',
             'name' => '',
@@ -265,47 +294,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        13 => array(
-            'key' => 'field_599ea123bdd06',
-            'label' => __('Effects', 'modularity-form-builder'),
-            'name' => '',
-            'type' => 'tab',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'placement' => 'top',
-            'endpoint' => 0,
-        ),
         14 => array(
-            'key' => 'field_599eb0127b917',
-            'label' => '',
-            'name' => '',
-            'type' => 'clone',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'clone' => array(
-                0 => 'field_599eaf20c6db6',
-                1 => 'field_599ed4d2dc77b',
-                2 => 'field_599fed3fec804',
-                3 => 'field_59a00dad5a07f',
-            ),
-            'display' => 'seamless',
-            'layout' => 'block',
-            'prefix_label' => 0,
-            'prefix_name' => 0,
-        ),
-        15 => array(
             'key' => 'field_599edf6a51fd5',
             'label' => __('Submodules', 'modularity-form-builder'),
             'name' => '',
@@ -321,7 +310,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        16 => array(
+        15 => array(
             'key' => 'field_599edf7a51fd6',
             'label' => '',
             'name' => '',

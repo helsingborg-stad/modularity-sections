@@ -142,8 +142,8 @@
         },
         {
             "key": "field_599ed4d2dc77b",
-            "label": "Multiply effect",
-            "name": "mod_section_effect_multiply",
+            "label": "Overlay effect",
+            "name": "mod_section_effect_overlay",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -153,8 +153,8 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Yes, blend the background image with the background color to make the background image more coherence to your overall profile.",
-            "default_value": 1,
+            "message": "Yes, blend the background image with a selected color.",
+            "default_value": 0,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -173,7 +173,7 @@
                 "id": ""
             },
             "message": "Yes, make the background image blurred to let the content stand out.",
-            "default_value": 1,
+            "default_value": 0,
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -406,6 +406,143 @@
             "default_value": "normal",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_59a929fbc4f6e",
+            "label": "Frame fourgound image",
+            "name": "mod_section_image_frame",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes, add a frame to the foreground image",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59a92a77de529",
+            "label": "Foreground image frame width",
+            "name": "mod_section_image_frame_width",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59a929fbc4f6e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sm": "Small",
+                "md": "Medium",
+                "lg": "Large"
+            },
+            "default_value": [
+                "md"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a92accde52a",
+            "label": "Foreground image frame color",
+            "name": "mod_section_image_frame_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59a929fbc4f6e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF"
+        },
+        {
+            "key": "field_59a93c8131933",
+            "label": "Overlay color",
+            "name": "mod_section_effect_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_599ed4d2dc77b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_59a93ca631934",
+            "label": "Overlay opacity",
+            "name": "mod_section_effect_overlay_opacity",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_599ed4d2dc77b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hi": "High",
+                "md": "Medium",
+                "lo": "Low"
+            },
+            "default_value": [
+                "md"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [

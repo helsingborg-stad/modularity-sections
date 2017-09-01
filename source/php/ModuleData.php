@@ -32,6 +32,7 @@ class ModuleData
         $this->data = $this->createLayoutProperties($this->data);
         $this->data = $this->createBackgroundProperties($this->data);
         $this->data = $this->createTextLayoutProperties($this->data);
+        $this->data = $this->createImageProperties($this->data);
         $this->data = $this->renderShortCodes($this->data);
     }
 
@@ -47,8 +48,12 @@ class ModuleData
 
             'mod_section_justify_text' => 'justifyText',
             'mod_section_fontsize' => 'fontSize',
+            'mod_section_fontcolor' => 'fontColor',
 
             'mod_section_image' => 'foregroundImage',
+            'mod_section_image_frame' => 'foregroundImageFrame',
+            'mod_section_image_frame_width' => 'foregroundImageFrameWidth',
+            'mod_section_image_frame_color' => 'foregroundImageFrameColor',
 
             'mod_section_height' => 'height',
             'mod_section_padding' => 'padding',
@@ -61,9 +66,12 @@ class ModuleData
             'mod_section_bg_position_horizontal' => 'backgroundHorizontal',
 
             'mod_section_effect_parallax' => 'effectParallax',
-            'mod_section_effect_multiply' => 'effectMultiply',
             'mod_section_effect_blur' => 'effectBlur',
             'mod_section_effect_inset' => 'effectInsetShadow',
+
+            'mod_section_effect_overlay' => 'effectOverlay',
+            'mod_section_effect_overlay_opacity' => 'effectOverlayOpcaity',
+            'mod_section_effect_overlay_color' => 'effectOverlayColor',
 
             'mod_section_background_image' => 'backgroundImage',
             'mod_section_background_color' => 'backgroundColor',
@@ -83,6 +91,20 @@ class ModuleData
     }
 
     /**
+     * Create foreground image classes
+     * @return array
+     */
+    public function createImageProperties($data) : array
+    {
+        //Add parallax effect
+        if ($data['foregroundImage'] && $data['foregroundImageFrame']) {
+            $data['classes']['section-foreground-frame-width'] = "image-frame-width-" . $data['foregroundImageFrameWidth'];
+        }
+
+        return $data;
+    }
+
+    /**
      * Create effect classes
      * @return array
      */
@@ -93,9 +115,10 @@ class ModuleData
             $data['classes']['section-parallax'] = "effect-parallax";
         }
 
-        //Add multiply effect
-        if ($data['effectMultiply']) {
-            $data['classes']['section-multiply'] = "effect-multiply";
+        //Add overlay effect
+        if ($data['effectOverlay']) {
+            $data['classes']['section-overlay'] = "effect-overlay";
+            $data['classes']['section-overlay-opacity'] = "effect-overlay-opacity-" . $data['effectOverlayOpcaity'];
         }
 
         //Add blur effect
@@ -173,7 +196,7 @@ class ModuleData
         $data['classes']['section-columns'] = !empty($data['numberOfColumns']) ? "columnize-" .$data['numberOfColumns'] : "";
 
         //Add justify text
-        if ($this->calculateContrastColor($data['backgroundColor']) == "dark") {
+        if ($data['fontColor'] == "dark") {
             $data['classes']['section-text-color'] = "text-color-dark";
         } else {
             $data['classes']['section-text-color'] = "text-color-light";
@@ -226,44 +249,5 @@ class ModuleData
         }
 
         return $imageSize;
-    }
-
-    /**
-     * Calulate contrast color depending on background solid color
-     * @return string
-     */
-    public function calculateContrastColor($hexColor) : string
-    {
-        $hexColor = str_replace("#", "", $hexColor);
-
-        $R1 = hexdec(substr($hexColor, 0, 2));
-        $G1 = hexdec(substr($hexColor, 2, 2));
-        $B1 = hexdec(substr($hexColor, 4, 2));
-
-        $blackColor = "#000000";
-        $R2BlackColor = hexdec(substr($blackColor, 0, 2));
-        $G2BlackColor = hexdec(substr($blackColor, 2, 2));
-        $B2BlackColor = hexdec(substr($blackColor, 4, 2));
-
-        $L1 = 0.2126 * pow($R1 / 255, 2.2) +
-               0.7152 * pow($G1 / 255, 2.2) +
-               0.0722 * pow($B1 / 255, 2.2);
-
-        $L2 = 0.2126 * pow($R2BlackColor / 255, 2.2) +
-              0.7152 * pow($G2BlackColor / 255, 2.2) +
-              0.0722 * pow($B2BlackColor / 255, 2.2);
-
-        $contrastRatio = 0;
-        if ($L1 > $L2) {
-            $contrastRatio = (int)(($L1 + 0.05) / ($L2 + 0.05));
-        } else {
-            $contrastRatio = (int)(($L2 + 0.05) / ($L1 + 0.05));
-        }
-
-        if ($contrastRatio > 11) {
-            return 'dark';
-        } else {
-            return 'light';
-        }
     }
 }

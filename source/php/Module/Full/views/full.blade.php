@@ -1,4 +1,4 @@
-<section id="{{ $sectionID }}" class="section section-full background-4 {{ $classes }}" style="background-color: {{ $backgroundColor }}; background-image: url({{ $backgroundImage }}); ">
+<section id="{{ $sectionID }}" class="section section-full {{ $classes }}" style="background-color: {{ $backgroundColor }}; background-image: url({{ $backgroundImage }}); ">
   <div class="container">
     <div class="grid">
       <div class="grid-xs-12">
