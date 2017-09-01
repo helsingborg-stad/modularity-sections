@@ -143,8 +143,34 @@
             "prefix_name": 0
         },
         {
+            "key": "field_599fdc0732b43",
+            "label": "",
+            "name": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_599eaf20c6db6",
+                "field_599fed3fec804",
+                "field_59a00dad5a07f",
+                "field_599ed4d2dc77b",
+                "field_59a93c8131933",
+                "field_59a93ca631934"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_599fdc07327d0",
-            "label": "Margins & size",
+            "label": "Margins",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -215,48 +241,6 @@
             },
             "clone": [
                 "field_599ecb18ef407"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_599fdc0732a8d",
-            "label": "Effects",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_599fdc0732b43",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_599eaf20c6db6",
-                "field_599fed3fec804",
-                "field_59a00dad5a07f",
-                "field_599ed4d2dc77b",
-                "field_59a93c8131933",
-                "field_59a93ca631934"
             ],
             "display": "seamless",
             "layout": "block",

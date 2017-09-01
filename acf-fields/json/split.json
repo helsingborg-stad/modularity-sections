@@ -143,7 +143,7 @@
         },
         {
             "key": "field_599fddb1de8f6",
-            "label": "Margins & size",
+            "label": "Margins",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -235,43 +235,6 @@
             },
             "clone": [
                 "field_599ecb18ef407"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_599fddb1deb7c",
-            "label": "Effects",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_599fddb1dec0d",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_599ed4d2dc77b"
             ],
             "display": "seamless",
             "layout": "block",
