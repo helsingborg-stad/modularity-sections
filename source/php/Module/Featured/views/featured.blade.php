@@ -4,7 +4,7 @@
       <div class="grid-xs-12">
         <article class="section-article">
            <div class="grid content-grid">
-              <div class="section-image grid-xs-12 grid-lg-4">
+              <div class="section-image grid-xs-12 grid-lg-5">
                 @if(is_numeric($foregroundImage))
                 <img src="{!! wp_get_attachment_image_src($foregroundImage, 'large')[0] !!}" class="hidden-xs hidden-sm hidden-md"/>
                 @endif
@@ -15,7 +15,7 @@
                 <img src="{!! wp_get_attachment_image_src($foregroundImage, array(640,360))[0] !!}" class="hidden-md hidden-lg"/>
                 @endif
               </div>
-              <div class="section-text grid-xs-12 grid-lg-8">
+              <div class="section-text grid-xs-12 grid-lg-7">
                 @if (!$hideTitle && !empty($post_title))
                 <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
                 @endif
