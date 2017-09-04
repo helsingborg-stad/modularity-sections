@@ -195,12 +195,9 @@ class ModuleData
         //Create section text columns
         $data['classes']['section-columns'] = !empty($data['numberOfColumns']) ? "columnize-" .$data['numberOfColumns'] : "";
 
-        //Add justify text
-        if ($data['fontColor'] == "dark") {
-            $data['classes']['section-text-color'] = "text-color-dark";
-        } else {
-            $data['classes']['section-text-color'] = "text-color-light";
-        }
+        //Add font color
+        $data['classes']['section-text-color'] = $data['fontColor'];
+
 
         return $data;
     }

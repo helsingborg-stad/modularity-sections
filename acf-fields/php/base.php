@@ -376,7 +376,7 @@
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '50',
+                'width' => '33',
                 'class' => '',
                 'id' => '',
             ),
@@ -395,7 +395,7 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '50',
+                'width' => '33',
                 'class' => '',
                 'id' => '',
             ),
@@ -412,6 +412,30 @@
             'return_format' => 'value',
         ),
         18 => array(
+            'key' => 'field_59a955123431a',
+            'label' => __('Font color', 'modularity-form-builder'),
+            'name' => 'mod_section_fontcolor',
+            'type' => 'radio',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '33',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                'text-color-dark' => __('Dark', 'modularity-form-builder'),
+                'text-color-light' => __('Light', 'modularity-form-builder'),
+            ),
+            'allow_null' => 0,
+            'other_choice' => 0,
+            'save_other_choice' => 0,
+            'default_value' => 'section-text--dark : Dark',
+            'layout' => 'horizontal',
+            'return_format' => 'value',
+        ),
+        19 => array(
             'key' => 'field_59a929fbc4f6e',
             'label' => __('Frame fourgound image', 'modularity-form-builder'),
             'name' => 'mod_section_image_frame',
@@ -430,7 +454,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        19 => array(
+        20 => array(
             'key' => 'field_59a92a77de529',
             'label' => __('Foreground image frame width', 'modularity-form-builder'),
             'name' => 'mod_section_image_frame_width',
@@ -466,7 +490,7 @@
             'return_format' => 'value',
             'placeholder' => '',
         ),
-        20 => array(
+        21 => array(
             'key' => 'field_59a92accde52a',
             'label' => __('Foreground image frame color', 'modularity-form-builder'),
             'name' => 'mod_section_image_frame_color',
@@ -489,7 +513,7 @@
             ),
             'default_value' => '#FFFFFF',
         ),
-        21 => array(
+        22 => array(
             'key' => 'field_59a93c8131933',
             'label' => __('Overlay color', 'modularity-form-builder'),
             'name' => 'mod_section_effect_overlay_color',
@@ -512,7 +536,7 @@
             ),
             'default_value' => '#ffffff',
         ),
-        22 => array(
+        23 => array(
             'key' => 'field_59a93ca631934',
             'label' => __('Overlay opacity', 'modularity-form-builder'),
             'name' => 'mod_section_effect_overlay_opacity',

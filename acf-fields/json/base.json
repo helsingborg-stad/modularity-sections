@@ -372,7 +372,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -391,7 +391,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -404,6 +404,30 @@
             "other_choice": 0,
             "save_other_choice": 0,
             "default_value": "normal",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59a955123431a",
+            "label": "Font color",
+            "name": "mod_section_fontcolor",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "text-color-dark": "Dark",
+                "text-color-light": "Light"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "section-text--dark : Dark",
             "layout": "horizontal",
             "return_format": "value"
         },
