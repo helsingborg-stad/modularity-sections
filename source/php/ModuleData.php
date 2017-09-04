@@ -34,6 +34,9 @@ class ModuleData
         $this->data = $this->createTextLayoutProperties($this->data);
         $this->data = $this->createImageProperties($this->data);
         $this->data = $this->renderShortCodes($this->data);
+
+        //Add animation class
+        $this->data['classes']['animate'] = "animate";
     }
 
     /**
