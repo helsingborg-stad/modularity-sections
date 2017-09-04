@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
-"POT-Creation-Date: 2017-09-04 09:49+0200\n"
-"PO-Revision-Date: 2017-09-04 09:49+0200\n"
+"POT-Creation-Date: 2017-09-04 10:10+0200\n"
+"PO-Revision-Date: 2017-09-04 10:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -60,17 +60,17 @@ msgstr ""
 "Välj marginalstorleken till toppen och botten av sektionen. Marginalen "
 "ändrar inte på storleken av sektionen. "
 
-#: acf-fields/php/base.php:66 acf-fields/php/base.php:455
+#: acf-fields/php/base.php:66 acf-fields/php/base.php:479
 msgid "Small"
 msgstr "Liten\t"
 
-#: acf-fields/php/base.php:67 acf-fields/php/base.php:456
-#: acf-fields/php/base.php:538
+#: acf-fields/php/base.php:67 acf-fields/php/base.php:480
+#: acf-fields/php/base.php:562
 msgid "Medium"
 msgstr "Medel"
 
 #: acf-fields/php/base.php:68 acf-fields/php/base.php:404
-#: acf-fields/php/base.php:457
+#: acf-fields/php/base.php:481
 msgid "Large"
 msgstr "Stor"
 
@@ -205,8 +205,8 @@ msgstr ""
 "Hur innehåller ska justeras vertikalt när det finns utrymme kvar i någon av "
 "kolumnerna."
 
-#: acf-fields/php/base.php:293 acf-fields/php/featured.php:299
-#: acf-fields/php/full.php:255 acf-fields/php/split.php:249
+#: acf-fields/php/base.php:293 acf-fields/php/featured.php:300
+#: acf-fields/php/full.php:256 acf-fields/php/split.php:250
 msgid "Submodules"
 msgstr "Moduler"
 
@@ -289,34 +289,46 @@ msgid "Extra large"
 msgstr "Extra stor"
 
 #: acf-fields/php/base.php:416
+msgid "Font color"
+msgstr "Färg på typsnitt"
+
+#: acf-fields/php/base.php:428
+msgid "Dark"
+msgstr "Mörk"
+
+#: acf-fields/php/base.php:429
+msgid "Light"
+msgstr "Ljus"
+
+#: acf-fields/php/base.php:440
 msgid "Frame fourgound image"
 msgstr "Sektionens förgrundsbild"
 
-#: acf-fields/php/base.php:427
+#: acf-fields/php/base.php:451
 msgid "Yes, add a frame to the foreground image"
 msgstr "Ja, rama in bilden i förgrunden"
 
-#: acf-fields/php/base.php:435
+#: acf-fields/php/base.php:459
 msgid "Foreground image frame width"
 msgstr "Ramlinjens tjocklek"
 
-#: acf-fields/php/base.php:471
+#: acf-fields/php/base.php:495
 msgid "Foreground image frame color"
 msgstr "Ramlinjens färg"
 
-#: acf-fields/php/base.php:494
+#: acf-fields/php/base.php:518
 msgid "Overlay color"
 msgstr "Färg på övertoning"
 
-#: acf-fields/php/base.php:517
+#: acf-fields/php/base.php:541
 msgid "Overlay opacity"
 msgstr "Övertoningens genomskinlighet"
 
-#: acf-fields/php/base.php:537
+#: acf-fields/php/base.php:561
 msgid "High"
 msgstr "Hög"
 
-#: acf-fields/php/base.php:539
+#: acf-fields/php/base.php:563
 msgid "Low"
 msgstr "Låg"
 
@@ -329,13 +341,13 @@ msgstr "Utvald sektion (sektion med förgrundsbild)"
 msgid "General"
 msgstr "Generellt"
 
-#: acf-fields/php/featured.php:93 acf-fields/php/full.php:70
-#: acf-fields/php/split.php:69
+#: acf-fields/php/featured.php:94 acf-fields/php/full.php:71
+#: acf-fields/php/split.php:70
 msgid "Background"
 msgstr "Bakgrund"
 
-#: acf-fields/php/featured.php:199 acf-fields/php/full.php:176
-#: acf-fields/php/split.php:149
+#: acf-fields/php/featured.php:200 acf-fields/php/full.php:177
+#: acf-fields/php/split.php:150
 msgid "Margins"
 msgstr "Marginaler"
 
