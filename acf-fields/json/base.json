@@ -413,7 +413,7 @@
             "name": "mod_section_fontcolor",
             "type": "radio",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "33",
@@ -427,7 +427,7 @@
             "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
-            "default_value": "section-text--dark : Dark",
+            "default_value": "text-color-light",
             "layout": "horizontal",
             "return_format": "value"
         },

@@ -1,7 +1,7 @@
-<?php
+<?php 
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
     'key' => 'group_599eaa60c0e79',
     'title' => __('Section base fields', 'modularity-sections'),
     'fields' => array(
@@ -413,11 +413,11 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         18 => array(
             'key' => 'field_59a955123431a',
-            'label' => __('Font color', 'modularity-form-builder'),
+            'label' => __('Font color', 'modularity-sections'),
             'name' => 'mod_section_fontcolor',
             'type' => 'radio',
             'instructions' => '',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '33',
@@ -425,13 +425,13 @@ if (function_exists('acf_add_local_field_group')) {
                 'id' => '',
             ),
             'choices' => array(
-                'text-color-dark' => __('Dark', 'modularity-form-builder'),
-                'text-color-light' => __('Light', 'modularity-form-builder'),
+                'text-color-dark' => __('Dark', 'modularity-sections'),
+                'text-color-light' => __('Light', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
             'save_other_choice' => 0,
-            'default_value' => 'section-text--dark : Dark',
+            'default_value' => 'text-color-light',
             'layout' => 'horizontal',
             'return_format' => 'value',
         ),
@@ -591,4 +591,4 @@ if (function_exists('acf_add_local_field_group')) {
     'active' => 1,
     'description' => '',
 ));
-}
+}
