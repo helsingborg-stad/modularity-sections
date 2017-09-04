@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
-"POT-Creation-Date: 2017-09-04 10:10+0200\n"
-"PO-Revision-Date: 2017-09-04 10:10+0200\n"
+"POT-Creation-Date: 2017-09-04 16:22+0200\n"
+"PO-Revision-Date: 2017-09-04 16:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -353,11 +353,11 @@ msgstr "Marginaler"
 
 #: acf-fields/php/full.php:6
 msgid "Full section"
-msgstr "Fullbredd sektion (100% bild och innehåll)"
+msgstr "Fullbredd sektion"
 
 #: acf-fields/php/split.php:6
 msgid "Split section"
-msgstr "Tvådelad sektion (50% bild, 50% innehåll)"
+msgstr "Tvådelad sektion"
 
 #: source/php/Module/Featured/Featured.php:12
 #: source/php/Module/Featured/Featured.php:13
@@ -370,7 +370,7 @@ msgstr "Skriver ut en modul."
 
 #: source/php/Module/Full/Full.php:12 source/php/Module/Full/Full.php:13
 msgid "Section full"
-msgstr "Fullbredd sektion (100% bild och innehåll)"
+msgstr "Fullbredd sektion"
 
 #: source/php/Module/Full/Full.php:14 source/php/Module/Split/Split.php:14
 msgid "Outputs a section."
@@ -378,7 +378,7 @@ msgstr "Skriver ut en sektion."
 
 #: source/php/Module/Split/Split.php:12 source/php/Module/Split/Split.php:13
 msgid "Section split"
-msgstr "Tvådelad sektion (50% bild, 50% innehåll)"
+msgstr "Tvådelad sektion"
 
 #: vendor/helsingborg-stad/acf-export-manager/src/AcfExportManager.php:362
 msgid "Export with AcfExportManager"
