@@ -1,13 +1,13 @@
-<?php 
+<?php
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
     'key' => 'group_599eaa60c0e79',
-    'title' => __('Section base fields', 'modularity-form-builder'),
+    'title' => __('Section base fields', 'modularity-sections'),
     'fields' => array(
         0 => array(
             'key' => 'field_599eaa6a6c354',
-            'label' => __('Content', 'modularity-form-builder'),
+            'label' => __('Content', 'modularity-sections'),
             'name' => 'mod_section_content',
             'type' => 'wysiwyg',
             'instructions' => '',
@@ -26,10 +26,10 @@
         ),
         1 => array(
             'key' => 'field_599eab01559ea',
-            'label' => __('Section Height', 'modularity-form-builder'),
+            'label' => __('Section Height', 'modularity-sections'),
             'name' => 'mod_section_height',
             'type' => 'radio',
-            'instructions' => __('Select the amount of space that the section should take up vertically', 'modularity-form-builder'),
+            'instructions' => __('Select the amount of space that the section should take up vertically', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -38,9 +38,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'sm' => __('Small (Adapt to content)', 'modularity-form-builder'),
-                'md' => __('Medium (Minimum 40 % height)', 'modularity-form-builder'),
-                'lg' => __('Large (Minimum 100% height)', 'modularity-form-builder'),
+                'sm' => __('Small (Adapt to content)', 'modularity-sections'),
+                'md' => __('Medium (Minimum 40 % height)', 'modularity-sections'),
+                'lg' => __('Large (Minimum 100% height)', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -51,10 +51,10 @@
         ),
         2 => array(
             'key' => 'field_599ecc223a4f6',
-            'label' => __('Section margin', 'modularity-form-builder'),
+            'label' => __('Section margin', 'modularity-sections'),
             'name' => 'mod_section_padding',
             'type' => 'radio',
-            'instructions' => __('Select a margin to the top/bottom of this section. The margin will respect the size of the section.', 'modularity-form-builder'),
+            'instructions' => __('Select a margin to the top/bottom of this section. The margin will respect the size of the section.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -63,9 +63,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'sm' => __('Small', 'modularity-form-builder'),
-                'md' => __('Medium', 'modularity-form-builder'),
-                'lg' => __('Large', 'modularity-form-builder'),
+                'sm' => __('Small', 'modularity-sections'),
+                'md' => __('Medium', 'modularity-sections'),
+                'lg' => __('Large', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -76,10 +76,10 @@
         ),
         3 => array(
             'key' => 'field_599eabaeaad08',
-            'label' => __('Background focus (vertical)', 'modularity-form-builder'),
+            'label' => __('Background focus (vertical)', 'modularity-sections'),
             'name' => 'mod_section_bg_position_vertical',
             'type' => 'radio',
-            'instructions' => __('If the image has to be cropped to fit the view, where is the background focal point vertically?', 'modularity-form-builder'),
+            'instructions' => __('If the image has to be cropped to fit the view, where is the background focal point vertically?', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -88,9 +88,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'top' => __('Top', 'modularity-form-builder'),
-                'center' => __('Middle', 'modularity-form-builder'),
-                'bottom' => __('Bottom', 'modularity-form-builder'),
+                'top' => __('Top', 'modularity-sections'),
+                'center' => __('Middle', 'modularity-sections'),
+                'bottom' => __('Bottom', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -101,10 +101,10 @@
         ),
         4 => array(
             'key' => 'field_599eac93ead36',
-            'label' => __('Background focus (horizontal)', 'modularity-form-builder'),
+            'label' => __('Background focus (horizontal)', 'modularity-sections'),
             'name' => 'mod_section_bg_position_horizontal',
             'type' => 'radio',
-            'instructions' => __('If the image has to be cropped to fit the view, where is the background focal point horizontally?', 'modularity-form-builder'),
+            'instructions' => __('If the image has to be cropped to fit the view, where is the background focal point horizontally?', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -113,9 +113,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'left' => __('Left', 'modularity-form-builder'),
-                'center' => __('Center', 'modularity-form-builder'),
-                'right' => __('Right', 'modularity-form-builder'),
+                'left' => __('Left', 'modularity-sections'),
+                'center' => __('Center', 'modularity-sections'),
+                'right' => __('Right', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -126,7 +126,7 @@
         ),
         5 => array(
             'key' => 'field_599eaf20c6db6',
-            'label' => __('Parallax effect', 'modularity-form-builder'),
+            'label' => __('Parallax effect', 'modularity-sections'),
             'name' => 'mod_section_effect_parallax',
             'type' => 'true_false',
             'instructions' => '',
@@ -137,7 +137,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'message' => __('Yes, use parallax to create some depth with a fixed background in the section. This option creates a illusion that indicates that the content floats on-top of the background.', 'modularity-form-builder'),
+            'message' => __('Yes, use parallax to create some depth with a fixed background in the section. This option creates a illusion that indicates that the content floats on-top of the background.', 'modularity-sections'),
             'default_value' => 0,
             'ui' => 0,
             'ui_on_text' => '',
@@ -145,7 +145,7 @@
         ),
         6 => array(
             'key' => 'field_599ed4d2dc77b',
-            'label' => __('Overlay effect', 'modularity-form-builder'),
+            'label' => __('Overlay effect', 'modularity-sections'),
             'name' => 'mod_section_effect_overlay',
             'type' => 'true_false',
             'instructions' => '',
@@ -156,7 +156,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'message' => __('Yes, blend the background image with a selected color.', 'modularity-form-builder'),
+            'message' => __('Yes, blend the background image with a selected color.', 'modularity-sections'),
             'default_value' => 0,
             'ui' => 0,
             'ui_on_text' => '',
@@ -164,7 +164,7 @@
         ),
         7 => array(
             'key' => 'field_599fed3fec804',
-            'label' => __('Blur effect', 'modularity-form-builder'),
+            'label' => __('Blur effect', 'modularity-sections'),
             'name' => 'mod_section_effect_blur',
             'type' => 'true_false',
             'instructions' => '',
@@ -175,7 +175,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'message' => __('Yes, make the background image blurred to let the content stand out.', 'modularity-form-builder'),
+            'message' => __('Yes, make the background image blurred to let the content stand out.', 'modularity-sections'),
             'default_value' => 0,
             'ui' => 0,
             'ui_on_text' => '',
@@ -183,7 +183,7 @@
         ),
         8 => array(
             'key' => 'field_59a00dad5a07f',
-            'label' => __('Inner shadow effect', 'modularity-form-builder'),
+            'label' => __('Inner shadow effect', 'modularity-sections'),
             'name' => 'mod_section_effect_inset',
             'type' => 'true_false',
             'instructions' => '',
@@ -194,7 +194,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'message' => __('Yes, overlay the image with a soft inner shadow.', 'modularity-form-builder'),
+            'message' => __('Yes, overlay the image with a soft inner shadow.', 'modularity-sections'),
             'default_value' => 1,
             'ui' => 0,
             'ui_on_text' => '',
@@ -202,10 +202,10 @@
         ),
         9 => array(
             'key' => 'field_599ec93c4b4b7',
-            'label' => __('Image position', 'modularity-form-builder'),
+            'label' => __('Image position', 'modularity-sections'),
             'name' => 'mod_section_image_position',
             'type' => 'radio',
-            'instructions' => __('Select on what side of the screen that the image should be placed.', 'modularity-form-builder'),
+            'instructions' => __('Select on what side of the screen that the image should be placed.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -214,8 +214,8 @@
                 'id' => '',
             ),
             'choices' => array(
-                'left' => __('Left', 'modularity-form-builder'),
-                'right' => __('Right', 'modularity-form-builder'),
+                'left' => __('Left', 'modularity-sections'),
+                'right' => __('Right', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -226,10 +226,10 @@
         ),
         10 => array(
             'key' => 'field_599ed8d854523',
-            'label' => __('Background image', 'modularity-form-builder'),
+            'label' => __('Background image', 'modularity-sections'),
             'name' => 'mod_section_background_image',
             'type' => 'image',
-            'instructions' => __('Select a good background image for this section. Choose one that is large enough to cover the whole screen.', 'modularity-form-builder'),
+            'instructions' => __('Select a good background image for this section. Choose one that is large enough to cover the whole screen.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -250,10 +250,10 @@
         ),
         11 => array(
             'key' => 'field_599fce6fc2c2c',
-            'label' => __('Background color', 'modularity-form-builder'),
+            'label' => __('Background color', 'modularity-sections'),
             'name' => 'mod_section_background_color',
             'type' => 'color_picker',
-            'instructions' => __('Select a background coolor for this section. This is important to choose eaven if you are using a background image as this will show during rendering and in combination with some effects.', 'modularity-form-builder'),
+            'instructions' => __('Select a background coolor for this section. This is important to choose eaven if you are using a background image as this will show during rendering and in combination with some effects.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -265,10 +265,10 @@
         ),
         12 => array(
             'key' => 'field_599ecb18ef407',
-            'label' => __('Vertical content position', 'modularity-form-builder'),
+            'label' => __('Vertical content position', 'modularity-sections'),
             'name' => 'mod_section_content_position',
             'type' => 'radio',
-            'instructions' => __('How to justify the content vertically when there is space left in either column.', 'modularity-form-builder'),
+            'instructions' => __('How to justify the content vertically when there is space left in either column.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -277,9 +277,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'top' => __('Top', 'modularity-form-builder'),
-                'middle' => __('Middle', 'modularity-form-builder'),
-                'bottom' => __('Bottom', 'modularity-form-builder'),
+                'top' => __('Top', 'modularity-sections'),
+                'middle' => __('Middle', 'modularity-sections'),
+                'bottom' => __('Bottom', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -290,10 +290,10 @@
         ),
         13 => array(
             'key' => 'field_599edec7a0587',
-            'label' => __('Submodules', 'modularity-form-builder'),
+            'label' => __('Submodules', 'modularity-sections'),
             'name' => 'mod_section_submodules',
             'type' => 'post_object',
-            'instructions' => __('Select modules that you like to display below the content of this section. A limited types are compatible with this function. For now, you cannot create new ones from this UI or edit them (you have to go trough the modularity tab to the left).', 'modularity-form-builder'),
+            'instructions' => __('Select modules that you like to display below the content of this section. A limited types are compatible with this function. For now, you cannot create new ones from this UI or edit them (you have to go trough the modularity tab to the left).', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -320,10 +320,10 @@
         ),
         14 => array(
             'key' => 'field_599fd58984f01',
-            'label' => __('Foreground image', 'modularity-form-builder'),
+            'label' => __('Foreground image', 'modularity-sections'),
             'name' => 'mod_section_image',
             'type' => 'image',
-            'instructions' => __('Add an image to this section, placed in the foreground. Often svg images or transparent png images looks best.', 'modularity-form-builder'),
+            'instructions' => __('Add an image to this section, placed in the foreground. Often svg images or transparent png images looks best.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -344,10 +344,10 @@
         ),
         15 => array(
             'key' => 'field_59a0236d0a74e',
-            'label' => __('Columns', 'modularity-form-builder'),
+            'label' => __('Columns', 'modularity-sections'),
             'name' => 'mod_section_columns',
             'type' => 'radio',
-            'instructions' => __('Select the number of columns you do want to use for the body text.', 'modularity-form-builder'),
+            'instructions' => __('Select the number of columns you do want to use for the body text.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -356,9 +356,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                1 => __('One column', 'modularity-form-builder'),
-                2 => __('Two columns', 'modularity-form-builder'),
-                3 => __('Three columns', 'modularity-form-builder'),
+                1 => __('One column', 'modularity-sections'),
+                2 => __('Two columns', 'modularity-sections'),
+                3 => __('Three columns', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -369,10 +369,10 @@
         ),
         16 => array(
             'key' => 'field_59a02632ed6f6',
-            'label' => __('Justify text', 'modularity-form-builder'),
+            'label' => __('Justify text', 'modularity-sections'),
             'name' => 'mod_section_justify_text',
             'type' => 'true_false',
-            'instructions' => __('This may cause some light readability issues. Use with caution and review the results on the page displayed (in both mobile and desktop version).', 'modularity-form-builder'),
+            'instructions' => __('This may cause some light readability issues. Use with caution and review the results on the page displayed (in both mobile and desktop version).', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -380,7 +380,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'message' => __('Yes, even the space between words to fill up whole container', 'modularity-form-builder'),
+            'message' => __('Yes, even the space between words to fill up whole container', 'modularity-sections'),
             'default_value' => 0,
             'ui' => 0,
             'ui_on_text' => '',
@@ -388,10 +388,10 @@
         ),
         17 => array(
             'key' => 'field_59a6861f61302',
-            'label' => __('Font size', 'modularity-form-builder'),
+            'label' => __('Font size', 'modularity-sections'),
             'name' => 'mod_section_fontsize',
             'type' => 'radio',
-            'instructions' => __('How large should the font render? This only affects the header size, normal content will render as usual.', 'modularity-form-builder'),
+            'instructions' => __('How large should the font render? This only affects the header size, normal content will render as usual.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -400,9 +400,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'normal' => __('Normal', 'modularity-form-builder'),
-                'large' => __('Large', 'modularity-form-builder'),
-                'xlarge' => __('Extra large', 'modularity-form-builder'),
+                'normal' => __('Normal', 'modularity-sections'),
+                'large' => __('Large', 'modularity-sections'),
+                'xlarge' => __('Extra large', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
@@ -413,7 +413,7 @@
         ),
         18 => array(
             'key' => 'field_59a929fbc4f6e',
-            'label' => __('Frame fourgound image', 'modularity-form-builder'),
+            'label' => __('Frame fourgound image', 'modularity-sections'),
             'name' => 'mod_section_image_frame',
             'type' => 'true_false',
             'instructions' => '',
@@ -424,7 +424,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'message' => __('Yes, add a frame to the foreground image', 'modularity-form-builder'),
+            'message' => __('Yes, add a frame to the foreground image', 'modularity-sections'),
             'default_value' => 0,
             'ui' => 0,
             'ui_on_text' => '',
@@ -432,7 +432,7 @@
         ),
         19 => array(
             'key' => 'field_59a92a77de529',
-            'label' => __('Foreground image frame width', 'modularity-form-builder'),
+            'label' => __('Foreground image frame width', 'modularity-sections'),
             'name' => 'mod_section_image_frame_width',
             'type' => 'select',
             'instructions' => '',
@@ -452,9 +452,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'sm' => __('Small', 'modularity-form-builder'),
-                'md' => __('Medium', 'modularity-form-builder'),
-                'lg' => __('Large', 'modularity-form-builder'),
+                'sm' => __('Small', 'modularity-sections'),
+                'md' => __('Medium', 'modularity-sections'),
+                'lg' => __('Large', 'modularity-sections'),
             ),
             'default_value' => array(
                 0 => 'md',
@@ -468,7 +468,7 @@
         ),
         20 => array(
             'key' => 'field_59a92accde52a',
-            'label' => __('Foreground image frame color', 'modularity-form-builder'),
+            'label' => __('Foreground image frame color', 'modularity-sections'),
             'name' => 'mod_section_image_frame_color',
             'type' => 'color_picker',
             'instructions' => '',
@@ -491,7 +491,7 @@
         ),
         21 => array(
             'key' => 'field_59a93c8131933',
-            'label' => __('Overlay color', 'modularity-form-builder'),
+            'label' => __('Overlay color', 'modularity-sections'),
             'name' => 'mod_section_effect_overlay_color',
             'type' => 'color_picker',
             'instructions' => '',
@@ -514,7 +514,7 @@
         ),
         22 => array(
             'key' => 'field_59a93ca631934',
-            'label' => __('Overlay opacity', 'modularity-form-builder'),
+            'label' => __('Overlay opacity', 'modularity-sections'),
             'name' => 'mod_section_effect_overlay_opacity',
             'type' => 'select',
             'instructions' => '',
@@ -534,9 +534,9 @@
                 'id' => '',
             ),
             'choices' => array(
-                'hi' => __('High', 'modularity-form-builder'),
-                'md' => __('Medium', 'modularity-form-builder'),
-                'lo' => __('Low', 'modularity-form-builder'),
+                'hi' => __('High', 'modularity-sections'),
+                'md' => __('Medium', 'modularity-sections'),
+                'lo' => __('Low', 'modularity-sections'),
             ),
             'default_value' => array(
                 0 => 'md',
@@ -567,4 +567,4 @@
     'active' => 1,
     'description' => '',
 ));
-}
+}

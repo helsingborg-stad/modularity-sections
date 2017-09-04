@@ -40,7 +40,7 @@ new ModularitySections\App();
 // Acf auto import and export
 add_action('plugins_loaded', function () {
     $acfExportManager = new \AcfExportManager\AcfExportManager();
-    $acfExportManager->setTextdomain('modularity-form-builder');
+    $acfExportManager->setTextdomain('modularity-sections');
     $acfExportManager->setExportFolder(MODULARITYSECTIONS_PATH . 'acf-fields/');
     $acfExportManager->autoExport(array(
         'base' => 'group_599eaa60c0e79',

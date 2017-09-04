@@ -1,13 +1,13 @@
-<?php 
+<?php
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
     'key' => 'group_599fdc072e961',
-    'title' => __('Full section', 'modularity-form-builder'),
+    'title' => __('Full section', 'modularity-sections'),
     'fields' => array(
         0 => array(
             'key' => 'field_599fdc073244a',
-            'label' => __('General', 'modularity-form-builder'),
+            'label' => __('General', 'modularity-sections'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -67,7 +67,7 @@
         ),
         3 => array(
             'key' => 'field_599fdc073260a',
-            'label' => __('Background', 'modularity-form-builder'),
+            'label' => __('Background', 'modularity-sections'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -173,7 +173,7 @@
         ),
         8 => array(
             'key' => 'field_599fdc07327d0',
-            'label' => __('Margins', 'modularity-form-builder'),
+            'label' => __('Margins', 'modularity-sections'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -252,7 +252,7 @@
         ),
         12 => array(
             'key' => 'field_599fdc0732bc5',
-            'label' => __('Submodules', 'modularity-form-builder'),
+            'label' => __('Submodules', 'modularity-sections'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -306,4 +306,4 @@
     'active' => 1,
     'description' => '',
 ));
-}
+}
