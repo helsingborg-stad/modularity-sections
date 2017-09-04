@@ -1,4 +1,7 @@
 <section id="{{ $sectionID }}" class="section section-featured {{ $classes }}" style="background-color: {{ $backgroundColor }}; background-image: url({{ $backgroundImage }}); ">
+  @if(isset($effectOverlayColor) && $effectOverlayColor)
+    <div class="overlay" style="background-color: {{$effectOverlayColor}};"></div>
+  @endif
   <div class="container">
      <div class="grid">
         <div class="section-image grid-xs-12 grid-lg-5">
