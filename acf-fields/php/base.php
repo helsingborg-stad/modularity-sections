@@ -413,7 +413,7 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         18 => array(
             'key' => 'field_59a955123431a',
-            'label' => __('Font color', 'modularity-form-builder'),
+            'label' => __('Font color', 'modularity-sections'),
             'name' => 'mod_section_fontcolor',
             'type' => 'radio',
             'instructions' => '',
@@ -425,8 +425,8 @@ if (function_exists('acf_add_local_field_group')) {
                 'id' => '',
             ),
             'choices' => array(
-                'text-color-dark' => __('Dark', 'modularity-form-builder'),
-                'text-color-light' => __('Light', 'modularity-form-builder'),
+                'text-color-dark' => __('Dark', 'modularity-sections'),
+                'text-color-light' => __('Light', 'modularity-sections'),
             ),
             'allow_null' => 0,
             'other_choice' => 0,
