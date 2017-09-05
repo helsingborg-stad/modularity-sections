@@ -32,13 +32,50 @@
                 "id": ""
             },
             "clone": [
-                "field_599eaa6a6c354",
-                "field_59a0236d0a74e"
+                "field_599eaa6a6c354"
             ],
             "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_59aeadad99a45",
+            "label": "Number of columns",
+            "name": "number_of_columns",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "modularity-ui-header modularity-ui-highlight",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_59aeadce99a46",
+                    "label": "",
+                    "name": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_59a0236d0a74e"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         },
         {
             "key": "field_59aea095dee91",

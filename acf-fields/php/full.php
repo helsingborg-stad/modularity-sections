@@ -36,7 +36,6 @@
             ),
             'clone' => array(
                 0 => 'field_599eaa6a6c354',
-                1 => 'field_59a0236d0a74e',
             ),
             'display' => 'seamless',
             'layout' => 'block',
@@ -44,6 +43,44 @@
             'prefix_name' => 0,
         ),
         2 => array(
+            'key' => 'field_59aeadad99a45',
+            'label' => __('Number of columns', 'modularity-sections'),
+            'name' => 'number_of_columns',
+            'type' => 'group',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => 'modularity-ui-header modularity-ui-highlight',
+                'id' => '',
+            ),
+            'layout' => 'block',
+            'sub_fields' => array(
+                0 => array(
+                    'key' => 'field_59aeadce99a46',
+                    'label' => '',
+                    'name' => '',
+                    'type' => 'clone',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'clone' => array(
+                        0 => 'field_59a0236d0a74e',
+                    ),
+                    'display' => 'seamless',
+                    'layout' => 'block',
+                    'prefix_label' => 0,
+                    'prefix_name' => 0,
+                ),
+            ),
+        ),
+        3 => array(
             'key' => 'field_59aea095dee91',
             'label' => __('Text & font settings', 'modularity-sections'),
             'name' => 'text_font_settings',
@@ -83,7 +120,7 @@
                 ),
             ),
         ),
-        3 => array(
+        4 => array(
             'key' => 'field_599fdc073260a',
             'label' => __('Background', 'modularity-sections'),
             'name' => '',
@@ -99,7 +136,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        4 => array(
+        5 => array(
             'key' => 'field_59ae9cbbe44bb',
             'label' => __('Basic background details', 'modularity-sections'),
             'name' => 'the_basics',
@@ -138,7 +175,7 @@
                 ),
             ),
         ),
-        5 => array(
+        6 => array(
             'key' => 'field_59ae9b8cfd57d',
             'label' => __('Background focus', 'modularity-sections'),
             'name' => 'background_focus',
@@ -177,7 +214,7 @@
                 ),
             ),
         ),
-        6 => array(
+        7 => array(
             'key' => 'field_59ae87b6b6aec',
             'label' => __('Effects', 'modularity-sections'),
             'name' => 'effects',
@@ -220,7 +257,7 @@
                 ),
             ),
         ),
-        7 => array(
+        8 => array(
             'key' => 'field_599fdc07327d0',
             'label' => __('Margins', 'modularity-sections'),
             'name' => '',
@@ -236,7 +273,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        8 => array(
+        9 => array(
             'key' => 'field_599fdc0732863',
             'label' => '',
             'name' => '',
@@ -257,7 +294,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_599fdc07329fc',
             'label' => '',
             'name' => '',
@@ -278,7 +315,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_599fdc0732987',
             'label' => '',
             'name' => '',
@@ -299,7 +336,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599fdc0732bc5',
             'label' => __('Submodules', 'modularity-sections'),
             'name' => '',
@@ -315,7 +352,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_599fdc0732c47',
             'label' => '',
             'name' => '',

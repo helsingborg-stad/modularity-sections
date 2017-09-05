@@ -33,8 +33,8 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '50',
-                'class' => '',
+                'width' => '',
+                'class' => 'modularity-ui-header modularity-ui-highlight',
                 'id' => '',
             ),
             'choices' => array(
@@ -58,8 +58,8 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '50',
-                'class' => '',
+                'width' => '',
+                'class' => 'modularity-ui-header modularity-ui-highlight',
                 'id' => '',
             ),
             'choices' => array(
@@ -272,8 +272,8 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '50',
-                'class' => '',
+                'width' => '',
+                'class' => 'modularity-ui-header modularity-ui-highlight',
                 'id' => '',
             ),
             'choices' => array(
