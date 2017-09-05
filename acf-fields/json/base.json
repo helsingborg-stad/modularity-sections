@@ -136,7 +136,7 @@
             },
             "message": "Yes, use parallax to create some depth with a fixed background in the section. This option creates a illusion that indicates that the content floats on-top of the background.",
             "default_value": 0,
-            "ui": 0,
+            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
         },
@@ -155,7 +155,7 @@
             },
             "message": "Yes, blend the background image with a selected color.",
             "default_value": 0,
-            "ui": 0,
+            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
         },
@@ -174,7 +174,7 @@
             },
             "message": "Yes, make the background image blurred to let the content stand out.",
             "default_value": 0,
-            "ui": 0,
+            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
         },
@@ -193,7 +193,7 @@
             },
             "message": "Yes, overlay the image with a soft inner shadow.",
             "default_value": 1,
-            "ui": 0,
+            "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
         },
