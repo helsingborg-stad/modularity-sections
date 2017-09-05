@@ -416,7 +416,7 @@
             'label' => __('Font color', 'modularity-sections'),
             'name' => 'mod_section_fontcolor',
             'type' => 'radio',
-            'instructions' => '',
+            'instructions' => __('Select the color of the text displayed. This should be selected purely on readability.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(

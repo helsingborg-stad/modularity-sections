@@ -412,7 +412,7 @@
             "label": "Font color",
             "name": "mod_section_fontcolor",
             "type": "radio",
-            "instructions": "",
+            "instructions": "Select the color of the text displayed. This should be selected purely on readability.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {

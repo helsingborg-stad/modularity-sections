@@ -20,8 +20,30 @@ class App
 
         //Add sections menu to municipio
         add_filter('Municipio/Menu/Vertical/Items', array($this, 'renderSectionsMenu'));
+
+        //Add classes to mod element
+        add_filter('Modularity/Display/BeforeModule', array($this, 'addClass'), 10, 4);
     }
 
+    /**
+     * Add class to divided sections
+     * @return string
+     */
+    public function addClass($markup, $args, $moduleType, $moduleId)
+    {
+        if (in_array(str_replace("mod-section-", "", $moduleType), array('full', 'featured', 'split'))) {
+            if (function_exists('get_field') && get_field('mod_section_divider', $moduleId)) {
+                $markup = str_replace($moduleType . " ", $moduleType . " has-divider ", $markup);
+            }
+        }
+
+        return $markup;
+    }
+
+    /**
+     * Render the sections menu
+     * @return array
+     */
 
     public function renderSectionsMenu($items)
     {
