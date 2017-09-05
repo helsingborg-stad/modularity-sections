@@ -40,51 +40,85 @@
             "prefix_name": 0
         },
         {
-            "key": "field_599fd5fb527c2",
-            "label": "",
-            "name": "",
-            "type": "clone",
+            "key": "field_59aeb864abbe5",
+            "label": "Foreground image",
+            "name": "foreground",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "modularity-ui-header modularity-ui-highlight",
                 "id": ""
             },
-            "clone": [
-                "field_599fd58984f01",
-                "field_59a929fbc4f6e",
-                "field_59a92a77de529",
-                "field_59a92accde52a"
-            ],
-            "display": "seamless",
             "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "sub_fields": [
+                {
+                    "key": "field_59aeb8ea2db5e",
+                    "label": "",
+                    "name": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_599fd58984f01",
+                        "field_59a929fbc4f6e",
+                        "field_59a92a77de529",
+                        "field_59a92accde52a"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         },
         {
-            "key": "field_59a027afffd46",
-            "label": "",
-            "name": "",
-            "type": "clone",
+            "key": "field_59aeb7e474545",
+            "label": "Text & font settings",
+            "name": "text_font_settings",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "modularity-ui-header modularity-ui-highlight",
                 "id": ""
             },
-            "clone": [
-                "field_59a02632ed6f6",
-                "field_59a6861f61302",
-                "field_59a955123431a"
-            ],
-            "display": "seamless",
             "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "sub_fields": [
+                {
+                    "key": "field_59aeb7fc74546",
+                    "label": "",
+                    "name": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_59a02632ed6f6",
+                        "field_59a6861f61302",
+                        "field_59a955123431a"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         },
         {
             "key": "field_599ed837efd03",
@@ -103,94 +137,125 @@
             "endpoint": 0
         },
         {
-            "key": "field_599fd236f9084",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
+            "key": "field_59aebacca4e8b",
+            "label": "Background basic details",
+            "name": "background_basic_details",
+            "type": "group",
+            "instructions": "Set a background image and\/or color for this section.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "modularity-ui-header modularity-ui-highlight",
                 "id": ""
             },
-            "clone": [
-                "field_599fce6fc2c2c"
-            ],
-            "display": "seamless",
             "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "sub_fields": [
+                {
+                    "key": "field_59aebad9a4e8c",
+                    "label": "",
+                    "name": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_599fce6fc2c2c",
+                        "field_599ed8d854523"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         },
         {
-            "key": "field_599ed90b13e88",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
+            "key": "field_59aeba687973d",
+            "label": "Background focus",
+            "name": "background_focus",
+            "type": "group",
+            "instructions": "Some part of your image are often more important than others. A person or fourground image for example. Set the focal point in the image below.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "modularity-ui-header modularity-ui-highlight",
                 "id": ""
             },
-            "clone": [
-                "field_599ed8d854523"
-            ],
-            "display": "seamless",
             "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "sub_fields": [
+                {
+                    "key": "field_59aeba797973e",
+                    "label": "",
+                    "name": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_599eabaeaad08",
+                        "field_599eac93ead36"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         },
         {
-            "key": "field_599eac3fc1d85",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
+            "key": "field_59aeb9e54b6d2",
+            "label": "Effects",
+            "name": "effects",
+            "type": "group",
+            "instructions": "You can apply one or more effects below to this module. Please combine them carefully.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": " modularity-ui-additional modularity-ui-header modularity-ui-highlight",
                 "id": ""
             },
-            "clone": [
-                "field_599eabaeaad08",
-                "field_599eac93ead36"
-            ],
-            "display": "seamless",
             "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_599eb0127b917",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_599eaf20c6db6",
-                "field_599fed3fec804",
-                "field_59a00dad5a07f",
-                "field_599ed4d2dc77b",
-                "field_59a93c8131933",
-                "field_59a93ca631934"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "sub_fields": [
+                {
+                    "key": "field_59aeb9f34b6d3",
+                    "label": "",
+                    "name": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_599eaf20c6db6",
+                        "field_599fed3fec804",
+                        "field_59a00dad5a07f",
+                        "field_599ed4d2dc77b",
+                        "field_59a93c8131933",
+                        "field_59a93ca631934"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         },
         {
             "key": "field_599ea10abdd05",

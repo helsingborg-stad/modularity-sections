@@ -209,8 +209,8 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '50',
-                'class' => '',
+                'width' => '',
+                'class' => 'modularity-ui-header',
                 'id' => '',
             ),
             'choices' => array(
@@ -298,7 +298,7 @@
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
-                'class' => '',
+                'class' => 'modularity-ui-header ',
                 'id' => '',
             ),
             'post_type' => array(

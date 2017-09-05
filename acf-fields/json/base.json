@@ -206,8 +206,8 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
-                "class": "",
+                "width": "",
+                "class": "modularity-ui-header",
                 "id": ""
             },
             "choices": {
@@ -295,7 +295,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "modularity-ui-header ",
                 "id": ""
             },
             "post_type": [
