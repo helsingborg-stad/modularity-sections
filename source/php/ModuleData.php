@@ -49,7 +49,6 @@ class ModuleData
         $metaMapper = array(
             'mod_section_content' => 'content',
 
-            'font_mod_section_justify_text' => 'justifyText',
             'font_mod_section_fontsize' => 'fontSize',
             'font_mod_section_fontcolor' => 'fontColor',
 
@@ -195,10 +194,6 @@ class ModuleData
      */
     public function createTextLayoutProperties($data) : array
     {
-        //Add justify text
-        if ($data['justifyText']) {
-            $data['classes']['section-justify'] = "justify-text";
-        }
 
         //Add font size
         $data['classes']['section-fontsize'] = "fontsize-" . $data['fontSize'];

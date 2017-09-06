@@ -395,7 +395,7 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '33',
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),
@@ -420,7 +420,7 @@
             'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '33',
+                'width' => '50',
                 'class' => '',
                 'id' => '',
             ),
