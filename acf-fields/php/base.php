@@ -195,7 +195,7 @@
                 'id' => '',
             ),
             'message' => __('Yes, overlay the image with a soft inner shadow.', 'modularity-sections'),
-            'default_value' => 1,
+            'default_value' => 0,
             'ui' => 1,
             'ui_on_text' => '',
             'ui_off_text' => '',
@@ -254,7 +254,7 @@
             'name' => 'mod_section_background_color',
             'type' => 'color_picker',
             'instructions' => __('Select a background coolor for this section. This is important to choose eaven if you are using a background image as this will show during rendering and in combination with some effects.', 'modularity-sections'),
-            'required' => 1,
+            'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '50',
