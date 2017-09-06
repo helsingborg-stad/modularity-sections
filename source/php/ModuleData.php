@@ -49,35 +49,35 @@ class ModuleData
         $metaMapper = array(
             'mod_section_content' => 'content',
 
-            'group_mod_section_justify_text' => 'justifyText',
-            'group_mod_section_fontsize' => 'fontSize',
-            'group_mod_section_fontcolor' => 'fontColor',
+            'font_mod_section_justify_text' => 'justifyText',
+            'font_mod_section_fontsize' => 'fontSize',
+            'font_mod_section_fontcolor' => 'fontColor',
 
-            'group_mod_section_image' => 'foregroundImage',
-            'group_mod_section_image_frame' => 'foregroundImageFrame',
-            'group_mod_section_image_frame_width' => 'foregroundImageFrameWidth',
-            'group_mod_section_image_frame_color' => 'foregroundImageFrameColor',
+            'fgimg_mod_section_image' => 'foregroundImage',
+            'fgimg_mod_section_image_frame' => 'foregroundImageFrame',
+            'fgimg_mod_section_image_frame_width' => 'foregroundImageFrameWidth',
+            'fgimg_mod_section_image_frame_color' => 'foregroundImageFrameColor',
 
             'mod_section_height' => 'height',
             'mod_section_padding' => 'padding',
 
             'mod_section_image_position' => 'imagePosition',
             'mod_section_content_position' => 'contentPosition',
-            'mod_section_columns' => 'numberOfColumns',
+            'tcol_mod_section_columns' => 'numberOfColumns',
 
-            'mod_section_bg_position_vertical' => 'backgroundVertical',
-            'mod_section_bg_position_horizontal' => 'backgroundHorizontal',
+            'bgfoc_mod_section_bg_position_vertical' => 'backgroundVertical',
+            'bgfoc_mod_section_bg_position_horizontal' => 'backgroundHorizontal',
 
-            'group_mod_section_effect_parallax' => 'effectParallax',
-            'group_mod_section_effect_blur' => 'effectBlur',
-            'group_mod_section_effect_inset' => 'effectInsetShadow',
+            'efx_mod_section_effect_parallax' => 'effectParallax',
+            'efx_mod_section_effect_blur' => 'effectBlur',
+            'efx_mod_section_effect_inset' => 'effectInsetShadow',
 
-            'group_mod_section_effect_overlay' => 'effectOverlay',
-            'group_mod_section_effect_overlay_opacity' => 'effectOverlayOpcaity',
-            'group_mod_section_effect_overlay_color' => 'effectOverlayColor',
+            'efx_mod_section_effect_overlay' => 'effectOverlay',
+            'efx_mod_section_effect_overlay_opacity' => 'effectOverlayOpcaity',
+            'efx_mod_section_effect_overlay_color' => 'effectOverlayColor',
 
-            'group_mod_section_background_image' => 'backgroundImage',
-            'group_mod_section_background_color' => 'backgroundColor',
+            'bgimg_mod_section_background_image' => 'backgroundImage',
+            'bgimg_mod_section_background_color' => 'backgroundColor',
 
             'mod_section_submodules' => 'submodules',
         );
