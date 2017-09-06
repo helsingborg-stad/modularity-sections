@@ -42,7 +42,7 @@
         {
             "key": "field_59aeadad99a45",
             "label": "Number of columns",
-            "name": "number_of_columns",
+            "name": "group",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -80,7 +80,7 @@
         {
             "key": "field_59aea095dee91",
             "label": "Text & font settings",
-            "name": "text_font_settings",
+            "name": "group",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -136,7 +136,7 @@
         {
             "key": "field_59ae9cbbe44bb",
             "label": "Basic background details",
-            "name": "the_basics",
+            "name": "group",
             "type": "group",
             "instructions": "Set a background image and\/or color for this section.",
             "required": 0,
@@ -175,7 +175,7 @@
         {
             "key": "field_59ae9b8cfd57d",
             "label": "Background focus",
-            "name": "background_focus",
+            "name": "group",
             "type": "group",
             "instructions": "Some part of your image are often more important than others. A person or fourground image for example. Set the focal point in the image below.",
             "required": 0,
@@ -214,7 +214,7 @@
         {
             "key": "field_59ae87b6b6aec",
             "label": "Effects",
-            "name": "effects",
+            "name": "group",
             "type": "group",
             "instructions": "You can apply one or more effects below to this module. Please combine them carefully.",
             "required": 0,

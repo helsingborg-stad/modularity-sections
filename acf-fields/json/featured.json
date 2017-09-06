@@ -42,7 +42,7 @@
         {
             "key": "field_59aeb864abbe5",
             "label": "Foreground image",
-            "name": "foreground",
+            "name": "group",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -83,7 +83,7 @@
         {
             "key": "field_59aeb7e474545",
             "label": "Text & font settings",
-            "name": "text_font_settings",
+            "name": "group",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -139,7 +139,7 @@
         {
             "key": "field_59aebacca4e8b",
             "label": "Background basic details",
-            "name": "background_basic_details",
+            "name": "group",
             "type": "group",
             "instructions": "Set a background image and\/or color for this section.",
             "required": 0,
@@ -178,7 +178,7 @@
         {
             "key": "field_59aeba687973d",
             "label": "Background focus",
-            "name": "background_focus",
+            "name": "group",
             "type": "group",
             "instructions": "Some part of your image are often more important than others. A person or fourground image for example. Set the focal point in the image below.",
             "required": 0,
@@ -217,14 +217,14 @@
         {
             "key": "field_59aeb9e54b6d2",
             "label": "Effects",
-            "name": "effects",
+            "name": "group",
             "type": "group",
             "instructions": "You can apply one or more effects below to this module. Please combine them carefully.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": " modularity-ui-additional modularity-ui-header modularity-ui-highlight",
+                "class": "modularity-ui-additional modularity-ui-header modularity-ui-highlight",
                 "id": ""
             },
             "layout": "block",

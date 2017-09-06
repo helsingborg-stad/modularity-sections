@@ -49,14 +49,14 @@ class ModuleData
         $metaMapper = array(
             'mod_section_content' => 'content',
 
-            'mod_section_justify_text' => 'justifyText',
-            'mod_section_fontsize' => 'fontSize',
-            'mod_section_fontcolor' => 'fontColor',
+            'group_mod_section_justify_text' => 'justifyText',
+            'group_mod_section_fontsize' => 'fontSize',
+            'group_mod_section_fontcolor' => 'fontColor',
 
-            'mod_section_image' => 'foregroundImage',
-            'mod_section_image_frame' => 'foregroundImageFrame',
-            'mod_section_image_frame_width' => 'foregroundImageFrameWidth',
-            'mod_section_image_frame_color' => 'foregroundImageFrameColor',
+            'group_mod_section_image' => 'foregroundImage',
+            'group_mod_section_image_frame' => 'foregroundImageFrame',
+            'group_mod_section_image_frame_width' => 'foregroundImageFrameWidth',
+            'group_mod_section_image_frame_color' => 'foregroundImageFrameColor',
 
             'mod_section_height' => 'height',
             'mod_section_padding' => 'padding',
@@ -68,16 +68,16 @@ class ModuleData
             'mod_section_bg_position_vertical' => 'backgroundVertical',
             'mod_section_bg_position_horizontal' => 'backgroundHorizontal',
 
-            'mod_section_effect_parallax' => 'effectParallax',
-            'mod_section_effect_blur' => 'effectBlur',
-            'mod_section_effect_inset' => 'effectInsetShadow',
+            'group_mod_section_effect_parallax' => 'effectParallax',
+            'group_mod_section_effect_blur' => 'effectBlur',
+            'group_mod_section_effect_inset' => 'effectInsetShadow',
 
-            'mod_section_effect_overlay' => 'effectOverlay',
-            'mod_section_effect_overlay_opacity' => 'effectOverlayOpcaity',
-            'mod_section_effect_overlay_color' => 'effectOverlayColor',
+            'group_mod_section_effect_overlay' => 'effectOverlay',
+            'group_mod_section_effect_overlay_opacity' => 'effectOverlayOpcaity',
+            'group_mod_section_effect_overlay_color' => 'effectOverlayColor',
 
-            'mod_section_background_image' => 'backgroundImage',
-            'mod_section_background_color' => 'backgroundColor',
+            'group_mod_section_background_image' => 'backgroundImage',
+            'group_mod_section_background_color' => 'backgroundColor',
 
             'mod_section_submodules' => 'submodules',
         );

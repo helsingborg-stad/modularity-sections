@@ -42,7 +42,7 @@
         {
             "key": "field_59aeb511b83cd",
             "label": "Text & font settings",
-            "name": "text_font_settings",
+            "name": "group",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -98,7 +98,7 @@
         {
             "key": "field_59aeb58f585fe",
             "label": "Basic background details",
-            "name": "basic_background_details",
+            "name": "group",
             "type": "group",
             "instructions": "Set a background image and\/or color for this section.",
             "required": 0,
@@ -137,7 +137,7 @@
         {
             "key": "field_59aeb5e17ffe4",
             "label": "Background focus",
-            "name": "background_focus",
+            "name": "group",
             "type": "group",
             "instructions": "Some part of your image are often more important than others. A person or fourground image for example. Set the focal point in the image below.",
             "required": 0,

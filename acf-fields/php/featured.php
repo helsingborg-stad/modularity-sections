@@ -45,7 +45,7 @@
         2 => array(
             'key' => 'field_59aeb864abbe5',
             'label' => __('Foreground image', 'modularity-sections'),
-            'name' => 'foreground',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => '',
             'required' => 0,
@@ -86,7 +86,7 @@
         3 => array(
             'key' => 'field_59aeb7e474545',
             'label' => __('Text & font settings', 'modularity-sections'),
-            'name' => 'text_font_settings',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => '',
             'required' => 0,
@@ -142,7 +142,7 @@
         5 => array(
             'key' => 'field_59aebacca4e8b',
             'label' => __('Background basic details', 'modularity-sections'),
-            'name' => 'background_basic_details',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => __('Set a background image and/or color for this section.', 'modularity-sections'),
             'required' => 0,
@@ -181,7 +181,7 @@
         6 => array(
             'key' => 'field_59aeba687973d',
             'label' => __('Background focus', 'modularity-sections'),
-            'name' => 'background_focus',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => __('Some part of your image are often more important than others. A person or fourground image for example. Set the focal point in the image below.', 'modularity-sections'),
             'required' => 0,
@@ -220,14 +220,14 @@
         7 => array(
             'key' => 'field_59aeb9e54b6d2',
             'label' => __('Effects', 'modularity-sections'),
-            'name' => 'effects',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => __('You can apply one or more effects below to this module. Please combine them carefully.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
-                'class' => ' modularity-ui-additional modularity-ui-header modularity-ui-highlight',
+                'class' => 'modularity-ui-additional modularity-ui-header modularity-ui-highlight',
                 'id' => '',
             ),
             'layout' => 'block',

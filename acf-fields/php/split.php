@@ -45,7 +45,7 @@
         2 => array(
             'key' => 'field_59aeb511b83cd',
             'label' => __('Text & font settings', 'modularity-sections'),
-            'name' => 'text_font_settings',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => '',
             'required' => 0,
@@ -101,7 +101,7 @@
         4 => array(
             'key' => 'field_59aeb58f585fe',
             'label' => __('Basic background details', 'modularity-sections'),
-            'name' => 'basic_background_details',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => __('Set a background image and/or color for this section.', 'modularity-sections'),
             'required' => 0,
@@ -140,7 +140,7 @@
         5 => array(
             'key' => 'field_59aeb5e17ffe4',
             'label' => __('Background focus', 'modularity-sections'),
-            'name' => 'background_focus',
+            'name' => 'group',
             'type' => 'group',
             'instructions' => __('Some part of your image are often more important than others. A person or fourground image for example. Set the focal point in the image below.', 'modularity-sections'),
             'required' => 0,
