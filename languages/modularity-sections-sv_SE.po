@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
-"POT-Creation-Date: 2017-09-04 16:22+0200\n"
-"PO-Revision-Date: 2017-09-04 16:23+0200\n"
+"POT-Creation-Date: 2017-09-06 09:08+0200\n"
+"PO-Revision-Date: 2017-09-06 09:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -205,8 +205,8 @@ msgstr ""
 "Hur innehåller ska justeras vertikalt när det finns utrymme kvar i någon av "
 "kolumnerna."
 
-#: acf-fields/php/base.php:293 acf-fields/php/featured.php:300
-#: acf-fields/php/full.php:256 acf-fields/php/split.php:250
+#: acf-fields/php/base.php:293 acf-fields/php/featured.php:365
+#: acf-fields/php/full.php:341 acf-fields/php/split.php:281
 msgid "Submodules"
 msgstr "Moduler"
 
@@ -221,7 +221,7 @@ msgstr ""
 "begränsat urval av moduler kan användas här. För tillfället kan du inte "
 "skapa nya moduler i det här gränssnittet. "
 
-#: acf-fields/php/base.php:323
+#: acf-fields/php/base.php:323 acf-fields/php/featured.php:47
 msgid "Foreground image"
 msgstr "Bild"
 
@@ -292,6 +292,14 @@ msgstr "Extra stor"
 msgid "Font color"
 msgstr "Färg på typsnitt"
 
+#: acf-fields/php/base.php:419
+msgid ""
+"Select the color of the text displayed. This should be selected purely on "
+"readability."
+msgstr ""
+"Välj färgen som texten ska ha, du bör ta ett beslut grundat i läsbarheten "
+"och inte grundat i utseendet. "
+
 #: acf-fields/php/base.php:428
 msgid "Dark"
 msgstr "Mörk"
@@ -341,19 +349,67 @@ msgstr "Utvald sektion (sektion med förgrundsbild)"
 msgid "General"
 msgstr "Generellt"
 
-#: acf-fields/php/featured.php:94 acf-fields/php/full.php:71
-#: acf-fields/php/split.php:70
+#: acf-fields/php/featured.php:88 acf-fields/php/full.php:85
+#: acf-fields/php/split.php:47
+msgid "Text & font settings"
+msgstr "Typsnittsinställningar"
+
+#: acf-fields/php/featured.php:128 acf-fields/php/full.php:125
+#: acf-fields/php/split.php:87
 msgid "Background"
 msgstr "Bakgrund"
 
-#: acf-fields/php/featured.php:200 acf-fields/php/full.php:177
-#: acf-fields/php/split.php:150
+#: acf-fields/php/featured.php:144
+msgid "Background basic details"
+msgstr "Grundläggande inställningar för bakgrund"
+
+#: acf-fields/php/featured.php:147 acf-fields/php/full.php:144
+#: acf-fields/php/split.php:106
+msgid "Set a background image and/or color for this section."
+msgstr "Välj en bakgrundsbild och/eller färg för den här sektionen."
+
+#: acf-fields/php/featured.php:183 acf-fields/php/full.php:180
+#: acf-fields/php/split.php:142
+msgid "Background focus"
+msgstr "Bakgrundens fokuspunkt"
+
+#: acf-fields/php/featured.php:186 acf-fields/php/full.php:183
+#: acf-fields/php/split.php:145
+msgid ""
+"Some part of your image are often more important than others. A person or "
+"fourground image for example. Set the focal point in the image below."
+msgstr ""
+"Vissa delar av en bild är viktigare än andra. Ställ in en fokuspunkt i "
+"bilden som matchar en person eller objekt i förgrunden. "
+
+#: acf-fields/php/featured.php:222 acf-fields/php/full.php:219
+msgid "Effects"
+msgstr "Effekter"
+
+#: acf-fields/php/featured.php:225 acf-fields/php/full.php:222
+msgid ""
+"You can apply one or more effects below to this module. Please combine them "
+"carefully."
+msgstr ""
+"Du kan lägga till en eller flera effekter för den här modulen. Kombinera dem "
+"varsamt."
+
+#: acf-fields/php/featured.php:265 acf-fields/php/full.php:262
+#: acf-fields/php/split.php:181
 msgid "Margins"
 msgstr "Marginaler"
 
 #: acf-fields/php/full.php:6
 msgid "Full section"
 msgstr "Fullbredd sektion"
+
+#: acf-fields/php/full.php:47
+msgid "Number of columns"
+msgstr "Antal textkolumner"
+
+#: acf-fields/php/full.php:141 acf-fields/php/split.php:103
+msgid "Basic background details"
+msgstr "Grundläggande inställningar för bakgrund"
 
 #: acf-fields/php/split.php:6
 msgid "Split section"
