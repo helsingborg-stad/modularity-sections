@@ -572,6 +572,60 @@
             'return_format' => 'value',
             'placeholder' => '',
         ),
+        24 => array(
+            'key' => 'field_59afc2b4a0b9f',
+            'label' => __('Section divider', 'modularity-sections'),
+            'name' => 'mod_section_divider',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => '',
+            'default_value' => 0,
+            'ui' => 1,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
+        25 => array(
+            'key' => 'field_59afc4a5a0ba0',
+            'label' => __('Section divider style', 'modularity-sections'),
+            'name' => 'mod_section_divider_style',
+            'type' => 'select',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_59afc2b4a0b9f',
+                        'operator' => '==',
+                        'value' => '1',
+                    ),
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                'divider-skew' => __('Skew', 'modularity-sections'),
+                'divider-skew-reverse' => __('Skew (Reverse)', 'modularity-sections'),
+            ),
+            'default_value' => array(
+                0 => 'divider-skew',
+            ),
+            'allow_null' => 0,
+            'multiple' => 0,
+            'ui' => 0,
+            'ajax' => 0,
+            'return_format' => 'value',
+            'placeholder' => '',
+        ),
     ),
     'location' => array(
         0 => array(

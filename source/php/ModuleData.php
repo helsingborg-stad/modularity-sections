@@ -76,6 +76,9 @@ class ModuleData
             'efx_mod_section_effect_overlay_opacity' => 'effectOverlayOpcaity',
             'efx_mod_section_effect_overlay_color' => 'effectOverlayColor',
 
+            'efx_mod_section_divider' => 'sectionDivider',
+            'efx_mod_section_divider_style' => 'sectionDividerStyle',
+
             'bgimg_mod_section_background_image' => 'backgroundImage',
             'bgimg_mod_section_background_color' => 'backgroundColor',
 
@@ -132,6 +135,11 @@ class ModuleData
         //Add inset shadow effect
         if ($data['effectInsetShadow']) {
             $data['classes']['section-shadow'] = "effect-inner-shadow";
+        }
+
+        if ($data['sectionDivider'] == true && $data['sectionDividerStyle']) {
+            $data['classes']['section-divider-position'] = "divider-bottom";
+            $data['classes']['section-divider-style'] = $data['sectionDividerStyle'];
         }
 
         return $data;

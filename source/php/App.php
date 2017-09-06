@@ -32,7 +32,7 @@ class App
     public function addClass($markup, $args, $moduleType, $moduleId)
     {
         if (in_array(str_replace("mod-section-", "", $moduleType), array('full', 'featured', 'split'))) {
-            if (function_exists('get_field') && get_field('mod_section_divider', $moduleId)) {
+            if (function_exists('get_field') && get_field('efx_mod_section_divider', $moduleId)) {
                 $markup = str_replace($moduleType . " ", $moduleType . " has-divider ", $markup);
             }
         }

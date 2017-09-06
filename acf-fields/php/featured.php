@@ -252,6 +252,8 @@
                         3 => 'field_599ed4d2dc77b',
                         4 => 'field_59a93c8131933',
                         5 => 'field_59a93ca631934',
+                        6 => 'field_59afc2b4a0b9f',
+                        7 => 'field_59afc4a5a0ba0',
                     ),
                     'display' => 'seamless',
                     'layout' => 'block',
