@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
-"POT-Creation-Date: 2017-09-06 09:08+0200\n"
-"PO-Revision-Date: 2017-09-06 09:11+0200\n"
+"POT-Creation-Date: 2017-09-08 08:04+0200\n"
+"PO-Revision-Date: 2017-09-08 08:06+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -205,8 +205,8 @@ msgstr ""
 "Hur innehåller ska justeras vertikalt när det finns utrymme kvar i någon av "
 "kolumnerna."
 
-#: acf-fields/php/base.php:293 acf-fields/php/featured.php:365
-#: acf-fields/php/full.php:341 acf-fields/php/split.php:281
+#: acf-fields/php/base.php:293 acf-fields/php/featured.php:366
+#: acf-fields/php/full.php:342 acf-fields/php/split.php:280
 msgid "Submodules"
 msgstr "Moduler"
 
@@ -340,6 +340,22 @@ msgstr "Hög"
 msgid "Low"
 msgstr "Låg"
 
+#: acf-fields/php/base.php:577
+msgid "Section divider"
+msgstr "Avgränsare"
+
+#: acf-fields/php/base.php:596
+msgid "Section divider style"
+msgstr "Stil på sektionens avgränsare"
+
+#: acf-fields/php/base.php:616
+msgid "Skew"
+msgstr "Lutande"
+
+#: acf-fields/php/base.php:617
+msgid "Skew (Reverse)"
+msgstr "Lutande (omvänd)"
+
 #: acf-fields/php/featured.php:6
 msgid "Featured section"
 msgstr "Utvald sektion (sektion med förgrundsbild)"
@@ -354,27 +370,27 @@ msgstr "Generellt"
 msgid "Text & font settings"
 msgstr "Typsnittsinställningar"
 
-#: acf-fields/php/featured.php:128 acf-fields/php/full.php:125
-#: acf-fields/php/split.php:87
+#: acf-fields/php/featured.php:127 acf-fields/php/full.php:124
+#: acf-fields/php/split.php:86
 msgid "Background"
 msgstr "Bakgrund"
 
-#: acf-fields/php/featured.php:144
+#: acf-fields/php/featured.php:143
 msgid "Background basic details"
 msgstr "Grundläggande inställningar för bakgrund"
 
-#: acf-fields/php/featured.php:147 acf-fields/php/full.php:144
-#: acf-fields/php/split.php:106
+#: acf-fields/php/featured.php:146 acf-fields/php/full.php:143
+#: acf-fields/php/split.php:105
 msgid "Set a background image and/or color for this section."
 msgstr "Välj en bakgrundsbild och/eller färg för den här sektionen."
 
-#: acf-fields/php/featured.php:183 acf-fields/php/full.php:180
-#: acf-fields/php/split.php:142
+#: acf-fields/php/featured.php:182 acf-fields/php/full.php:179
+#: acf-fields/php/split.php:141
 msgid "Background focus"
 msgstr "Bakgrundens fokuspunkt"
 
-#: acf-fields/php/featured.php:186 acf-fields/php/full.php:183
-#: acf-fields/php/split.php:145
+#: acf-fields/php/featured.php:185 acf-fields/php/full.php:182
+#: acf-fields/php/split.php:144
 msgid ""
 "Some part of your image are often more important than others. A person or "
 "fourground image for example. Set the focal point in the image below."
@@ -382,11 +398,11 @@ msgstr ""
 "Vissa delar av en bild är viktigare än andra. Ställ in en fokuspunkt i "
 "bilden som matchar en person eller objekt i förgrunden. "
 
-#: acf-fields/php/featured.php:222 acf-fields/php/full.php:219
+#: acf-fields/php/featured.php:221 acf-fields/php/full.php:218
 msgid "Effects"
 msgstr "Effekter"
 
-#: acf-fields/php/featured.php:225 acf-fields/php/full.php:222
+#: acf-fields/php/featured.php:224 acf-fields/php/full.php:221
 msgid ""
 "You can apply one or more effects below to this module. Please combine them "
 "carefully."
@@ -394,8 +410,8 @@ msgstr ""
 "Du kan lägga till en eller flera effekter för den här modulen. Kombinera dem "
 "varsamt."
 
-#: acf-fields/php/featured.php:265 acf-fields/php/full.php:262
-#: acf-fields/php/split.php:181
+#: acf-fields/php/featured.php:266 acf-fields/php/full.php:263
+#: acf-fields/php/split.php:180
 msgid "Margins"
 msgstr "Marginaler"
 
@@ -407,7 +423,7 @@ msgstr "Fullbredd sektion"
 msgid "Number of columns"
 msgstr "Antal textkolumner"
 
-#: acf-fields/php/full.php:141 acf-fields/php/split.php:103
+#: acf-fields/php/full.php:140 acf-fields/php/split.php:102
 msgid "Basic background details"
 msgstr "Grundläggande inställningar för bakgrund"
 
@@ -458,9 +474,9 @@ msgid "Provides graphical sections intended for full-width usage"
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Sebastian Thulin"
+msgid "Sebastian Thulin, Nikolas Ramstedt"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://github.com/sebastianthulin"
+msgid "https://github.com/helsingborg-stad"
 msgstr ""
