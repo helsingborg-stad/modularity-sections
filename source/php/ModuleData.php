@@ -9,8 +9,8 @@ class ModuleData
     public $data = array();
     public $imageSize = array(
         'mod-section-split' => array(650, 365),
-        'mod-section-full' => array(1300, 731),
-        'mod-section-featured' => array(1300, 731),
+        'mod-section-full' => array(1920, 1080),
+        'mod-section-featured' => array(1920, 1080),
     );
 
     public function __construct($module)
