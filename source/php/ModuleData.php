@@ -106,6 +106,11 @@ class ModuleData
             $data['classes']['section-foreground-frame-width'] = "image-frame-width-" . $data['foregroundImageFrameWidth'];
         }
 
+        //Image caption that accepts shortcodes
+        if ($data['foregroundImage'] && $caption = get_post($data['foregroundImage'])->post_excerpt) {
+            $data['foregroundImageCaption'] = do_shortcode($caption);
+        }
+
         return $data;
     }
 
