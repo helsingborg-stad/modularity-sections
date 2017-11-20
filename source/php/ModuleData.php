@@ -9,8 +9,8 @@ class ModuleData
     public $data = array();
     public $imageSize = array(
         'mod-section-split' => array(650, 365),
-        'mod-section-full' => array(1300, 731),
-        'mod-section-featured' => array(1300, 731),
+        'mod-section-full' => array(1920, 1080),
+        'mod-section-featured' => array(1920, 1080),
     );
 
     public function __construct($module)
@@ -104,6 +104,11 @@ class ModuleData
         //Add parallax effect
         if ($data['foregroundImage'] && $data['foregroundImageFrame']) {
             $data['classes']['section-foreground-frame-width'] = "image-frame-width-" . $data['foregroundImageFrameWidth'];
+        }
+
+        //Image caption that accepts shortcodes
+        if ($data['foregroundImage'] && $caption = get_post($data['foregroundImage'])->post_excerpt) {
+            $data['foregroundImageCaption'] = do_shortcode($caption);
         }
 
         return $data;
