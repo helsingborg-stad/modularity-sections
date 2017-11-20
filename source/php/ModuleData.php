@@ -185,6 +185,11 @@ class ModuleData
             $data['backgroundImage'] = $data['backgroundImage'][0];
         }
 
+        //Add class that indicates that the section has a background image
+        if (is_numeric($data['backgroundImage'])) {
+            $data['classes']['has-background'] = 'has-background-image';
+        }
+
         return $data;
     }
 
