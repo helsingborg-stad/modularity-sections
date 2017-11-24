@@ -1,7 +1,7 @@
-<?php 
+<?php
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
     'key' => 'group_599eaa60c0e79',
     'title' => __('Section base fields', 'modularity-sections'),
     'fields' => array(
@@ -310,6 +310,7 @@
                 5 => 'mod-script',
                 6 => 'mod-social',
                 7 => 'mod-video',
+                8 => 'mod-socialmedia',
             ),
             'taxonomy' => array(
             ),
@@ -645,4 +646,4 @@
     'active' => 1,
     'description' => '',
 ));
-}
+}
