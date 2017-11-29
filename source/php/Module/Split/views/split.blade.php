@@ -5,10 +5,10 @@
       <div class="section-image hidden-xs hidden-sm grid-xs-12 grid-md-5 grid-lg-6" style="background-image: url({{ $backgroundImage }});" data-equal-item></div>
       <div class="section-content grid-xs-12 grid-md-7 grid-lg-6">
           <article class="section-article">
-                   @if (!$hideTitle && !empty($post_title))
-                   <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
-                   @endif
                  <div class="section-text">
+                    @if (!$hideTitle && !empty($post_title))
+                      <h2 class="section-title">{!! apply_filters('the_title', $post_title) !!}</h2>
+                    @endif
                    {!! $content !!}
                 </div>
           </article>
