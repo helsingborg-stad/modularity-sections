@@ -33,10 +33,20 @@ class ModuleData
         $this->data = $this->createBackgroundProperties($this->data);
         $this->data = $this->createTextLayoutProperties($this->data);
         $this->data = $this->createImageProperties($this->data);
+        $this->data = $this->createAnimationProperties($this->data);
         $this->data = $this->renderShortCodes($this->data);
+    }
 
-        //Add animation class
-        $this->data['classes']['animate'] = "animate";
+    public function createAnimationProperties($data)
+    {
+        if (get_field('mod_section_animation', $this->module->ID) && get_field('mod_section_animation', $this->module->ID) != 'none') {
+            $data['animation']['classes'] = "o-reveal-animation js-reveal-animation";
+
+            $animation = 'animated ' . get_field('mod_section_animation', $this->module->ID);
+            $data['animation']['attribute'] = $animation;
+        }
+
+        return $data;
     }
 
     /**

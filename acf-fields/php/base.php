@@ -1,7 +1,7 @@
-<?php
+<?php 
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
     'key' => 'group_599eaa60c0e79',
     'title' => __('Section base fields', 'modularity-sections'),
     'fields' => array(
@@ -10,6 +10,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Content', 'modularity-sections'),
             'name' => 'mod_section_content',
             'type' => 'wysiwyg',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -29,6 +30,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Section Height', 'modularity-sections'),
             'name' => 'mod_section_height',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('Select the amount of space that the section should take up vertically', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -54,6 +56,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Section margin', 'modularity-sections'),
             'name' => 'mod_section_padding',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('Select a margin to the top/bottom of this section. The margin will respect the size of the section.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -79,6 +82,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Background focus (vertical)', 'modularity-sections'),
             'name' => 'mod_section_bg_position_vertical',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('If the image has to be cropped to fit the view, where is the background focal point vertically?', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -104,6 +108,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Background focus (horizontal)', 'modularity-sections'),
             'name' => 'mod_section_bg_position_horizontal',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('If the image has to be cropped to fit the view, where is the background focal point horizontally?', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -129,6 +134,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Parallax effect', 'modularity-sections'),
             'name' => 'mod_section_effect_parallax',
             'type' => 'true_false',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -148,6 +154,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Overlay effect', 'modularity-sections'),
             'name' => 'mod_section_effect_overlay',
             'type' => 'true_false',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -167,6 +174,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Blur effect', 'modularity-sections'),
             'name' => 'mod_section_effect_blur',
             'type' => 'true_false',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -186,6 +194,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Inner shadow effect', 'modularity-sections'),
             'name' => 'mod_section_effect_inset',
             'type' => 'true_false',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -205,6 +214,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Image position', 'modularity-sections'),
             'name' => 'mod_section_image_position',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('Select on what side of the screen that the image should be placed.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -229,6 +239,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Background image', 'modularity-sections'),
             'name' => 'mod_section_background_image',
             'type' => 'image',
+            'value' => NULL,
             'instructions' => __('Select a good background image for this section. Choose one that is large enough to cover the whole screen.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -253,6 +264,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Background color', 'modularity-sections'),
             'name' => 'mod_section_background_color',
             'type' => 'color_picker',
+            'value' => NULL,
             'instructions' => __('Select a background coolor for this section. This is important to choose eaven if you are using a background image as this will show during rendering and in combination with some effects.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -268,6 +280,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Vertical content position', 'modularity-sections'),
             'name' => 'mod_section_content_position',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('How to justify the content vertically when there is space left in either column.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -293,6 +306,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Submodules', 'modularity-sections'),
             'name' => 'mod_section_submodules',
             'type' => 'post_object',
+            'value' => NULL,
             'instructions' => __('Select modules that you like to display below the content of this section. A limited types are compatible with this function. For now, you cannot create new ones from this UI or edit them (you have to go trough the modularity tab to the left).', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -324,6 +338,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Foreground image', 'modularity-sections'),
             'name' => 'mod_section_image',
             'type' => 'image',
+            'value' => NULL,
             'instructions' => __('Add an image to this section, placed in the foreground. Often svg images or transparent png images looks best.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -348,6 +363,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Columns', 'modularity-sections'),
             'name' => 'mod_section_columns',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('Select the number of columns you do want to use for the body text.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -373,6 +389,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Justify text', 'modularity-sections'),
             'name' => 'mod_section_justify_text',
             'type' => 'true_false',
+            'value' => NULL,
             'instructions' => __('This may cause some light readability issues. Use with caution and review the results on the page displayed (in both mobile and desktop version).', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -392,6 +409,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Font size', 'modularity-sections'),
             'name' => 'mod_section_fontsize',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('How large should the font render? This only affects the header size, normal content will render as usual.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -417,6 +435,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Font color', 'modularity-sections'),
             'name' => 'mod_section_fontcolor',
             'type' => 'radio',
+            'value' => NULL,
             'instructions' => __('Select the color of the text displayed. This should be selected purely on readability.', 'modularity-sections'),
             'required' => 1,
             'conditional_logic' => 0,
@@ -441,6 +460,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Frame fourgound image', 'modularity-sections'),
             'name' => 'mod_section_image_frame',
             'type' => 'true_false',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -460,6 +480,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Foreground image frame width', 'modularity-sections'),
             'name' => 'mod_section_image_frame_width',
             'type' => 'select',
+            'value' => NULL,
             'instructions' => '',
             'required' => 1,
             'conditional_logic' => array(
@@ -496,6 +517,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Foreground image frame color', 'modularity-sections'),
             'name' => 'mod_section_image_frame_color',
             'type' => 'color_picker',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => array(
@@ -519,6 +541,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Overlay color', 'modularity-sections'),
             'name' => 'mod_section_effect_overlay_color',
             'type' => 'color_picker',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => array(
@@ -542,6 +565,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Overlay opacity', 'modularity-sections'),
             'name' => 'mod_section_effect_overlay_opacity',
             'type' => 'select',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => array(
@@ -578,6 +602,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Section divider', 'modularity-sections'),
             'name' => 'mod_section_divider',
             'type' => 'true_false',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -597,6 +622,7 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => __('Section divider style', 'modularity-sections'),
             'name' => 'mod_section_divider_style',
             'type' => 'select',
+            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => array(
@@ -627,6 +653,34 @@ if (function_exists('acf_add_local_field_group')) {
             'return_format' => 'value',
             'placeholder' => '',
         ),
+        26 => array(
+            'key' => 'field_5a328e3688880',
+            'label' => __('Section animation', 'modularity-sections'),
+            'name' => 'mod_section_animation',
+            'type' => 'select',
+            'value' => NULL,
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+                'none' => __('None', 'modularity-sections'),
+                'fadeInUp' => __('Fade in up', 'modularity-sections'),
+            ),
+            'default_value' => array(
+                0 => 'none',
+            ),
+            'allow_null' => 0,
+            'multiple' => 0,
+            'ui' => 0,
+            'ajax' => 0,
+            'return_format' => 'value',
+            'placeholder' => '',
+        ),
     ),
     'location' => array(
         0 => array(
@@ -646,4 +700,4 @@ if (function_exists('acf_add_local_field_group')) {
     'active' => 1,
     'description' => '',
 ));
-}
+}

@@ -2,7 +2,7 @@
   @if(isset($effectOverlayColor) && $effectOverlayColor)
     <div class="overlay" style="background-color: {{$effectOverlayColor}};"></div>
   @endif
-  <div class="container">
+  <div class="container {{ $animation['classes'] }}" data-animation="{!! $animation['attribute'] !!}">
     <div class="grid">
       <div class="grid-xs-12 section-content">
         <article class="section-article full">
