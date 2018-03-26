@@ -7,7 +7,7 @@
      <div class="grid">
         <div class="section-image grid-xs-12 grid-lg-5">
           @if(is_numeric($foregroundImage))
-                <img style="border-color: {{ $foregroundImageFrameColor }}" src="{!! wp_get_attachment_image_src($foregroundImage, 'large')[0] !!}" class="hidden-xs hidden-sm hidden-md"/>
+                <img style="border-color: {{ $foregroundImageFrameColor }}" src="{!! wp_get_attachment_image_src($foregroundImage, array(900, null))[0] !!}" class="hidden-xs hidden-sm hidden-md"/>
                 <img style="border-color: {{ $foregroundImageFrameColor }}" src="{!! wp_get_attachment_image_src($foregroundImage, array(800,null))[0] !!}" class="hidden-xs hidden-sm hidden-lg"/>
                 <img style="border-color: {{ $foregroundImageFrameColor }}" src="{!! wp_get_attachment_image_src($foregroundImage, array(640, null))[0] !!}" class="hidden-md hidden-lg"/>
                 @if (! empty($foregroundImageCaption))
