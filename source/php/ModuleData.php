@@ -4,7 +4,6 @@ namespace ModularitySections;
 
 class ModuleData
 {
-
     public $module;
     public $data = array();
     public $imageSize = array(
@@ -34,7 +33,19 @@ class ModuleData
         $this->data = $this->createTextLayoutProperties($this->data);
         $this->data = $this->createImageProperties($this->data);
         $this->data = $this->createAnimationProperties($this->data);
+        $this->data = $this->appendCustomClasses($this->data);
         $this->data = $this->renderShortCodes($this->data);
+    }
+
+    public function appendCustomClasses($data)
+    {
+        if (!empty($data['customClasses'])) {
+            $customClasses = explode(' ', $data['customClasses']);
+            if (!empty($customClasses) && is_array($customClasses) && is_array($data['classes'])) {
+                $data['classes'] = array_merge($data['classes'], $customClasses);
+            }
+        }
+        return $data;
     }
 
     public function createAnimationProperties($data)
@@ -92,6 +103,7 @@ class ModuleData
             'bgimg_mod_section_background_color' => 'backgroundColor',
 
             'mod_section_submodules' => 'submodules',
+            'mod_section_classes' => 'customClasses',
         );
 
         //Id
