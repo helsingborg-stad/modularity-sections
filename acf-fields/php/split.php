@@ -26,7 +26,6 @@
             'label' => '',
             'name' => '',
             'type' => 'clone',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -48,7 +47,6 @@
             'label' => __('Typsnittsinställningar', 'modularity-sections'),
             'name' => 'font',
             'type' => 'group',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -64,7 +62,6 @@
                     'label' => '',
                     'name' => '',
                     'type' => 'clone',
-                    'value' => NULL,
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
@@ -89,7 +86,6 @@
             'label' => '',
             'name' => '',
             'type' => 'clone',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -107,6 +103,27 @@
             'prefix_name' => 0,
         ),
         4 => array(
+            'key' => 'field_5eb961ab15346',
+            'label' => '',
+            'name' => '',
+            'type' => 'clone',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'clone' => array(
+                0 => 'field_5eb9611f5099a',
+            ),
+            'display' => 'seamless',
+            'layout' => 'block',
+            'prefix_label' => 0,
+            'prefix_name' => 0,
+        ),
+        5 => array(
             'key' => 'field_599fddb1de713',
             'label' => __('Background', 'modularity-sections'),
             'name' => '',
@@ -122,12 +139,11 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        5 => array(
+        6 => array(
             'key' => 'field_59aeb58f585fe',
             'label' => __('Grundläggande inställningar för bakgrund', 'modularity-sections'),
             'name' => 'bgimg',
             'type' => 'group',
-            'value' => NULL,
             'instructions' => __('Välj en bakgrundsbild och/eller färg för den här sektionen.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -143,7 +159,6 @@
                     'label' => '',
                     'name' => '',
                     'type' => 'clone',
-                    'value' => NULL,
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
@@ -163,12 +178,11 @@
                 ),
             ),
         ),
-        6 => array(
+        7 => array(
             'key' => 'field_59aeb5e17ffe4',
             'label' => __('Bakgrundens fokuspunkt', 'modularity-sections'),
             'name' => 'bgfoc',
             'type' => 'group',
-            'value' => NULL,
             'instructions' => __('Vissa delar av en bild är viktigare än andra. Ställ in en fokuspunkt i bilden som matchar en person eller objekt i förgrunden.', 'modularity-sections'),
             'required' => 0,
             'conditional_logic' => 0,
@@ -184,7 +198,6 @@
                     'label' => '',
                     'name' => '',
                     'type' => 'clone',
-                    'value' => NULL,
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
@@ -204,7 +217,7 @@
                 ),
             ),
         ),
-        7 => array(
+        8 => array(
             'key' => 'field_599fddb1de8f6',
             'label' => __('Margins', 'modularity-sections'),
             'name' => '',
@@ -220,12 +233,11 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        8 => array(
+        9 => array(
             'key' => 'field_599fddb1de987',
             'label' => '',
             'name' => '',
             'type' => 'clone',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -242,12 +254,11 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_599fddb1deb21',
             'label' => '',
             'name' => '',
             'type' => 'clone',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -264,12 +275,11 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_599fddb1de9e5',
             'label' => '',
             'name' => '',
             'type' => 'clone',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -286,12 +296,11 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_599fddb1dea90',
             'label' => '',
             'name' => '',
             'type' => 'clone',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
@@ -308,7 +317,7 @@
             'prefix_label' => 0,
             'prefix_name' => 0,
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_599fddb1decc3',
             'label' => __('Submodules', 'modularity-sections'),
             'name' => '',
@@ -324,12 +333,11 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        13 => array(
+        14 => array(
             'key' => 'field_599fddb1ded24',
             'label' => '',
             'name' => '',
             'type' => 'clone',
-            'value' => NULL,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
