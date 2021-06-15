@@ -22,6 +22,10 @@ define('MODULARITYSECTIONS_PATH', plugin_dir_path(__FILE__));
 define('MODULARITYSECTIONS_URL', plugins_url('', __FILE__));
 define('MODULARITYSECTIONS_TEMPLATE_PATH', MODULARITYSECTIONS_PATH . 'templates/');
 define('MODULARITYSECTIONS_MODULE_PATH', MODULARITYSECTIONS_PATH . 'source/php/Module');
+define('MODULARITYSECTIONS_FULL_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Full/views');
+define('MODULARITYSECTIONS_SPLIT_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Split/views');
+define('MODULARITYSECTIONS_FEATURED_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Featured/views');
+
 
 load_plugin_textdomain('modularity-sections', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
@@ -70,3 +74,12 @@ add_action('plugins_loaded', function () {
         );
     }
 });
+
+add_filter('/Modularity/externalViewPath', function($viewPaths){
+    $viewPaths['mod-section-split'] = MODULARITYSECTIONS_SPLIT_VIEW_PATH;
+    $viewPaths['mod-section-full'] = MODULARITYSECTIONS_FULL_VIEW_PATH;
+    $viewPaths['mod-section-featured'] = MODULARITYSECTIONS_FEATURED_VIEW_PATH;
+    
+    return $viewPaths;
+});
+
