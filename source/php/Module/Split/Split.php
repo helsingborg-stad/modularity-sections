@@ -16,18 +16,21 @@ class Split extends \Modularity\Module
 
     public function data() : array
     {
-        //Get common data
-        $data = new \ModularitySections\ModuleData($this);
+        $data = get_fields($this->ID);
+        var_dump( $data);
+        // //Get common data
+        // $data = new \ModularitySections\ModuleData($this);
 
-        if (isset($data->data) && is_array($data->data)) {
-            $data = $data->data;
-        } else {
-            $data = array();
-        }
+        // if (isset($data->data) && is_array($data->data)) {
+        //     $data = $data->data;
+        // } else {
+        //     $data = array();
+        // }
 
-        //Implode classes (filterable)
-        $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args, $data));
+        // //Implode classes (filterable)
+        // $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args, $data));
 
+        
         //Send to view
         return $data;
     }
