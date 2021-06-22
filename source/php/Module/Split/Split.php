@@ -17,7 +17,7 @@ class Split extends \Modularity\Module
     public function data() : array
     {
         $data = get_fields($this->ID);
-        var_dump( $data);
+        
         // //Get common data
         // $data = new \ModularitySections\ModuleData($this);
 
