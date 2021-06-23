@@ -597,6 +597,44 @@
             'placeholder' => '',
         ),
         24 => array(
+            'key' => 'field_60d2f664b4cd4',
+            'label' => __('Spacing Top', 'modularity-sections'),
+            'name' => 'spacing_top',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => __('Add spacing to top', 'modularity-sections'),
+            'default_value' => 1,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
+        25 => array(
+            'key' => 'field_60d2f6a7b4cd5',
+            'label' => __('Spacing Bottom', 'modularity-sections'),
+            'name' => 'spacing_bottom',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '50',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => __('Add spacing to bottom', 'modularity-sections'),
+            'default_value' => 1,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ),
+        26 => array(
             'key' => 'field_599fdc0732bc5',
             'label' => __('Submodules', 'modularity-sections'),
             'name' => '',
@@ -612,7 +650,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        25 => array(
+        27 => array(
             'key' => 'field_599fdc0732c47',
             'label' => '',
             'name' => '',
@@ -685,6 +723,20 @@
             ),
         ),
         7 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-full',
+            ),
+        ),
+        8 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-full',
+            ),
+        ),
+        9 => array(
             0 => array(
                 'param' => 'block',
                 'operator' => '==',
