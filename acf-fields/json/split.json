@@ -225,6 +225,44 @@
             "placeholder": ""
         },
         {
+            "key": "field_60d2f7b110b0b",
+            "label": "Spacing Top",
+            "name": "spacing_top",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add spacing to top",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60d2f7cc10b0c",
+            "label": "Spacing Bottom",
+            "name": "spacing_bottom",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add spacing to bottom",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_599fddb1decc3",
             "label": "Submodules",
             "name": "",
@@ -268,6 +306,20 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "mod-section-split"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-split"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-split"
             }
         ],
         [
