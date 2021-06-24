@@ -28,6 +28,12 @@ class Full extends \Modularity\Module
         //Implode classes (filterable)
         $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args, $data));
 
+        $data = get_fields($this->ID);
+
+        if ($data['image_overlay']) {
+            $data['image_overlay'] = $data['text_color'] == 'dark' ? 'light' : 'dark';
+        }
+
         //Send to view
         return $data;
     }
