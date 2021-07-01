@@ -7,7 +7,7 @@
     'fields' => array(
         0 => array(
             'key' => 'field_60d1a7a50b827',
-            'label' => __('Content', 'modularity-sections'),
+            'label' => __('General', 'modularity-sections'),
             'name' => '',
             'type' => 'tab',
             'instructions' => '',
@@ -22,6 +22,27 @@
             'endpoint' => 0,
         ),
         1 => array(
+            'key' => 'field_60d1a90e5551a',
+            'label' => __('Image', 'modularity-sections'),
+            'name' => 'image',
+            'type' => 'focuspoint',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '25',
+                'class' => '',
+                'id' => '',
+            ),
+            'preview_size' => 'medium',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+        ),
+        2 => array(
             'key' => 'field_60d1a8040b829',
             'label' => __('Text', 'modularity-sections'),
             'name' => 'text',
@@ -30,7 +51,7 @@
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
-                'width' => '',
+                'width' => '75',
                 'class' => '',
                 'id' => '',
             ),
@@ -40,45 +61,14 @@
             'rows' => '',
             'new_lines' => '',
         ),
-        2 => array(
-            'key' => 'field_60d1a90e5551a',
-            'label' => __('Image', 'modularity-sections'),
-            'name' => 'image',
-            'type' => 'image',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'return_format' => 'url',
-            'preview_size' => 'medium',
-            'library' => 'all',
-            'min_width' => '',
-            'min_height' => '',
-            'min_size' => '',
-            'max_width' => '',
-            'max_height' => '',
-            'max_size' => '',
-            'mime_types' => '',
-        ),
         3 => array(
             'key' => 'field_60d1f51ff8692',
             'label' => __('Image Position', 'modularity-sections'),
             'name' => 'reverse_columns',
             'type' => 'radio',
             'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => array(
-                0 => array(
-                    0 => array(
-                        'field' => 'field_60d1a90e5551a',
-                        'operator' => '!=empty',
-                    ),
-                ),
-            ),
+            'required' => 1,
+            'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
                 'class' => '',
@@ -91,27 +81,11 @@
             'allow_null' => 0,
             'other_choice' => 0,
             'default_value' => '',
-            'layout' => 'vertical',
+            'layout' => 'horizontal',
             'return_format' => 'value',
             'save_other_choice' => 0,
         ),
         4 => array(
-            'key' => 'field_60d1a7c00b828',
-            'label' => __('Appearance', 'modularity-sections'),
-            'name' => '',
-            'type' => 'tab',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'placement' => 'top',
-            'endpoint' => 0,
-        ),
-        5 => array(
             'key' => 'field_60d1a9555551c',
             'label' => __('Text Color', 'modularity-sections'),
             'name' => 'text_color',
@@ -128,7 +102,7 @@
                 'light' => __('Light', 'modularity-sections'),
                 'dark' => __('Dark', 'modularity-sections'),
             ),
-            'default_value' => 'dark',
+            'default_value' => __('dark', 'modularity-sections'),
             'allow_null' => 0,
             'multiple' => 0,
             'ui' => 0,
@@ -136,7 +110,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        6 => array(
+        5 => array(
             'key' => 'field_60d1a84a0b82a',
             'label' => __('Text Size', 'modularity-sections'),
             'name' => 'text_size',
@@ -153,7 +127,7 @@
                 'default' => __('Default', 'modularity-sections'),
                 'large' => __('Large', 'modularity-sections'),
             ),
-            'default_value' => 'default',
+            'default_value' => __('default', 'modularity-sections'),
             'allow_null' => 0,
             'multiple' => 0,
             'ui' => 0,
@@ -161,7 +135,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        7 => array(
+        6 => array(
             'key' => 'field_60d1a9d55551e',
             'label' => __('Text Alignment', 'modularity-sections'),
             'name' => 'text_alignment',
@@ -187,7 +161,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        8 => array(
+        7 => array(
             'key' => 'field_60d1a9295551b',
             'label' => __('Background Color', 'modularity-sections'),
             'name' => 'background_color',
@@ -202,7 +176,7 @@
             ),
             'default_value' => '',
         ),
-        9 => array(
+        8 => array(
             'key' => 'field_60d1a9935551d',
             'label' => __('Height', 'modularity-sections'),
             'name' => 'height',
@@ -227,7 +201,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        10 => array(
+        9 => array(
             'key' => 'field_60d2f7b110b0b',
             'label' => __('Spacing Top', 'modularity-sections'),
             'name' => 'spacing_top',
@@ -246,7 +220,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        11 => array(
+        10 => array(
             'key' => 'field_60d2f7cc10b0c',
             'label' => __('Spacing Bottom', 'modularity-sections'),
             'name' => 'spacing_bottom',
@@ -265,7 +239,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        12 => array(
+        11 => array(
             'key' => 'field_599fddb1decc3',
             'label' => __('Submodules', 'modularity-sections'),
             'name' => '',
@@ -281,7 +255,7 @@
             'placement' => 'top',
             'endpoint' => 0,
         ),
-        13 => array(
+        12 => array(
             'key' => 'field_599fddb1ded24',
             'label' => '',
             'name' => '',
@@ -417,6 +391,55 @@
             ),
         ),
         16 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-split',
+            ),
+        ),
+        17 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-split',
+            ),
+        ),
+        18 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-split',
+            ),
+        ),
+        19 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-split',
+            ),
+        ),
+        20 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-split',
+            ),
+        ),
+        21 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-split',
+            ),
+        ),
+        22 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/section-split',
+            ),
+        ),
+        23 => array(
             0 => array(
                 'param' => 'block',
                 'operator' => '==',

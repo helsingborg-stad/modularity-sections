@@ -4,7 +4,7 @@
     'content'           => $text,
     'layout'            => 'split',
     'background'        => $background_color,
-    'image'             => $image,
+    'image'             => $image ? $image->url : false,
     'height'            => $height,
     'textColor'         => $text_color,
     'textAlignment'     => $text_alignment,

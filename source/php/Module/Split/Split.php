@@ -6,6 +6,7 @@ class Split extends \Modularity\Module
 {
     public $slug = 'section-split';
     public $supports = array();
+    private $imageSize = [500, 400]; 
 
     public function init()
     {
@@ -17,19 +18,18 @@ class Split extends \Modularity\Module
     public function data() : array
     {
         $data = get_fields($this->ID);
-        
-        // //Get common data
-        // $data = new \ModularitySections\ModuleData($this);
 
-        // if (isset($data->data) && is_array($data->data)) {
-        //     $data = $data->data;
-        // } else {
-        //     $data = array();
-        // }
+        //Fetch image data
+        if(isset($data['image']) && is_array($data['image'])) {
+            $data['image']['url'] = wp_get_attachment_image_src($data['image']['id'], $this->imageSize)[0];
+        } elseif(isset($data['image']) && is_numeric($data['image'])) {
+            $imageId = $data['image']; 
+            $data['image'] = []; 
+            $data['image']['url'] = wp_get_attachment_image_src($imageId, $this->imageSize)[0]; 
+        }
 
-        // //Implode classes (filterable)
-        // $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args, $data));
-
+        //Transform to object
+        $data['image'] = (object) $data['image']; 
         
         //Send to view
         return $data;
