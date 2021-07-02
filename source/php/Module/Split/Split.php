@@ -6,7 +6,7 @@ class Split extends \Modularity\Module
 {
     public $slug = 'section-split';
     public $supports = array();
-    private $imageSize = [500, 400]; 
+    private $imageSize = [960, 540]; 
 
     public function init()
     {
