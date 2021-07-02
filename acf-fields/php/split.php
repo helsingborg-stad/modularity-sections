@@ -3,7 +3,7 @@
 if (function_exists('acf_add_local_field_group')) {
     acf_add_local_field_group(array(
     'key' => 'group_599fddb1da69a',
-    'title' => __('Split section', 'modularity-sections'),
+    'title' => __('Section Settings', 'modularity-sections'),
     'fields' => array(
         0 => array(
             'key' => 'field_60d1a7a50b827',
@@ -294,9 +294,9 @@
         ),
         2 => array(
             0 => array(
-                'param' => 'block',
+                'param' => 'post_type',
                 'operator' => '==',
-                'value' => 'acf/section-split',
+                'value' => 'mod-section-full',
             ),
         ),
         3 => array(
@@ -310,7 +310,7 @@
             0 => array(
                 'param' => 'block',
                 'operator' => '==',
-                'value' => 'acf/section-split',
+                'value' => 'acf/section-full',
             ),
         ),
         5 => array(
@@ -324,126 +324,7 @@
             0 => array(
                 'param' => 'block',
                 'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        7 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        8 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        9 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        10 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        11 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        12 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        13 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        14 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        15 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        16 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        17 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        18 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        19 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        20 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        21 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        22 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        23 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-split',
+                'value' => 'acf/section-full',
             ),
         ),
     ),
