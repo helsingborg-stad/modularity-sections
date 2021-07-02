@@ -25,7 +25,9 @@ class Split extends \Modularity\Module
         } elseif(isset($data['image']) && is_numeric($data['image'])) {
             $imageId = $data['image']; 
             $data['image'] = []; 
-            $data['image']['url'] = wp_get_attachment_image_src($imageId, $this->imageSize)[0]; 
+            $data['image']['url']   = wp_get_attachment_image_src($imageId, $this->imageSize)[0];
+            $data['image']['top']   = false;
+            $data['image']['left']  = false;
         }
 
         //Transform to object
