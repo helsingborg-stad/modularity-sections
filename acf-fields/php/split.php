@@ -287,16 +287,16 @@
         ),
         1 => array(
             0 => array(
-                'param' => 'block',
+                'param' => 'post_type',
                 'operator' => '==',
-                'value' => 'acf/section-split',
+                'value' => 'mod-section-full',
             ),
         ),
         2 => array(
             0 => array(
                 'param' => 'post_type',
                 'operator' => '==',
-                'value' => 'mod-section-full',
+                'value' => 'mod-section-featured',
             ),
         ),
         3 => array(
@@ -317,14 +317,7 @@
             0 => array(
                 'param' => 'block',
                 'operator' => '==',
-                'value' => 'acf/section-split',
-            ),
-        ),
-        6 => array(
-            0 => array(
-                'param' => 'block',
-                'operator' => '==',
-                'value' => 'acf/section-full',
+                'value' => 'acf/section-featured',
             ),
         ),
     ),

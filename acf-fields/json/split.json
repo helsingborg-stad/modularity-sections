@@ -284,13 +284,6 @@
         ],
         [
             {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-split"
-            }
-        ],
-        [
-            {
                 "param": "post_type",
                 "operator": "==",
                 "value": "mod-section-full"
@@ -298,16 +291,9 @@
         ],
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/section-split"
-            }
-        ],
-        [
-            {
-                "param": "block",
-                "operator": "==",
-                "value": "acf\/section-full"
+                "value": "mod-section-featured"
             }
         ],
         [
@@ -322,6 +308,13 @@
                 "param": "block",
                 "operator": "==",
                 "value": "acf\/section-full"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-featured"
             }
         ]
     ],

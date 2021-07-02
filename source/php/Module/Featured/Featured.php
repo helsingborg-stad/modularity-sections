@@ -6,6 +6,7 @@ class Featured extends \Modularity\Module
 {
     public $slug = 'section-featured';
     public $supports = array();
+    private $imageSize = [960, 540]; 
 
     public function init()
     {
@@ -16,18 +17,22 @@ class Featured extends \Modularity\Module
 
     public function data() : array
     {
-        //Get common data
-        $data = new \ModularitySections\ModuleData($this);
+        $data = get_fields($this->ID);
 
-        if (isset($data->data) && is_array($data->data)) {
-            $data = $data->data;
-        } else {
-            $data = array();
+        //Fetch image data
+        if(isset($data['image']) && is_array($data['image'])) {
+            $data['image']['url'] = wp_get_attachment_image_src($data['image']['id'], $this->imageSize)[0];
+        } elseif(isset($data['image']) && is_numeric($data['image'])) {
+            $imageId = $data['image']; 
+            $data['image'] = []; 
+            $data['image']['url']   = wp_get_attachment_image_src($imageId, $this->imageSize)[0];
+            $data['image']['top']   = false;
+            $data['image']['left']  = false;
         }
 
-        //Implode classes (filterable)
-        $data['classes'] = implode(' ', apply_filters('Modularity/Module/Classes', $data['classes'], $this->post_type, $this->args, $data));
-
+        //Transform to object
+        $data['image'] = (object) $data['image']; 
+        
         //Send to view
         return $data;
     }
