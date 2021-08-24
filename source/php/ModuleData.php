@@ -35,6 +35,9 @@ class ModuleData
         $this->data = $this->createAnimationProperties($this->data);
         $this->data = $this->appendCustomClasses($this->data);
         $this->data = $this->renderShortCodes($this->data);
+
+        //Inner blocks 
+        $this->data['innerBlocks'] = '<InnerBlocks />'; 
     }
 
     public function appendCustomClasses($data)

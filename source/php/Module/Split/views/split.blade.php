@@ -19,4 +19,6 @@
     {!! $submoduleRendered !!}
     @endif
 
+    {!! $innerBlocks !!}
+
 @endsegment
