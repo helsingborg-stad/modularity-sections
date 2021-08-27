@@ -3,22 +3,6 @@
     "title": "Section Settings",
     "fields": [
         {
-            "key": "field_60d1a7a50b827",
-            "label": "General",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_60d1a90e5551a",
             "label": "Image",
             "name": "image",
@@ -237,41 +221,23 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_599fddb1decc3",
-            "label": "Submodules",
-            "name": "",
-            "type": "tab",
+            "key": "field_61276075a9782",
+            "label": "Full width",
+            "name": "stretch",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "gutenberg-hidden",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_599fddb1ded24",
-            "label": "",
-            "name": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_599edec7a0587"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "message": "Stretch to full width of the page (only works with centered placements)",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [

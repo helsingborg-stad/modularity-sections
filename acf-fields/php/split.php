@@ -6,22 +6,6 @@
     'title' => __('Section Settings', 'modularity-sections'),
     'fields' => array(
         0 => array(
-            'key' => 'field_60d1a7a50b827',
-            'label' => __('General', 'modularity-sections'),
-            'name' => '',
-            'type' => 'tab',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'placement' => 'top',
-            'endpoint' => 0,
-        ),
-        1 => array(
             'key' => 'field_60d1a90e5551a',
             'label' => __('Image', 'modularity-sections'),
             'name' => 'image',
@@ -42,7 +26,7 @@
             'max_height' => '',
             'max_size' => '',
         ),
-        2 => array(
+        1 => array(
             'key' => 'field_60d1a8040b829',
             'label' => __('Text', 'modularity-sections'),
             'name' => 'text',
@@ -61,7 +45,7 @@
             'rows' => '',
             'new_lines' => '',
         ),
-        3 => array(
+        2 => array(
             'key' => 'field_60d1f51ff8692',
             'label' => __('Image Position', 'modularity-sections'),
             'name' => 'reverse_columns',
@@ -85,7 +69,7 @@
             'return_format' => 'value',
             'save_other_choice' => 0,
         ),
-        4 => array(
+        3 => array(
             'key' => 'field_60d1a9555551c',
             'label' => __('Text Color', 'modularity-sections'),
             'name' => 'text_color',
@@ -110,7 +94,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        5 => array(
+        4 => array(
             'key' => 'field_60d1a84a0b82a',
             'label' => __('Text Size', 'modularity-sections'),
             'name' => 'text_size',
@@ -135,7 +119,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        6 => array(
+        5 => array(
             'key' => 'field_60d1a9d55551e',
             'label' => __('Text Alignment', 'modularity-sections'),
             'name' => 'text_alignment',
@@ -161,7 +145,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        7 => array(
+        6 => array(
             'key' => 'field_60d1a9295551b',
             'label' => __('Background Color', 'modularity-sections'),
             'name' => 'background_color',
@@ -176,7 +160,7 @@
             ),
             'default_value' => '',
         ),
-        8 => array(
+        7 => array(
             'key' => 'field_60d1a9935551d',
             'label' => __('Height', 'modularity-sections'),
             'name' => 'height',
@@ -201,7 +185,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        9 => array(
+        8 => array(
             'key' => 'field_60d2f7b110b0b',
             'label' => __('Spacing Top', 'modularity-sections'),
             'name' => 'spacing_top',
@@ -220,7 +204,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        10 => array(
+        9 => array(
             'key' => 'field_60d2f7cc10b0c',
             'label' => __('Spacing Bottom', 'modularity-sections'),
             'name' => 'spacing_bottom',
@@ -239,42 +223,24 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        11 => array(
-            'key' => 'field_599fddb1decc3',
-            'label' => __('Submodules', 'modularity-sections'),
-            'name' => '',
-            'type' => 'tab',
+        10 => array(
+            'key' => 'field_61276075a9782',
+            'label' => __('Full width', 'modularity-sections'),
+            'name' => 'stretch',
+            'type' => 'true_false',
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
-                'class' => '',
+                'class' => 'gutenberg-hidden',
                 'id' => '',
             ),
-            'placement' => 'top',
-            'endpoint' => 0,
-        ),
-        12 => array(
-            'key' => 'field_599fddb1ded24',
-            'label' => '',
-            'name' => '',
-            'type' => 'clone',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'clone' => array(
-                0 => 'field_599edec7a0587',
-            ),
-            'display' => 'seamless',
-            'layout' => 'block',
-            'prefix_label' => 0,
-            'prefix_name' => 0,
+            'message' => __('Stretch to full width of the page (only works with centered placements)', 'modularity-sections'),
+            'default_value' => 0,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
         ),
     ),
     'location' => array(

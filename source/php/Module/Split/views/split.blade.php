@@ -12,7 +12,8 @@
     'textSize'          => $text_size,
     'reverseColumns'    => $reverse_columns,
     'paddingTop'        => $spacing_top,
-    'paddingBottom'     => $spacing_bottom
+    'paddingBottom'     => $spacing_bottom,
+    'stretch'           => $stretch
 ])
 
     @if(is_array($submodules) && !empty($submodules))
