@@ -55,10 +55,10 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "1": "Left",
-                "0": "Right"
-            },
+            "choices": [
+                "Left",
+                "Right"
+            ],
             "allow_null": 0,
             "other_choice": 0,
             "default_value": "",
