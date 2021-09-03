@@ -7,6 +7,7 @@ class Featured extends \Modularity\Module
     public $slug = 'section-featured';
     public $supports = array();
     private $imageSize = [960, 540]; 
+    public $innerBlockCompatible = false;
 
     public function init()
     {

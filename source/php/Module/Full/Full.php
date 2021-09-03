@@ -7,6 +7,7 @@ class Full extends \Modularity\Module
     public $slug = 'section-full';
     public $supports = array();
     private $imageSize = [1366, 768]; 
+    public $innerBlockCompatible = false;
 
     public function init()
     {

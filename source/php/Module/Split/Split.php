@@ -7,12 +7,13 @@ class Split extends \Modularity\Module
     public $slug = 'section-split';
     public $supports = array();
     private $imageSize = [960, 540]; 
+    public $innerBlockCompatible = false;
 
     public function init()
     {
         $this->nameSingular = __("Section split", 'modularity-sections');
         $this->namePlural = __("Section split", 'modularity-sections');
-        $this->description = __("Outputs a section.", 'modularity-sections');
+        $this->description = __("Outputs a section.", 'modularity-sections');  
     }
 
     public function data() : array
