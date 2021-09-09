@@ -13,7 +13,8 @@
     'reverseColumns'    => $reverse_columns,
     'paddingTop'        => $spacing_top,
     'paddingBottom'     => $spacing_bottom,
-    'stretch'           => $stretch
+    'stretch'           => $stretch,
+    'context'           => 'sectionsSplit',
 ])
 
     @if(is_array($submodules) && !empty($submodules))
