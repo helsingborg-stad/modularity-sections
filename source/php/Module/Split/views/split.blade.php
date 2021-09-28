@@ -1,3 +1,4 @@
+<div class="{!! $class !!}">
 @segment([
     'id'                => $sectionID,
     'title'             => apply_filters('the_title', $post_title),
@@ -22,3 +23,4 @@
     @endif
 
 @endsegment
+</div>

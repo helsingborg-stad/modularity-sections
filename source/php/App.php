@@ -37,12 +37,16 @@ class App
      * @return array
      */
     public function blockData($viewData, $block, $module) {
-        
-        if($block['align'] == 'full' && !is_admin()) {
-            $viewData['stretch'] = true;
+
+        $classList[] = 't-block-container';
+
+        if(isset($block['align']) && !empty($block['align'])) {
+            $classList[] = "t-block-align-" . $block['align'];
         }
 
-        return $viewData; 
+        $viewData['class'] = implode(' ', $classList);
+
+        return $viewData;
     }
 
     /**
