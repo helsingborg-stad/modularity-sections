@@ -38,10 +38,10 @@ class App
      */
     public function blockData($viewData, $block, $module) {
 
-        $classList[] = 'municipio-block-container';
+        $classList[] = 't-block-container';
 
         if(isset($block['align']) && !empty($block['align'])) {
-            $classList[] = "municipio-block-align-" . $block['align'];
+            $classList[] = "t-block-align-" . $block['align'];
         }
 
         $viewData['classList'] = implode(' ', $classList);
