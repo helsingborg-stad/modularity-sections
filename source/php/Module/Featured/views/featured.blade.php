@@ -1,4 +1,4 @@
-<div class="{!! $classList !!}">
+<div class="{!! $class !!}">
 <section id="{{ $sectionID }}" class="section section-featured {{ $classes }}" style="background-color: {{ $backgroundColor }}; background-image: url({{ $backgroundImage }});">
   @if(isset($effectOverlayColor) && $effectOverlayColor)
     <div class="overlay" style="background-color: {{$effectOverlayColor}};"></div>

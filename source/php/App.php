@@ -44,7 +44,7 @@ class App
             $classList[] = "t-block-align-" . $block['align'];
         }
 
-        $viewData['classList'] = implode(' ', $classList);
+        $viewData['class'] = implode(' ', $classList);
 
         return $viewData;
     }
