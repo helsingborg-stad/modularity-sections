@@ -17,15 +17,11 @@ class App
         //Add classes to mod element
         add_filter('Modularity/Display/BeforeModule', array($this, 'addClass'), 10, 4);
 
-        //Add css to fields
-        add_filter('acf/load_field/name=reverse_columns', array($this, 'renderCss'), 10, 1);
-
         //Add full-width capabilty to blocks
         add_filter('Modularity/Block/Settings', array($this, 'blockSettings'), 10, 2); 
 
         //Add full width data to view
         add_filter('Modularity/Block/Data', array($this, 'blockData'), 10, 3); 
-        
     }
 
     /**
@@ -74,21 +70,6 @@ class App
         }
 
         return $markup;
-    }
-
-    /**
-     * Hide position selector if section full is edited.
-     * This enshures that we can use the same filed definition
-     * for all section types. 
-     *
-     * @param array $field
-     * @return array
-     */
-    public function renderCss($field) {
-        if($this->getCurrentPostType() == 'mod-section-full') {
-            $field['instructions'] = '<style>[data-name="reverse_columns"] { display: none !important; }</style>'; 
-        }
-        return $field; 
     }
 
     /**

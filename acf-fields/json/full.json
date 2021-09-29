@@ -1,9 +1,9 @@
 [{
-    "key": "group_599fddb1da69a",
-    "title": "Split Section Settings",
+    "key": "group_6154339331c4e",
+    "title": "Full Width Section Settings",
     "fields": [
         {
-            "key": "field_60d1a90e5551a",
+            "key": "field_6154339333491",
             "label": "Image",
             "name": "image",
             "type": "focuspoint",
@@ -24,7 +24,7 @@
             "max_size": ""
         },
         {
-            "key": "field_60d1a8040b829",
+            "key": "field_6154339333497",
             "label": "Text",
             "name": "text",
             "type": "textarea",
@@ -49,7 +49,7 @@
             "repeater_value_field": "",
             "repeater_post_id": 0,
             "repeater_display_value": 0,
-            "key": "field_60d1f51ff8692",
+            "key": "field_61543393334a6",
             "label": "Image Position",
             "name": "reverse_columns",
             "type": "radio",
@@ -79,7 +79,7 @@
             "repeater_value_field": "",
             "repeater_post_id": 0,
             "repeater_display_value": 0,
-            "key": "field_60d1a9555551c",
+            "key": "field_61543393334b0",
             "label": "Text Color",
             "name": "text_color",
             "type": "select",
@@ -110,7 +110,7 @@
             "repeater_value_field": "",
             "repeater_post_id": 0,
             "repeater_display_value": 0,
-            "key": "field_60d1a84a0b82a",
+            "key": "field_61543393334b6",
             "label": "Text Size",
             "name": "text_size",
             "type": "select",
@@ -141,7 +141,7 @@
             "repeater_value_field": "",
             "repeater_post_id": 0,
             "repeater_display_value": 0,
-            "key": "field_60d1a9d55551e",
+            "key": "field_61543393334bb",
             "label": "Text Alignment",
             "name": "text_alignment",
             "type": "select",
@@ -170,7 +170,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_60d1a9295551b",
+            "key": "field_61543393334bf",
             "label": "Background Color",
             "name": "background_color",
             "type": "color_picker",
@@ -191,7 +191,7 @@
             "repeater_value_field": "",
             "repeater_post_id": 0,
             "repeater_display_value": 0,
-            "key": "field_60d1a9935551d",
+            "key": "field_61543393334c3",
             "label": "Height",
             "name": "height",
             "type": "select",
@@ -216,7 +216,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_60d2f7b110b0b",
+            "key": "field_61543393334c7",
             "label": "Spacing Top",
             "name": "spacing_top",
             "type": "true_false",
@@ -235,7 +235,7 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_60d2f7cc10b0c",
+            "key": "field_61543393334cc",
             "label": "Spacing Bottom",
             "name": "spacing_bottom",
             "type": "true_false",
@@ -254,7 +254,7 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_61276075a9782",
+            "key": "field_61543393334d0",
             "label": "Full width",
             "name": "stretch",
             "type": "true_false",
@@ -278,14 +278,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "mod-section-split"
+                "value": "mod-section-full"
             }
         ],
         [
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/section-split"
+                "value": "acf\/section-full"
             }
         ]
     ],

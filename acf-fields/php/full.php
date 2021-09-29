@@ -2,11 +2,11 @@
 
 if (function_exists('acf_add_local_field_group')) {
     acf_add_local_field_group(array(
-    'key' => 'group_599fddb1da69a',
-    'title' => __('Split Section Settings', 'modularity-sections'),
+    'key' => 'group_6154339331c4e',
+    'title' => __('Full Width Section Settings', 'modularity-sections'),
     'fields' => array(
         0 => array(
-            'key' => 'field_60d1a90e5551a',
+            'key' => 'field_6154339333491',
             'label' => __('Image', 'modularity-sections'),
             'name' => 'image',
             'type' => 'focuspoint',
@@ -27,7 +27,7 @@
             'max_size' => '',
         ),
         1 => array(
-            'key' => 'field_60d1a8040b829',
+            'key' => 'field_6154339333497',
             'label' => __('Text', 'modularity-sections'),
             'name' => 'text',
             'type' => 'textarea',
@@ -52,7 +52,7 @@
             'repeater_value_field' => '',
             'repeater_post_id' => 0,
             'repeater_display_value' => 0,
-            'key' => 'field_60d1f51ff8692',
+            'key' => 'field_61543393334a6',
             'label' => __('Image Position', 'modularity-sections'),
             'name' => 'reverse_columns',
             'type' => 'radio',
@@ -82,7 +82,7 @@
             'repeater_value_field' => '',
             'repeater_post_id' => 0,
             'repeater_display_value' => 0,
-            'key' => 'field_60d1a9555551c',
+            'key' => 'field_61543393334b0',
             'label' => __('Text Color', 'modularity-sections'),
             'name' => 'text_color',
             'type' => 'select',
@@ -113,7 +113,7 @@
             'repeater_value_field' => '',
             'repeater_post_id' => 0,
             'repeater_display_value' => 0,
-            'key' => 'field_60d1a84a0b82a',
+            'key' => 'field_61543393334b6',
             'label' => __('Text Size', 'modularity-sections'),
             'name' => 'text_size',
             'type' => 'select',
@@ -144,7 +144,7 @@
             'repeater_value_field' => '',
             'repeater_post_id' => 0,
             'repeater_display_value' => 0,
-            'key' => 'field_60d1a9d55551e',
+            'key' => 'field_61543393334bb',
             'label' => __('Text Alignment', 'modularity-sections'),
             'name' => 'text_alignment',
             'type' => 'select',
@@ -173,7 +173,7 @@
             'placeholder' => '',
         ),
         6 => array(
-            'key' => 'field_60d1a9295551b',
+            'key' => 'field_61543393334bf',
             'label' => __('Background Color', 'modularity-sections'),
             'name' => 'background_color',
             'type' => 'color_picker',
@@ -194,7 +194,7 @@
             'repeater_value_field' => '',
             'repeater_post_id' => 0,
             'repeater_display_value' => 0,
-            'key' => 'field_60d1a9935551d',
+            'key' => 'field_61543393334c3',
             'label' => __('Height', 'modularity-sections'),
             'name' => 'height',
             'type' => 'select',
@@ -219,7 +219,7 @@
             'placeholder' => '',
         ),
         8 => array(
-            'key' => 'field_60d2f7b110b0b',
+            'key' => 'field_61543393334c7',
             'label' => __('Spacing Top', 'modularity-sections'),
             'name' => 'spacing_top',
             'type' => 'true_false',
@@ -238,7 +238,7 @@
             'ui_off_text' => '',
         ),
         9 => array(
-            'key' => 'field_60d2f7cc10b0c',
+            'key' => 'field_61543393334cc',
             'label' => __('Spacing Bottom', 'modularity-sections'),
             'name' => 'spacing_bottom',
             'type' => 'true_false',
@@ -257,7 +257,7 @@
             'ui_off_text' => '',
         ),
         10 => array(
-            'key' => 'field_61276075a9782',
+            'key' => 'field_61543393334d0',
             'label' => __('Full width', 'modularity-sections'),
             'name' => 'stretch',
             'type' => 'true_false',
@@ -281,14 +281,14 @@
             0 => array(
                 'param' => 'post_type',
                 'operator' => '==',
-                'value' => 'mod-section-split',
+                'value' => 'mod-section-full',
             ),
         ),
         1 => array(
             0 => array(
                 'param' => 'block',
                 'operator' => '==',
-                'value' => 'acf/section-split',
+                'value' => 'acf/section-full',
             ),
         ),
     ),
