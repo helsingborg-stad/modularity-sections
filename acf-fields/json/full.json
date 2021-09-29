@@ -157,9 +157,9 @@
             "filter_context": "",
             "share_option": 0,
             "choices": {
-                "top": "Top",
+                "left": "Left",
                 "center": "Center",
-                "bottom": "Bottom"
+                "right": "Right"
             },
             "default_value": false,
             "allow_null": 0,

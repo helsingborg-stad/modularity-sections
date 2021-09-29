@@ -160,9 +160,9 @@
             'filter_context' => '',
             'share_option' => 0,
             'choices' => array(
-                'top' => __('Top', 'modularity-sections'),
+                'left' => __('Left', 'modularity-sections'),
                 'center' => __('Center', 'modularity-sections'),
-                'bottom' => __('Bottom', 'modularity-sections'),
+                'right' => __('Right', 'modularity-sections'),
             ),
             'default_value' => false,
             'allow_null' => 0,
