@@ -6,7 +6,6 @@ class Full extends \Modularity\Module
 {
     public $slug = 'section-full';
     public $supports = array();
-    private $imageSize = [1366, 768]; 
 
     public function init()
     {
@@ -21,11 +20,11 @@ class Full extends \Modularity\Module
 
         //Fetch image data
         if(isset($data['image']) && is_array($data['image'])) {
-            $data['image']['url'] = wp_get_attachment_image_src($data['image']['id'], $this->imageSize)[0];
+            $data['image']['url'] = wp_get_attachment_image_src($data['image']['id'], [1500, false])[0];
         } elseif(isset($data['image']) && is_numeric($data['image'])) {
             $imageId = $data['image']; 
             $data['image'] = []; 
-            $data['image']['url']   = wp_get_attachment_image_src($imageId, $this->imageSize)[0];
+            $data['image']['url']   = wp_get_attachment_image_src($imageId, [1500, false])[0];
             $data['image']['top']   = false;
             $data['image']['left']  = false;
         }
