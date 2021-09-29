@@ -49,36 +49,6 @@
             "repeater_value_field": "",
             "repeater_post_id": 0,
             "repeater_display_value": 0,
-            "key": "field_61543393334a6",
-            "label": "Image Position",
-            "name": "reverse_columns",
-            "type": "radio",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": [
-                "Left",
-                "Right"
-            ],
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "repeater_choices": false,
-            "repeater_field": "",
-            "repeater_label_field": "",
-            "repeater_value_field": "",
-            "repeater_post_id": 0,
-            "repeater_display_value": 0,
             "key": "field_61543393334b0",
             "label": "Text Color",
             "name": "text_color",

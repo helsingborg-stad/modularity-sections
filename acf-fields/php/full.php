@@ -52,36 +52,6 @@
             'repeater_value_field' => '',
             'repeater_post_id' => 0,
             'repeater_display_value' => 0,
-            'key' => 'field_61543393334a6',
-            'label' => __('Image Position', 'modularity-sections'),
-            'name' => 'reverse_columns',
-            'type' => 'radio',
-            'instructions' => '',
-            'required' => 1,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'choices' => array(
-                0 => __('Left', 'modularity-sections'),
-                1 => __('Right', 'modularity-sections'),
-            ),
-            'allow_null' => 0,
-            'other_choice' => 0,
-            'default_value' => '',
-            'layout' => 'horizontal',
-            'return_format' => 'value',
-            'save_other_choice' => 0,
-        ),
-        3 => array(
-            'repeater_choices' => false,
-            'repeater_field' => '',
-            'repeater_label_field' => '',
-            'repeater_value_field' => '',
-            'repeater_post_id' => 0,
-            'repeater_display_value' => 0,
             'key' => 'field_61543393334b0',
             'label' => __('Text Color', 'modularity-sections'),
             'name' => 'text_color',
@@ -106,7 +76,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        4 => array(
+        3 => array(
             'repeater_choices' => false,
             'repeater_field' => '',
             'repeater_label_field' => '',
@@ -137,7 +107,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        5 => array(
+        4 => array(
             'repeater_choices' => 0,
             'repeater_field' => '',
             'repeater_label_field' => '',
@@ -172,7 +142,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        6 => array(
+        5 => array(
             'key' => 'field_61543393334bf',
             'label' => __('Background Color', 'modularity-sections'),
             'name' => 'background_color',
@@ -187,7 +157,7 @@
             ),
             'default_value' => '',
         ),
-        7 => array(
+        6 => array(
             'repeater_choices' => false,
             'repeater_field' => '',
             'repeater_label_field' => '',
@@ -218,7 +188,7 @@
             'ajax' => 0,
             'placeholder' => '',
         ),
-        8 => array(
+        7 => array(
             'key' => 'field_61543393334c7',
             'label' => __('Spacing Top', 'modularity-sections'),
             'name' => 'spacing_top',
@@ -237,7 +207,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        9 => array(
+        8 => array(
             'key' => 'field_61543393334cc',
             'label' => __('Spacing Bottom', 'modularity-sections'),
             'name' => 'spacing_bottom',
@@ -256,7 +226,7 @@
             'ui_on_text' => '',
             'ui_off_text' => '',
         ),
-        10 => array(
+        9 => array(
             'key' => 'field_61543393334d0',
             'label' => __('Full width', 'modularity-sections'),
             'name' => 'stretch',
