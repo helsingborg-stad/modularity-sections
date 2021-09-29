@@ -161,7 +161,7 @@
                 "center": "Center",
                 "bottom": "Bottom"
             },
-            "default_value": false,
+            "default_value": "center",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,

@@ -164,7 +164,7 @@
                 'center' => __('Center', 'modularity-sections'),
                 'bottom' => __('Bottom', 'modularity-sections'),
             ),
-            'default_value' => false,
+            'default_value' => __('center', 'modularity-sections'),
             'allow_null' => 0,
             'multiple' => 0,
             'ui' => 0,
