@@ -43,12 +43,6 @@
             "new_lines": ""
         },
         {
-            "repeater_choices": false,
-            "repeater_field": "",
-            "repeater_label_field": "",
-            "repeater_value_field": "",
-            "repeater_post_id": 0,
-            "repeater_display_value": 0,
             "key": "field_60d1f51ff8692",
             "label": "Image Position",
             "name": "reverse_columns",
@@ -61,6 +55,12 @@
                 "class": "",
                 "id": ""
             },
+            "repeater_choices": false,
+            "repeater_field": "",
+            "repeater_label_field": "",
+            "repeater_value_field": "",
+            "repeater_post_id": 0,
+            "repeater_display_value": 0,
             "choices": [
                 "Left",
                 "Right"
@@ -73,12 +73,6 @@
             "save_other_choice": 0
         },
         {
-            "repeater_choices": false,
-            "repeater_field": "",
-            "repeater_label_field": "",
-            "repeater_value_field": "",
-            "repeater_post_id": 0,
-            "repeater_display_value": 0,
             "key": "field_60d1a9555551c",
             "label": "Text Color",
             "name": "text_color",
@@ -91,6 +85,12 @@
                 "class": "",
                 "id": ""
             },
+            "repeater_choices": false,
+            "repeater_field": "",
+            "repeater_label_field": "",
+            "repeater_value_field": "",
+            "repeater_post_id": 0,
+            "repeater_display_value": 0,
             "choices": {
                 "light": "Light",
                 "dark": "Dark"
@@ -104,12 +104,6 @@
             "placeholder": ""
         },
         {
-            "repeater_choices": false,
-            "repeater_field": "",
-            "repeater_label_field": "",
-            "repeater_value_field": "",
-            "repeater_post_id": 0,
-            "repeater_display_value": 0,
             "key": "field_60d1a84a0b82a",
             "label": "Text Size",
             "name": "text_size",
@@ -122,6 +116,12 @@
                 "class": "",
                 "id": ""
             },
+            "repeater_choices": false,
+            "repeater_field": "",
+            "repeater_label_field": "",
+            "repeater_value_field": "",
+            "repeater_post_id": 0,
+            "repeater_display_value": 0,
             "choices": {
                 "default": "Default",
                 "large": "Large"
@@ -135,12 +135,6 @@
             "placeholder": ""
         },
         {
-            "repeater_choices": 0,
-            "repeater_field": "",
-            "repeater_label_field": "",
-            "repeater_value_field": "",
-            "repeater_post_id": 0,
-            "repeater_display_value": 0,
             "key": "field_60d1a9d55551e",
             "label": "Text Alignment",
             "name": "text_alignment",
@@ -153,6 +147,12 @@
                 "class": "",
                 "id": ""
             },
+            "repeater_choices": 0,
+            "repeater_field": "",
+            "repeater_label_field": "",
+            "repeater_value_field": "",
+            "repeater_post_id": 0,
+            "repeater_display_value": 0,
             "render_type": "",
             "filter_context": "",
             "share_option": 0,
@@ -182,15 +182,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
         },
         {
-            "repeater_choices": false,
-            "repeater_field": "",
-            "repeater_label_field": "",
-            "repeater_value_field": "",
-            "repeater_post_id": 0,
-            "repeater_display_value": 0,
             "key": "field_60d1a9935551d",
             "label": "Height",
             "name": "height",
@@ -203,6 +199,12 @@
                 "class": "",
                 "id": ""
             },
+            "repeater_choices": false,
+            "repeater_field": "",
+            "repeater_label_field": "",
+            "repeater_value_field": "",
+            "repeater_post_id": 0,
+            "repeater_display_value": 0,
             "choices": {
                 "content": "Content",
                 "full-screen": "Full Screen"
@@ -286,6 +288,20 @@
                 "param": "block",
                 "operator": "==",
                 "value": "acf\/section-split"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "mod-section-featured"
+            }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/section-featured"
             }
         ]
     ],

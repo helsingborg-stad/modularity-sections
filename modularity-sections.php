@@ -47,10 +47,8 @@ add_action('plugins_loaded', function () {
     $acfExportManager->setTextdomain('modularity-sections');
     $acfExportManager->setExportFolder(MODULARITYSECTIONS_PATH . 'acf-fields/');
     $acfExportManager->autoExport(array(
-        'base' => 'group_599eaa60c0e79',
-        'featured' => 'group_599ea0d1d160b',
         'full' => 'group_6154339331c4e',
-        'split' => 'group_599fddb1da69a',
+        'split-featured' => 'group_599fddb1da69a',
     ));
     $acfExportManager->import();
 });
@@ -61,25 +59,23 @@ add_action('plugins_loaded', function () {
 add_action('plugins_loaded', function () {
     if (function_exists('modularity_register_module')) {
         modularity_register_module(
-            MODULARITYSECTIONS_MODULE_PATH ."/Split/",
+            MODULARITYSECTIONS_MODULE_PATH . "/Split/",
             'Split'
         );
         modularity_register_module(
-            MODULARITYSECTIONS_MODULE_PATH ."/Full/",
+            MODULARITYSECTIONS_MODULE_PATH . "/Full/",
             'Full'
         );
         modularity_register_module(
-            MODULARITYSECTIONS_MODULE_PATH ."/Featured/",
+            MODULARITYSECTIONS_MODULE_PATH . "/Featured/",
             'Featured'
         );
     }
 });
 
-add_filter('/Modularity/externalViewPath', function($viewPaths){
+add_filter('/Modularity/externalViewPath', function ($viewPaths) {
     $viewPaths['mod-section-split'] = MODULARITYSECTIONS_SPLIT_VIEW_PATH;
     $viewPaths['mod-section-full'] = MODULARITYSECTIONS_FULL_VIEW_PATH;
     $viewPaths['mod-section-featured'] = MODULARITYSECTIONS_FEATURED_VIEW_PATH;
-    
     return $viewPaths;
 });
-
