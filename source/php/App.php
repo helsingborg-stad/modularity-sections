@@ -18,31 +18,10 @@ class App
         add_filter('Modularity/Display/BeforeModule', array($this, 'addClass'), 10, 4);
 
         //Add full-width capabilty to blocks
-        add_filter('Modularity/Block/Settings', array($this, 'blockSettings'), 10, 2); 
+        add_filter('Modularity/Block/Settings', array($this, 'blockSettings'), 10, 2);
 
         //Add full width data to view
-        add_filter('Modularity/Block/Data', array($this, 'blockData'), 10, 3); 
-    }
-
-    /**
-     * Add full width setting to frontend. 
-     *
-     * @param [array] $viewData
-     * @param [array] $block
-     * @param [object] $module
-     * @return array
-     */
-    public function blockData($viewData, $block, $module) {
-
-        $classList[] = 't-block-container';
-
-        if(isset($block['align']) && !empty($block['align'])) {
-            $classList[] = "t-block-align-" . $block['align'];
-        }
-
-        $viewData['class'] = implode(' ', $classList);
-
-        return $viewData;
+        add_filter('Modularity/Block/Data', array($this, 'blockData'), 10, 3);
     }
 
     /**
@@ -53,10 +32,26 @@ class App
      * @return array
      */
     public function blockSettings($data, $slug) {
-        if(strpos($slug, 'section') === 0 && isset($data['supports'])) {
-            $data['supports']['align'] = ['full']; 
+        if (strpos($slug, 'section') === 0 && isset($data['supports'])) {
+            $data['supports']['align'] = ['full'];
         }
-        return $data; 
+        return $data;
+    }
+
+    /**
+     * Add full width setting to frontend.
+     *
+     * @param [array] $viewData
+     * @param [array] $block
+     * @param [object] $module
+     * @return array
+     */
+    public function blockData($viewData, $block, $module) {
+        if (strpos($block['name'], 'acf/section') === 0 && $block['align'] == 'full' && !is_admin()) {
+            $viewData['stretch'] = true;
+        }
+
+        return $viewData;
     }
 
     /**
@@ -77,16 +72,14 @@ class App
      *
      * @return string|bool
      */
-    private function getCurrentPostType() {
-
+    private function getCurrentPostType()
+    {
         global $pagenow;
-    
-        if ('post.php' === $pagenow && isset($_GET['post'])){
-            $postId = $_GET['post'];
 
-            return get_post_type($postId);    
+        if ('post.php' === $pagenow && isset($_GET['post'])) {
+            return get_post_type($_GET['post']);
         }
 
-        return false; 
+        return false;
     }
 }

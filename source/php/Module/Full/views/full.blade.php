@@ -1,4 +1,3 @@
-<div class="{!! $class !!}">
 @segment([
     'id'                => $sectionID,
     'title'             => $postTitle,
@@ -14,7 +13,8 @@
     'reverseColumns'    => $reverse_columns,
     'paddingTop'        => $spacing_top,
     'paddingBottom'     => $spacing_bottom,
-    'stretch'           => $stretch
+    'stretch'           => $stretch,
+    'context'           => ['sectionsFull', 'sections',  'sections.full', 'module.sections.full']
 ])
 
     @if(is_array($submodules) && !empty($submodules))
@@ -22,4 +22,3 @@
     @endif
 
 @endsegment
-</div>
