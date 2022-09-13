@@ -37,6 +37,7 @@ $loader = new ModularitySections\Vendor\Psr4ClassLoader();
 $loader->addPrefix('ModularitySections', MODULARITYSECTIONS_PATH);
 $loader->addPrefix('ModularitySections', MODULARITYSECTIONS_PATH . 'source/php/');
 $loader->register();
+    
 
 // Start application
 new ModularitySections\App();

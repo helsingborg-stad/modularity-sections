@@ -9,7 +9,7 @@ namespace ModularitySections;
  */
 class Upgrade
 {
-    private $dbVersion = 21; //The db version we want to achive
+    private $dbVersion = 1; //The db version we want to achive
     private $dbVersionKey = 'mod_sections_db_version';
     private $db;
 
@@ -83,18 +83,23 @@ class Upgrade
      */
     private function v_1($db): bool
     {
-            
-    $post = get_post(['',
-    ]);
+    
+    $args = array('post_type' => 'mod-section-full');
+    $posts = get_posts($args);
+    //var_dump($args);
+    foreach($posts as $post) {
+        
+        $meta = get_post_meta($post->ID);
+        
 
-    foreach($post as $item) {
-        $meta = get_post_meta($item->ID);
-        var_dump($meta);
-
+    var_dump($meta['mod_section_content']);
+    if(!isset($meta['text'])) {
+        update_post_meta($postId, 'text', $meta['mod_section_content']);
     }
+}
     //hitta gamla metanycklar flytta
         //Copy and update code here
-        return true; //Return false to keep running this each time!
+        return false; //Return false to keep running this each time!
     }
 
     // Migrate width from acf to kirki
