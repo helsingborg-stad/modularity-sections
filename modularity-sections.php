@@ -42,7 +42,7 @@ $loader->register();
 // Start application
 new ModularitySections\App();
 
-//upgrade
+// Upgrade database
 new \ModularitySections\Upgrade();
 
 // Acf auto import and export
