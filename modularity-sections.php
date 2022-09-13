@@ -41,6 +41,9 @@ $loader->register();
 // Start application
 new ModularitySections\App();
 
+//upgrade
+new \ModularitySections\Upgrade();
+
 // Acf auto import and export
 add_action('plugins_loaded', function () {
     $acfExportManager = new \AcfExportManager\AcfExportManager();
