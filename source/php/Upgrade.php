@@ -61,7 +61,7 @@ class Upgrade
             'bgimg_mod_section_background_image' => 'image',
             'font_mod_section_fontsize' =>'text_size',
             'font_mod_section_fontcolor' => 'text_color',
-            
+            //'height'
         );
 
         //echo wp_get_attachment_image(1218,$size = 'thumbnail');
