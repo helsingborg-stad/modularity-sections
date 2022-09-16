@@ -6,6 +6,9 @@ class App
 {
     public function __construct()
     {
+
+          new \ModularitySections\Upgrade();
+
         //Add template dirs
         add_filter('Modularity/Module/TemplatePath', function ($paths) {
             foreach (array('full', 'featured', 'split') as $module) {
@@ -22,8 +25,10 @@ class App
 
         //Add full width data to view
         add_filter('Modularity/Block/Data', array($this, 'blockData'), 10, 3);
-    }
 
+        
+    }
+    
     /**
      * Allow full-width alignment on section blocks
      *

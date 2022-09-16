@@ -58,9 +58,23 @@ class Upgrade
             'mod_section_content' => 'text'
         );
 
+/*     $args = array('post_type' => 'mod-section-full');
+    $posts = get_posts($args);
+    foreach($posts as $post) {
+        
+        $meta = get_post_meta($post->ID);
+        
+
+    var_dump($meta['mod_section_content']);
+    if(!isset($meta['text'])) {
+        update_post_meta($postId, 'text', $meta['mod_section_content']);
+    }
+} */
+    var_dump($posts);
         if (is_array($posts) && !empty($posts)) {
             foreach ($posts as $post) {
                 $meta = get_post_meta($post->ID);
+                var_dump($meta['mod_section_content']);
 
                 foreach ($keysToMove as $from => $to) {
                     if (!isset($meta[$to])) {
