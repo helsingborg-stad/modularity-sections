@@ -61,10 +61,11 @@ class Upgrade
             'bgimg_mod_section_background_image' => 'image',
             'font_mod_section_fontsize' =>'text_size',
             'font_mod_section_fontcolor' => 'text_color',
-            //'height'
-        );
+            'mod_section_height' => 'height',
+            'mod_section_padding' => 'spacing_top',
+            'bgimg_mod_section_background_color' => 'background_color'
 
-        //echo wp_get_attachment_image(1218,$size = 'thumbnail');
+        );
 
         if (is_array($posts) && !empty($posts)) {
             foreach ($posts as $post) {
@@ -92,7 +93,22 @@ class Upgrade
                             $meta[$from] = 'text-color-dark' ? 'dark' : 'light';
                         }
 
+                        //height 
+                        if($to == 'height') {
+                            $meta[$from] = 'lg' ? 'full-screen' : 'content';
+                            
+                        }
 
+                        //padding
+                        if($to == 'spacing_top') {
+                            if($meta[$from] = 'lg') {
+                                update_post_meta($postId, "spacing_bottom", 1);
+                                $meta[$from] = 1;
+                            } else {
+                                $meta[$from] = 0;
+                            }
+                        }
+                        
                         update_post_meta($postId, $to, $meta[$from]);
                     }
                 }
