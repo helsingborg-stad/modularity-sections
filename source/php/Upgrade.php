@@ -59,9 +59,9 @@ class Upgrade
         $keysToMove = array(
             'mod_section_content' => 'text',
             'bgimg_mod_section_background_image' => 'image',
-
             'font_mod_section_fontsize' =>'text_size',
             'font_mod_section_fontcolor' => 'text_color',
+            
         );
 
         //echo wp_get_attachment_image(1218,$size = 'thumbnail');
@@ -81,14 +81,18 @@ class Upgrade
                                 'url' => wp_get_attachment_image_src($meta[$from])
                             ];
                         }
-//large/default
-                        if($to == 'text_size') {
-                            var_dump($meta[$from]);
+
+                        //font-size
+                        if($to == 'text_size' && $meta[$from] == 'normal') {
+                            $meta[$from] = 'normal' ? 'default' : 'large';
+                        } 
+
+                        //font-color
+                        if($to == 'text_color') {
+                            $meta[$from] = 'text-color-dark' ? 'dark' : 'light';
                         }
 
-                        
-                        //var_dump($meta['font_mod_section_fontsize']);
-                        //var_dump($meta['bgimg_mod_section_background_image']);
+
                         update_post_meta($postId, $to, $meta[$from]);
                     }
                 }
