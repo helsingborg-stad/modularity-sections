@@ -7,8 +7,6 @@ class App
     public function __construct()
     {
 
-          new \ModularitySections\Upgrade();
-
         //Add template dirs
         add_filter('Modularity/Module/TemplatePath', function ($paths) {
             foreach (array('full', 'featured', 'split') as $module) {

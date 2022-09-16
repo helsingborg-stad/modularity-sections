@@ -9,7 +9,7 @@ namespace ModularitySections;
  */
 class Upgrade
 {
-    private $dbVersion = 1; //The db version we want to achive
+    private $dbVersion = 2; //The db version we want to achive
     private $dbVersionKey = 'mod_sections_db_version';
     private $db;
 
@@ -48,33 +48,23 @@ class Upgrade
      */
     private function v_1($db): bool
     {
+
         $posts = get_posts([
             'post_type' => 'mod-section-full',
             'numberposts' => -1
         ]);
+        //var_dump($posts);
 
         //key = from, value = to
         $keysToMove = array(
             'mod_section_content' => 'text'
         );
 
-/*     $args = array('post_type' => 'mod-section-full');
-    $posts = get_posts($args);
-    foreach($posts as $post) {
-        
-        $meta = get_post_meta($post->ID);
-        
+        //echo wp_get_attachment_image(1218,$size = 'thumbnail');
 
-    var_dump($meta['mod_section_content']);
-    if(!isset($meta['text'])) {
-        update_post_meta($postId, 'text', $meta['mod_section_content']);
-    }
-} */
-    var_dump($posts);
         if (is_array($posts) && !empty($posts)) {
             foreach ($posts as $post) {
                 $meta = get_post_meta($post->ID);
-                var_dump($meta['mod_section_content']);
 
                 foreach ($keysToMove as $from => $to) {
                     if (!isset($meta[$to])) {
@@ -87,8 +77,9 @@ class Upgrade
                                 'url' => wp_get_attachment_image_src($meta[$from])
                             ];
                         }
-
-                        update_post_meta($postId, $to, $meta[$from]);
+                        var_dump($meta[$from]);
+                        var_dump($to, implode($meta['bgimg_mod_section_background_image']));
+                        update_post_meta($postId, $to, implode($meta[$from]));
                     }
                 }
             }
@@ -124,7 +115,6 @@ class Upgrade
 
             //Run upgrade(s)
             while ($currentDbVersion <= $this->dbVersion) {
-                $currentDbVersion++;
                 $funcName = 'v_' . (string) $currentDbVersion;
                 if (method_exists($this, $funcName)) {
                     if ($this->{$funcName}($this->db)) {
@@ -132,6 +122,7 @@ class Upgrade
                         wp_cache_flush();
                     }
                 }
+                $currentDbVersion++;
             }
         }
     }
