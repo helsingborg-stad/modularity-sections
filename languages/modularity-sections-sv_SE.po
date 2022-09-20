@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
-"POT-Creation-Date: 2022-09-20 10:53+0200\n"
-"PO-Revision-Date: 2022-09-20 11:06+0200\n"
+"POT-Creation-Date: 2022-09-20 11:06+0200\n"
+"PO-Revision-Date: 2022-09-20 11:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -33,8 +33,6 @@ msgid "Text"
 msgstr "Text"
 
 #: acf-fields/php/full.php:56 acf-fields/php/split-featured.php:80
-#, fuzzy
-#| msgid "Font color"
 msgid "Text Color"
 msgstr "Färg på typsnitt"
 
@@ -83,14 +81,10 @@ msgid "Right"
 msgstr "Höger"
 
 #: acf-fields/php/full.php:137
-#, fuzzy
-#| msgid "Center"
 msgid "center"
 msgstr "Mitten"
 
 #: acf-fields/php/full.php:147 acf-fields/php/split-featured.php:177
-#, fuzzy
-#| msgid "Background color"
 msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
@@ -103,8 +97,6 @@ msgid "Content"
 msgstr "Innehåll"
 
 #: acf-fields/php/full.php:181 acf-fields/php/split-featured.php:213
-#, fuzzy
-#| msgid "Full section"
 msgid "Full Screen"
 msgstr "Fullbredd sektion"
 
@@ -133,14 +125,10 @@ msgid "Stretch to full width of the page (only works with centered placements)"
 msgstr "Sträck till sidans fulla bredd (fungerar bara för centrerad placering)"
 
 #: acf-fields/php/split-featured.php:6
-#, fuzzy
-#| msgid "Split section"
 msgid "Split Section Settings"
 msgstr "Tvådelad sektion"
 
 #: acf-fields/php/split-featured.php:50
-#, fuzzy
-#| msgid "Image position"
 msgid "Image Position"
 msgstr "Bildens position"
 
@@ -172,18 +160,6 @@ msgstr "Skriver ut en sektion."
 #: source/php/Module/Split/Split.php:12 source/php/Module/Split/Split.php:13
 msgid "Section split"
 msgstr "Tvådelad sektion"
-
-#: source/php/Upgrade.php:132
-msgid "To be installed database version must be a number."
-msgstr ""
-
-#: source/php/Upgrade.php:136
-msgid "Current database version must be a number."
-msgstr ""
-
-#: source/php/Upgrade.php:140
-msgid "Database cannot be lower than currently installed (cannot downgrade)."
-msgstr ""
 
 #: vendor/helsingborg-stad/acf-export-manager/src/AcfExportManager.php:362
 msgid "Export with AcfExportManager"
