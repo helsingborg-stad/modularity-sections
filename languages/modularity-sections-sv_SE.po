@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
 "POT-Creation-Date: 2022-09-20 11:21+0200\n"
-"PO-Revision-Date: 2022-09-20 11:24+0200\n"
+"PO-Revision-Date: 2022-09-20 11:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: acf-fields/php/full.php:6
 msgid "Full Width Section Settings"
-msgstr "Fulldbredd sektion inställningar"
+msgstr "Inställningar för fullbreddssektion"
 
 #: acf-fields/php/full.php:10 acf-fields/php/split-featured.php:10
 msgid "Image"
@@ -118,7 +118,7 @@ msgstr "Lägg till avstånd från botten"
 
 #: acf-fields/php/full.php:231 acf-fields/php/split-featured.php:263
 msgid "Full width"
-msgstr "Full bredd"
+msgstr "Fullbredd"
 
 #: acf-fields/php/full.php:242 acf-fields/php/split-featured.php:274
 msgid "Stretch to full width of the page (only works with centered placements)"
