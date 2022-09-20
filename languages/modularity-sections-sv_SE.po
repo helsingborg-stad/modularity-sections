@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
-"POT-Creation-Date: 2017-09-08 08:04+0200\n"
-"PO-Revision-Date: 2017-09-08 08:06+0200\n"
+"POT-Creation-Date: 2022-09-20 11:21+0200\n"
+"PO-Revision-Date: 2022-09-20 11:24+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: modularity-sections.php\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
@@ -20,416 +20,125 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: acf-fields/php/base.php:6
-msgid "Section base fields"
-msgstr "Grundläggande fält\t"
+#: acf-fields/php/full.php:6
+msgid "Full Width Section Settings"
+msgstr "Fulldbredd sektion inställningar"
 
-#: acf-fields/php/base.php:10
-msgid "Content"
-msgstr "Innehåll"
-
-#: acf-fields/php/base.php:29
-msgid "Section Height"
-msgstr "Sektionens höjd"
-
-#: acf-fields/php/base.php:32
-msgid "Select the amount of space that the section should take up vertically"
-msgstr "Välj hur mycket höjd sektionen minst ska ta upp"
-
-#: acf-fields/php/base.php:41
-msgid "Small (Adapt to content)"
-msgstr "Liten (Anpassa till innehållet)"
-
-#: acf-fields/php/base.php:42
-msgid "Medium (Minimum 40 % height)"
-msgstr "Medel (Minst 40% av höjden)"
-
-#: acf-fields/php/base.php:43
-msgid "Large (Minimum 100% height)"
-msgstr "Stor (Minst 100% av höjden)"
-
-#: acf-fields/php/base.php:54
-msgid "Section margin"
-msgstr "Sektionens marginal"
-
-#: acf-fields/php/base.php:57
-msgid ""
-"Select a margin to the top/bottom of this section. The margin will respect "
-"the size of the section."
-msgstr ""
-"Välj marginalstorleken till toppen och botten av sektionen. Marginalen "
-"ändrar inte på storleken av sektionen. "
-
-#: acf-fields/php/base.php:66 acf-fields/php/base.php:479
-msgid "Small"
-msgstr "Liten\t"
-
-#: acf-fields/php/base.php:67 acf-fields/php/base.php:480
-#: acf-fields/php/base.php:562
-msgid "Medium"
-msgstr "Medel"
-
-#: acf-fields/php/base.php:68 acf-fields/php/base.php:404
-#: acf-fields/php/base.php:481
-msgid "Large"
-msgstr "Stor"
-
-#: acf-fields/php/base.php:79
-msgid "Background focus (vertical)"
-msgstr "Fokuspunkt i bakgrundsbild"
-
-#: acf-fields/php/base.php:82
-msgid ""
-"If the image has to be cropped to fit the view, where is the background "
-"focal point vertically?"
-msgstr ""
-"Ställ in en fokuspunkt i bilden, så att systemet kan beskära bilden vid "
-"behov men ändå spara det viktiga i bilden. "
-
-#: acf-fields/php/base.php:91 acf-fields/php/base.php:280
-msgid "Top"
-msgstr "Överkant"
-
-#: acf-fields/php/base.php:92 acf-fields/php/base.php:281
-msgid "Middle"
-msgstr "Mitten"
-
-#: acf-fields/php/base.php:93 acf-fields/php/base.php:282
-msgid "Bottom"
-msgstr "Nederkant"
-
-#: acf-fields/php/base.php:104
-msgid "Background focus (horizontal)"
-msgstr "Bakgrundsfokus"
-
-#: acf-fields/php/base.php:107
-msgid ""
-"If the image has to be cropped to fit the view, where is the background "
-"focal point horizontally?"
-msgstr ""
-"Om bilden behöver beskäras, var finns bildens väsentliga innehåll i "
-"horisontalt led? "
-
-#: acf-fields/php/base.php:116 acf-fields/php/base.php:217
-msgid "Left"
-msgstr "Vänster"
-
-#: acf-fields/php/base.php:117
-msgid "Center"
-msgstr "Mitten"
-
-#: acf-fields/php/base.php:118 acf-fields/php/base.php:218
-msgid "Right"
-msgstr "Höger"
-
-#: acf-fields/php/base.php:129
-msgid "Parallax effect"
-msgstr "Parallax effekt (simulera djup)"
-
-#: acf-fields/php/base.php:140
-msgid ""
-"Yes, use parallax to create some depth with a fixed background in the "
-"section. This option creates a illusion that indicates that the content "
-"floats on-top of the background."
-msgstr ""
-"Ja, använd en parallax effekt för att skapa illusionen av djup i sidan."
-
-#: acf-fields/php/base.php:148
-msgid "Overlay effect"
-msgstr "Övertoningseffekt"
-
-#: acf-fields/php/base.php:159
-msgid "Yes, blend the background image with a selected color."
-msgstr "Ja, lägg ett lager över bilden med en solid färg."
-
-#: acf-fields/php/base.php:167
-msgid "Blur effect"
-msgstr "Effekt för suddighet"
-
-#: acf-fields/php/base.php:178
-msgid "Yes, make the background image blurred to let the content stand out."
-msgstr ""
-"Ja, gör bakgrundsbilden suddig. Det här alternativet gör texten mer läsbar. "
-
-#: acf-fields/php/base.php:186
-msgid "Inner shadow effect"
-msgstr "Innerskugga"
-
-#: acf-fields/php/base.php:197
-msgid "Yes, overlay the image with a soft inner shadow."
-msgstr "Ja, lägg till en skuggeffekt på bilden."
-
-#: acf-fields/php/base.php:205
-msgid "Image position"
-msgstr "Bildens position"
-
-#: acf-fields/php/base.php:208
-msgid "Select on what side of the screen that the image should be placed."
-msgstr "Var ska bilden placeras? Höger eller vänster sida av skärmen? "
-
-#: acf-fields/php/base.php:229
-msgid "Background image"
-msgstr "Bakgrundsbild"
-
-#: acf-fields/php/base.php:232
-msgid ""
-"Select a good background image for this section. Choose one that is large "
-"enough to cover the whole screen."
-msgstr ""
-"Välj en bild för den här sektionen. Bilden bör vara stor nog för att täcka "
-"hela skärmens yta."
-
-#: acf-fields/php/base.php:253
-msgid "Background color"
-msgstr "Bakgrundsfärg"
-
-#: acf-fields/php/base.php:256
-msgid ""
-"Select a background coolor for this section. This is important to choose "
-"eaven if you are using a background image as this will show during rendering "
-"and in combination with some effects."
-msgstr ""
-"Välj en bakgrundsfärg för den här sektionen. Det här valet kan påverka "
-"utseendet på vissa effekter och när sidan laddas. Det är därför viktigt att "
-"göra ett noggrant val även om du inte tänker använda bakgrundsfärgen. "
-
-#: acf-fields/php/base.php:268
-msgid "Vertical content position"
-msgstr "Innehållsposition vertikalt"
-
-#: acf-fields/php/base.php:271
-msgid ""
-"How to justify the content vertically when there is space left in either "
-"column."
-msgstr ""
-"Hur innehåller ska justeras vertikalt när det finns utrymme kvar i någon av "
-"kolumnerna."
-
-#: acf-fields/php/base.php:293 acf-fields/php/featured.php:366
-#: acf-fields/php/full.php:342 acf-fields/php/split.php:280
-msgid "Submodules"
-msgstr "Moduler"
-
-#: acf-fields/php/base.php:296
-msgid ""
-"Select modules that you like to display below the content of this section. A "
-"limited types are compatible with this function. For now, you cannot create "
-"new ones from this UI or edit them (you have to go trough the modularity tab "
-"to the left)."
-msgstr ""
-"Välj moduler som ska renderas ut i modulen, under innehållsytan. Ett "
-"begränsat urval av moduler kan användas här. För tillfället kan du inte "
-"skapa nya moduler i det här gränssnittet. "
-
-#: acf-fields/php/base.php:323 acf-fields/php/featured.php:47
-msgid "Foreground image"
+#: acf-fields/php/full.php:10 acf-fields/php/split-featured.php:10
+msgid "Image"
 msgstr "Bild"
 
-#: acf-fields/php/base.php:326
-msgid ""
-"Add an image to this section, placed in the foreground. Often svg images or "
-"transparent png images looks best."
-msgstr ""
-"Lägg till en bild till den här sektionen. Ofta fungerar en bild med "
-"transparent bakgrund i svg eller png format bäst. "
+#: acf-fields/php/full.php:31 acf-fields/php/split-featured.php:31
+msgid "Text"
+msgstr "Text"
 
-#: acf-fields/php/base.php:347
-msgid "Columns"
-msgstr "Kolumner"
-
-#: acf-fields/php/base.php:350
-msgid "Select the number of columns you do want to use for the body text."
-msgstr "Välj hur många kolumner som innehållet ska fördelas på."
-
-#: acf-fields/php/base.php:359
-msgid "One column"
-msgstr "En kolumn"
-
-#: acf-fields/php/base.php:360
-msgid "Two columns"
-msgstr "Två kolumner"
-
-#: acf-fields/php/base.php:361
-msgid "Three columns"
-msgstr "Tre kolumner"
-
-#: acf-fields/php/base.php:372
-msgid "Justify text"
-msgstr "Justera texten"
-
-#: acf-fields/php/base.php:375
-msgid ""
-"This may cause some light readability issues. Use with caution and review "
-"the results on the page displayed (in both mobile and desktop version)."
-msgstr ""
-"Det här alternativet kan påverka läsbarheten på texten. Använd försiktigt "
-"och kontrollera att justeringen passar ditt innehållet (både i mobil och på "
-"dator). "
-
-#: acf-fields/php/base.php:383
-msgid "Yes, even the space between words to fill up whole container"
-msgstr "Ja, jämna ut mellanrummet mellan ord."
-
-#: acf-fields/php/base.php:391
-msgid "Font size"
-msgstr "Typsnittets storlek"
-
-#: acf-fields/php/base.php:394
-msgid ""
-"How large should the font render? This only affects the header size, normal "
-"content will render as usual."
-msgstr "Hur stor ska rubriken vara? Det här påverkar inte innehållets storlek."
-
-#: acf-fields/php/base.php:403
-msgid "Normal"
-msgstr "Normal"
-
-#: acf-fields/php/base.php:405
-msgid "Extra large"
-msgstr "Extra stor"
-
-#: acf-fields/php/base.php:416
-msgid "Font color"
+#: acf-fields/php/full.php:56 acf-fields/php/split-featured.php:80
+msgid "Text Color"
 msgstr "Färg på typsnitt"
 
-#: acf-fields/php/base.php:419
-msgid ""
-"Select the color of the text displayed. This should be selected purely on "
-"readability."
-msgstr ""
-"Välj färgen som texten ska ha, du bör ta ett beslut grundat i läsbarheten "
-"och inte grundat i utseendet. "
-
-#: acf-fields/php/base.php:428
-msgid "Dark"
-msgstr "Mörk"
-
-#: acf-fields/php/base.php:429
+#: acf-fields/php/full.php:68 acf-fields/php/split-featured.php:98
 msgid "Light"
 msgstr "Ljus"
 
-#: acf-fields/php/base.php:440
-msgid "Frame fourgound image"
-msgstr "Sektionens förgrundsbild"
+#: acf-fields/php/full.php:69 acf-fields/php/split-featured.php:99
+msgid "Dark"
+msgstr "Mörk"
 
-#: acf-fields/php/base.php:451
-msgid "Yes, add a frame to the foreground image"
-msgstr "Ja, rama in bilden i förgrunden"
+#: acf-fields/php/full.php:71
+msgid "dark"
+msgstr "mörk"
 
-#: acf-fields/php/base.php:459
-msgid "Foreground image frame width"
-msgstr "Ramlinjens tjocklek"
+#: acf-fields/php/full.php:87 acf-fields/php/split-featured.php:111
+msgid "Text Size"
+msgstr "Typsnittstorlek"
 
-#: acf-fields/php/base.php:495
-msgid "Foreground image frame color"
-msgstr "Ramlinjens färg"
+#: acf-fields/php/full.php:99 acf-fields/php/split-featured.php:129
+msgid "Default"
+msgstr "Standard"
 
-#: acf-fields/php/base.php:518
-msgid "Overlay color"
-msgstr "Färg på övertoning"
+#: acf-fields/php/full.php:100 acf-fields/php/split-featured.php:130
+msgid "Large"
+msgstr "Stor"
 
-#: acf-fields/php/base.php:541
-msgid "Overlay opacity"
-msgstr "Övertoningens genomskinlighet"
+#: acf-fields/php/full.php:102
+msgid "default"
+msgstr "standard"
 
-#: acf-fields/php/base.php:561
-msgid "High"
-msgstr "Hög"
+#: acf-fields/php/full.php:118 acf-fields/php/split-featured.php:142
+msgid "Text Alignment"
+msgstr "Textjustering"
 
-#: acf-fields/php/base.php:563
-msgid "Low"
-msgstr "Låg"
+#: acf-fields/php/full.php:133 acf-fields/php/split-featured.php:68
+msgid "Left"
+msgstr "Vänster"
 
-#: acf-fields/php/base.php:577
-msgid "Section divider"
-msgstr "Avgränsare"
+#: acf-fields/php/full.php:134 acf-fields/php/split-featured.php:164
+msgid "Center"
+msgstr "Mitten"
 
-#: acf-fields/php/base.php:596
-msgid "Section divider style"
-msgstr "Stil på sektionens avgränsare"
+#: acf-fields/php/full.php:135 acf-fields/php/split-featured.php:69
+msgid "Right"
+msgstr "Höger"
 
-#: acf-fields/php/base.php:616
-msgid "Skew"
-msgstr "Lutande"
+#: acf-fields/php/full.php:137
+msgid "center"
+msgstr "mitten"
 
-#: acf-fields/php/base.php:617
-msgid "Skew (Reverse)"
-msgstr "Lutande (omvänd)"
+#: acf-fields/php/full.php:147 acf-fields/php/split-featured.php:177
+msgid "Background Color"
+msgstr "Bakgrundsfärg"
 
-#: acf-fields/php/featured.php:6
-msgid "Featured section"
-msgstr "Utvald sektion (sektion med förgrundsbild)"
+#: acf-fields/php/full.php:168 acf-fields/php/split-featured.php:194
+msgid "Height"
+msgstr "Höjd"
 
-#: acf-fields/php/featured.php:10 acf-fields/php/full.php:10
-#: acf-fields/php/split.php:10
-msgid "General"
-msgstr "Generellt"
+#: acf-fields/php/full.php:180 acf-fields/php/split-featured.php:212
+msgid "Content"
+msgstr "Innehåll"
 
-#: acf-fields/php/featured.php:88 acf-fields/php/full.php:85
-#: acf-fields/php/split.php:47
-msgid "Text & font settings"
-msgstr "Typsnittsinställningar"
-
-#: acf-fields/php/featured.php:127 acf-fields/php/full.php:124
-#: acf-fields/php/split.php:86
-msgid "Background"
-msgstr "Bakgrund"
-
-#: acf-fields/php/featured.php:143
-msgid "Background basic details"
-msgstr "Grundläggande inställningar för bakgrund"
-
-#: acf-fields/php/featured.php:146 acf-fields/php/full.php:143
-#: acf-fields/php/split.php:105
-msgid "Set a background image and/or color for this section."
-msgstr "Välj en bakgrundsbild och/eller färg för den här sektionen."
-
-#: acf-fields/php/featured.php:182 acf-fields/php/full.php:179
-#: acf-fields/php/split.php:141
-msgid "Background focus"
-msgstr "Bakgrundens fokuspunkt"
-
-#: acf-fields/php/featured.php:185 acf-fields/php/full.php:182
-#: acf-fields/php/split.php:144
-msgid ""
-"Some part of your image are often more important than others. A person or "
-"fourground image for example. Set the focal point in the image below."
-msgstr ""
-"Vissa delar av en bild är viktigare än andra. Ställ in en fokuspunkt i "
-"bilden som matchar en person eller objekt i förgrunden. "
-
-#: acf-fields/php/featured.php:221 acf-fields/php/full.php:218
-msgid "Effects"
-msgstr "Effekter"
-
-#: acf-fields/php/featured.php:224 acf-fields/php/full.php:221
-msgid ""
-"You can apply one or more effects below to this module. Please combine them "
-"carefully."
-msgstr ""
-"Du kan lägga till en eller flera effekter för den här modulen. Kombinera dem "
-"varsamt."
-
-#: acf-fields/php/featured.php:266 acf-fields/php/full.php:263
-#: acf-fields/php/split.php:180
-msgid "Margins"
-msgstr "Marginaler"
-
-#: acf-fields/php/full.php:6
-msgid "Full section"
+#: acf-fields/php/full.php:181 acf-fields/php/split-featured.php:213
+msgid "Full Screen"
 msgstr "Fullbredd sektion"
 
-#: acf-fields/php/full.php:47
-msgid "Number of columns"
-msgstr "Antal textkolumner"
+#: acf-fields/php/full.php:193 acf-fields/php/split-featured.php:225
+msgid "Spacing Top"
+msgstr "Avstånd över"
 
-#: acf-fields/php/full.php:140 acf-fields/php/split.php:102
-msgid "Basic background details"
-msgstr "Grundläggande inställningar för bakgrund"
+#: acf-fields/php/full.php:204 acf-fields/php/split-featured.php:236
+msgid "Add spacing to top"
+msgstr "Lägg till avstånd från toppen"
 
-#: acf-fields/php/split.php:6
-msgid "Split section"
+#: acf-fields/php/full.php:212 acf-fields/php/split-featured.php:244
+msgid "Spacing Bottom"
+msgstr "Avstånd under"
+
+#: acf-fields/php/full.php:223 acf-fields/php/split-featured.php:255
+msgid "Add spacing to bottom"
+msgstr "Lägg till avstånd från botten"
+
+#: acf-fields/php/full.php:231 acf-fields/php/split-featured.php:263
+msgid "Full width"
+msgstr "Full bredd"
+
+#: acf-fields/php/full.php:242 acf-fields/php/split-featured.php:274
+msgid "Stretch to full width of the page (only works with centered placements)"
+msgstr "Sträck till sidans fulla bredd (fungerar bara för centrerad placering)"
+
+#: acf-fields/php/split-featured.php:6
+msgid "Split Section Settings"
 msgstr "Tvådelad sektion"
+
+#: acf-fields/php/split-featured.php:50
+msgid "Image Position"
+msgstr "Bildens position"
+
+#: acf-fields/php/split-featured.php:163
+msgid "Top"
+msgstr "Överkant"
+
+#: acf-fields/php/split-featured.php:165
+msgid "Bottom"
+msgstr "Nederkant"
 
 #: source/php/Module/Featured/Featured.php:12
 #: source/php/Module/Featured/Featured.php:13
@@ -480,3 +189,280 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://github.com/helsingborg-stad"
 msgstr ""
+
+#~ msgid "Section base fields"
+#~ msgstr "Grundläggande fält\t"
+
+#~ msgid "Section Height"
+#~ msgstr "Sektionens höjd"
+
+#~ msgid ""
+#~ "Select the amount of space that the section should take up vertically"
+#~ msgstr "Välj hur mycket höjd sektionen minst ska ta upp"
+
+#~ msgid "Small (Adapt to content)"
+#~ msgstr "Liten (Anpassa till innehållet)"
+
+#~ msgid "Medium (Minimum 40 % height)"
+#~ msgstr "Medel (Minst 40% av höjden)"
+
+#~ msgid "Large (Minimum 100% height)"
+#~ msgstr "Stor (Minst 100% av höjden)"
+
+#~ msgid "Section margin"
+#~ msgstr "Sektionens marginal"
+
+#~ msgid ""
+#~ "Select a margin to the top/bottom of this section. The margin will "
+#~ "respect the size of the section."
+#~ msgstr ""
+#~ "Välj marginalstorleken till toppen och botten av sektionen. Marginalen "
+#~ "ändrar inte på storleken av sektionen. "
+
+#~ msgid "Small"
+#~ msgstr "Liten\t"
+
+#~ msgid "Medium"
+#~ msgstr "Medel"
+
+#~ msgid "Background focus (vertical)"
+#~ msgstr "Fokuspunkt i bakgrundsbild"
+
+#~ msgid ""
+#~ "If the image has to be cropped to fit the view, where is the background "
+#~ "focal point vertically?"
+#~ msgstr ""
+#~ "Ställ in en fokuspunkt i bilden, så att systemet kan beskära bilden vid "
+#~ "behov men ändå spara det viktiga i bilden. "
+
+#~ msgid "Middle"
+#~ msgstr "Mitten"
+
+#~ msgid "Background focus (horizontal)"
+#~ msgstr "Bakgrundsfokus"
+
+#~ msgid ""
+#~ "If the image has to be cropped to fit the view, where is the background "
+#~ "focal point horizontally?"
+#~ msgstr ""
+#~ "Om bilden behöver beskäras, var finns bildens väsentliga innehåll i "
+#~ "horisontalt led? "
+
+#~ msgid "Parallax effect"
+#~ msgstr "Parallax effekt (simulera djup)"
+
+#~ msgid ""
+#~ "Yes, use parallax to create some depth with a fixed background in the "
+#~ "section. This option creates a illusion that indicates that the content "
+#~ "floats on-top of the background."
+#~ msgstr ""
+#~ "Ja, använd en parallax effekt för att skapa illusionen av djup i sidan."
+
+#~ msgid "Overlay effect"
+#~ msgstr "Övertoningseffekt"
+
+#~ msgid "Yes, blend the background image with a selected color."
+#~ msgstr "Ja, lägg ett lager över bilden med en solid färg."
+
+#~ msgid "Blur effect"
+#~ msgstr "Effekt för suddighet"
+
+#~ msgid "Yes, make the background image blurred to let the content stand out."
+#~ msgstr ""
+#~ "Ja, gör bakgrundsbilden suddig. Det här alternativet gör texten mer "
+#~ "läsbar. "
+
+#~ msgid "Inner shadow effect"
+#~ msgstr "Innerskugga"
+
+#~ msgid "Yes, overlay the image with a soft inner shadow."
+#~ msgstr "Ja, lägg till en skuggeffekt på bilden."
+
+#~ msgid "Select on what side of the screen that the image should be placed."
+#~ msgstr "Var ska bilden placeras? Höger eller vänster sida av skärmen? "
+
+#~ msgid "Background image"
+#~ msgstr "Bakgrundsbild"
+
+#~ msgid ""
+#~ "Select a good background image for this section. Choose one that is large "
+#~ "enough to cover the whole screen."
+#~ msgstr ""
+#~ "Välj en bild för den här sektionen. Bilden bör vara stor nog för att "
+#~ "täcka hela skärmens yta."
+
+#~ msgid ""
+#~ "Select a background coolor for this section. This is important to choose "
+#~ "eaven if you are using a background image as this will show during "
+#~ "rendering and in combination with some effects."
+#~ msgstr ""
+#~ "Välj en bakgrundsfärg för den här sektionen. Det här valet kan påverka "
+#~ "utseendet på vissa effekter och när sidan laddas. Det är därför viktigt "
+#~ "att göra ett noggrant val även om du inte tänker använda bakgrundsfärgen. "
+
+#~ msgid "Vertical content position"
+#~ msgstr "Innehållsposition vertikalt"
+
+#~ msgid ""
+#~ "How to justify the content vertically when there is space left in either "
+#~ "column."
+#~ msgstr ""
+#~ "Hur innehåller ska justeras vertikalt när det finns utrymme kvar i någon "
+#~ "av kolumnerna."
+
+#~ msgid "Submodules"
+#~ msgstr "Moduler"
+
+#~ msgid ""
+#~ "Select modules that you like to display below the content of this "
+#~ "section. A limited types are compatible with this function. For now, you "
+#~ "cannot create new ones from this UI or edit them (you have to go trough "
+#~ "the modularity tab to the left)."
+#~ msgstr ""
+#~ "Välj moduler som ska renderas ut i modulen, under innehållsytan. Ett "
+#~ "begränsat urval av moduler kan användas här. För tillfället kan du inte "
+#~ "skapa nya moduler i det här gränssnittet. "
+
+#~ msgid "Foreground image"
+#~ msgstr "Bild"
+
+#~ msgid ""
+#~ "Add an image to this section, placed in the foreground. Often svg images "
+#~ "or transparent png images looks best."
+#~ msgstr ""
+#~ "Lägg till en bild till den här sektionen. Ofta fungerar en bild med "
+#~ "transparent bakgrund i svg eller png format bäst. "
+
+#~ msgid "Columns"
+#~ msgstr "Kolumner"
+
+#~ msgid "Select the number of columns you do want to use for the body text."
+#~ msgstr "Välj hur många kolumner som innehållet ska fördelas på."
+
+#~ msgid "One column"
+#~ msgstr "En kolumn"
+
+#~ msgid "Two columns"
+#~ msgstr "Två kolumner"
+
+#~ msgid "Three columns"
+#~ msgstr "Tre kolumner"
+
+#~ msgid "Justify text"
+#~ msgstr "Justera texten"
+
+#~ msgid ""
+#~ "This may cause some light readability issues. Use with caution and review "
+#~ "the results on the page displayed (in both mobile and desktop version)."
+#~ msgstr ""
+#~ "Det här alternativet kan påverka läsbarheten på texten. Använd försiktigt "
+#~ "och kontrollera att justeringen passar ditt innehållet (både i mobil och "
+#~ "på dator). "
+
+#~ msgid "Yes, even the space between words to fill up whole container"
+#~ msgstr "Ja, jämna ut mellanrummet mellan ord."
+
+#~ msgid "Font size"
+#~ msgstr "Typsnittets storlek"
+
+#~ msgid ""
+#~ "How large should the font render? This only affects the header size, "
+#~ "normal content will render as usual."
+#~ msgstr ""
+#~ "Hur stor ska rubriken vara? Det här påverkar inte innehållets storlek."
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Extra large"
+#~ msgstr "Extra stor"
+
+#~ msgid ""
+#~ "Select the color of the text displayed. This should be selected purely on "
+#~ "readability."
+#~ msgstr ""
+#~ "Välj färgen som texten ska ha, du bör ta ett beslut grundat i läsbarheten "
+#~ "och inte grundat i utseendet. "
+
+#~ msgid "Frame fourgound image"
+#~ msgstr "Sektionens förgrundsbild"
+
+#~ msgid "Yes, add a frame to the foreground image"
+#~ msgstr "Ja, rama in bilden i förgrunden"
+
+#~ msgid "Foreground image frame width"
+#~ msgstr "Ramlinjens tjocklek"
+
+#~ msgid "Foreground image frame color"
+#~ msgstr "Ramlinjens färg"
+
+#~ msgid "Overlay color"
+#~ msgstr "Färg på övertoning"
+
+#~ msgid "Overlay opacity"
+#~ msgstr "Övertoningens genomskinlighet"
+
+#~ msgid "High"
+#~ msgstr "Hög"
+
+#~ msgid "Low"
+#~ msgstr "Låg"
+
+#~ msgid "Section divider"
+#~ msgstr "Avgränsare"
+
+#~ msgid "Section divider style"
+#~ msgstr "Stil på sektionens avgränsare"
+
+#~ msgid "Skew"
+#~ msgstr "Lutande"
+
+#~ msgid "Skew (Reverse)"
+#~ msgstr "Lutande (omvänd)"
+
+#~ msgid "Featured section"
+#~ msgstr "Utvald sektion (sektion med förgrundsbild)"
+
+#~ msgid "General"
+#~ msgstr "Generellt"
+
+#~ msgid "Text & font settings"
+#~ msgstr "Typsnittsinställningar"
+
+#~ msgid "Background"
+#~ msgstr "Bakgrund"
+
+#~ msgid "Background basic details"
+#~ msgstr "Grundläggande inställningar för bakgrund"
+
+#~ msgid "Set a background image and/or color for this section."
+#~ msgstr "Välj en bakgrundsbild och/eller färg för den här sektionen."
+
+#~ msgid "Background focus"
+#~ msgstr "Bakgrundens fokuspunkt"
+
+#~ msgid ""
+#~ "Some part of your image are often more important than others. A person or "
+#~ "fourground image for example. Set the focal point in the image below."
+#~ msgstr ""
+#~ "Vissa delar av en bild är viktigare än andra. Ställ in en fokuspunkt i "
+#~ "bilden som matchar en person eller objekt i förgrunden. "
+
+#~ msgid "Effects"
+#~ msgstr "Effekter"
+
+#~ msgid ""
+#~ "You can apply one or more effects below to this module. Please combine "
+#~ "them carefully."
+#~ msgstr ""
+#~ "Du kan lägga till en eller flera effekter för den här modulen. Kombinera "
+#~ "dem varsamt."
+
+#~ msgid "Margins"
+#~ msgstr "Marginaler"
+
+#~ msgid "Number of columns"
+#~ msgstr "Antal textkolumner"
+
+#~ msgid "Basic background details"
+#~ msgstr "Grundläggande inställningar för bakgrund"
