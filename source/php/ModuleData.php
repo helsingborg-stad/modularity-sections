@@ -5,7 +5,7 @@ namespace ModularitySections;
 class ModuleData
 {
     public $module;
-    public $data = array();
+    public $data;
     public $imageSize = array(
         'mod-section-split' => array(960, 540),
         'mod-section-full' => array(1366, 768),
@@ -21,7 +21,12 @@ class ModuleData
         $this->module = $module;
 
         //Create data structure
-        $data = array('classes' => array());
+        $this->data = array(
+            'animation' => array(
+                'classes' => '',
+                'attribute' => ''
+            )
+        );
 
         //Get data
         $this->data = $this->init($this->data);
@@ -64,7 +69,7 @@ class ModuleData
      * Init data
      * @return array
      */
-    public function init($data) : array
+    public function init($data): array
     {
         //Mapping table
         $metaMapper = array(
@@ -121,7 +126,7 @@ class ModuleData
      * Create foreground image classes
      * @return array
      */
-    public function createImageProperties($data) : array
+    public function createImageProperties($data): array
     {
         //Add parallax effect
         if ($data['foregroundImage'] && $data['foregroundImageFrame']) {
@@ -140,7 +145,7 @@ class ModuleData
      * Create effect classes
      * @return array
      */
-    public function createEffectProperties($data) : array
+    public function createEffectProperties($data): array
     {
         //Add parallax effect
         if ($data['effectParallax']) {
@@ -175,7 +180,7 @@ class ModuleData
      * Create layout classes
      * @return array
      */
-    public function createLayoutProperties($data) : array
+    public function createLayoutProperties($data): array
     {
 
         //Create section size
@@ -197,14 +202,14 @@ class ModuleData
      * Create background classes
      * @return array
      */
-    public function createBackgroundProperties($data) : array
+    public function createBackgroundProperties($data): array
     {
 
         //Create background position
         $data['backgroundHorizontal'] = empty($data['backgroundHorizontal']) ? "center" : $data['backgroundHorizontal'];
         $data['backgroundVertical'] = empty($data['backgroundVertical']) ? "center" : $data['backgroundVertical'];
 
-        $data['classes']['image-focus'] = "image-focus-". $data['backgroundHorizontal'] . "-" . $data['backgroundVertical'];
+        $data['classes']['image-focus'] = "image-focus-" . $data['backgroundHorizontal'] . "-" . $data['backgroundVertical'];
 
         //Get background image
         if (is_numeric($data['backgroundImage'])) {
@@ -224,14 +229,14 @@ class ModuleData
      * Create text classes
      * @return array
      */
-    public function createTextLayoutProperties($data) : array
+    public function createTextLayoutProperties($data): array
     {
 
         //Add font size
         $data['classes']['section-fontsize'] = "fontsize-" . $data['fontSize'];
 
         //Create section text columns
-        $data['classes']['section-columns'] = !empty($data['numberOfColumns']) ? "columnize-" .$data['numberOfColumns'] : "";
+        $data['classes']['section-columns'] = !empty($data['numberOfColumns']) ? "columnize-" . $data['numberOfColumns'] : "";
 
         //Add font color
         $data['classes']['section-text-color'] = $data['fontColor'];
@@ -244,7 +249,7 @@ class ModuleData
      * Render shortcodes
      * @return array
      */
-    public function renderShortCodes($data) : array
+    public function renderShortCodes($data): array
     {
 
         //Run shortcodes
@@ -262,18 +267,18 @@ class ModuleData
      * Calulate the size of the background image
      * @return array
      */
-    public function calculateBackgroundSize($module, $data) : array
+    public function calculateBackgroundSize($module, $data): array
     {
         $imageSize = $this->imageSize[$this->module->post_type];
 
         //Make image "tall"
-        if ($this->module->post_type == "mod-section-split" && ($data['height'] == "lg"||strlen($data['content']) > 1000)) {
-            $imageSize[1] = $imageSize[1]*2;
+        if ($this->module->post_type == "mod-section-split" && ($data['height'] == "lg" || strlen($data['content']) > 1000)) {
+            $imageSize[1] = $imageSize[1] * 2;
         }
 
         //Make image "wide" on small section sizes
         if (in_array($this->module->post_type, array('mod-section-full', 'mod-section-featured')) && $data['height'] == "sm" && !$data['effectParallax']) {
-            $imageSize[1] = $imageSize[1]/2;
+            $imageSize[1] = $imageSize[1] / 2;
         }
 
         //Normalize
