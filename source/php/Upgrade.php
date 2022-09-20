@@ -9,7 +9,7 @@ namespace ModularitySections;
  */
 class Upgrade
 {
-    private $dbVersion = 2; //The db version we want to achive
+    private $dbVersion = 1; //The db version we want to achive
     private $dbVersionKey = 'mod_sections_db_version';
     private $db;
 
@@ -115,7 +115,7 @@ class Upgrade
             }
         }
 
-        return false; //Return false to keep running this each time!
+        return true; //Return false to keep running this each time!
     }
 
     /**
