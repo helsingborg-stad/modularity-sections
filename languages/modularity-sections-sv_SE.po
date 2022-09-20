@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Modularity sections\n"
 "POT-Creation-Date: 2022-09-20 11:21+0200\n"
-"PO-Revision-Date: 2022-09-20 11:28+0200\n"
+"PO-Revision-Date: 2022-09-20 11:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -151,7 +151,7 @@ msgstr "Skriver ut en modul."
 
 #: source/php/Module/Full/Full.php:12 source/php/Module/Full/Full.php:13
 msgid "Section full"
-msgstr "Fullbredd sektion"
+msgstr "Full höjd"
 
 #: source/php/Module/Full/Full.php:14 source/php/Module/Split/Split.php:14
 msgid "Outputs a section."
