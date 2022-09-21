@@ -48,12 +48,10 @@ class Upgrade
      */
     private function v_1($db): bool
     {
-
         $posts = get_posts([
             'post_type' => 'mod-section-full',
             'numberposts' => -1
         ]);
-        //var_dump($posts);
 
         //key = from, value = to
         $keysToMove = array(
@@ -64,7 +62,6 @@ class Upgrade
             'mod_section_height' => 'height',
             'mod_section_padding' => 'spacing_top',
             'bgimg_mod_section_background_color' => 'background_color'
-
         );
 
         if (is_array($posts) && !empty($posts)) {
@@ -83,32 +80,31 @@ class Upgrade
                             ];
                         }
 
-                        //font-size
-                        if($to == 'text_size' && $meta[$from] == 'normal') {
+                        //Font-size
+                        if ($to == 'text_size' && $meta[$from] == 'normal') {
                             $meta[$from] = 'normal' ? 'default' : 'large';
-                        } 
+                        }
 
-                        //font-color
-                        if($to == 'text_color') {
+                        //Font-color
+                        if ($to == 'text_color') {
                             $meta[$from] = 'text-color-dark' ? 'dark' : 'light';
                         }
 
-                        //height 
-                        if($to == 'height') {
+                        //Height
+                        if ($to == 'height') {
                             $meta[$from] = 'lg' ? 'full-screen' : 'content';
-                            
                         }
 
-                        //padding
-                        if($to == 'spacing_top') {
-                            if($meta[$from] = 'lg') {
+                        //Padding
+                        if ($to == 'spacing_top') {
+                            if ($meta[$from] = 'lg') {
                                 update_post_meta($postId, "spacing_bottom", 1);
                                 $meta[$from] = 1;
                             } else {
                                 $meta[$from] = 0;
                             }
                         }
-                        
+
                         update_post_meta($postId, $to, $meta[$from]);
                     }
                 }
