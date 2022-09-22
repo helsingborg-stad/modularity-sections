@@ -48,8 +48,17 @@ class Upgrade
      */
     private function v_1($db): bool
     {
+
+        if (!isset($_GET['sectupd'])) {
+            return false;
+        }
+
         $posts = get_posts([
-            'post_type' => 'mod-section-full',
+            'post_type' => [
+                'mod-section-full',
+                'mod-section-split',
+                'mod-section-featured'
+            ],
             'numberposts' => -1
         ]);
 
@@ -57,56 +66,107 @@ class Upgrade
         $keysToMove = array(
             'mod_section_content' => 'text',
             'bgimg_mod_section_background_image' => 'image',
-            'font_mod_section_fontsize' =>'text_size',
+            'font_mod_section_fontsize' => 'text_size',
             'font_mod_section_fontcolor' => 'text_color',
             'mod_section_height' => 'height',
             'mod_section_padding' => 'spacing_top',
-            'bgimg_mod_section_background_color' => 'background_color'
+            'bgimg_mod_section_background_color' => 'background_color',
+            'mod_section_image_position' => 'reverse_columns'
         );
+
+        $fieldIDsSplitFeature = [
+            'image' => 'field_60d1a90e5551a',
+            'text' => 'field_60d1a8040b829',
+            'reverse_columns' => 'field_60d1f51ff8692',
+            'text_color' => 'field_60d1a9555551c',
+            'text_size' => 'field_60d1a84a0b82a',
+            'text_alignment' => 'field_60d1a9d55551e',
+            'background_color' => 'field_60d1a9295551b',
+            'height' => 'field_60d1a9935551d',
+            'spacing_top' => 'field_60d2f7b110b0b',
+            'spacing_bottom' => 'field_60d2f7cc10b0c'
+        ];
+
+        $fieldIDsFull = [
+            'image' => 'field_6154339333491',
+            'text' => 'field_6154339333497',
+            'reverse_columns' => 'field_60d1f51ff8692',
+            'text_color' => 'field_61543393334b0',
+            'text_size' => 'field_61543393334b6',
+            'text_alignment' => 'field_61543393334bb',
+            'background_color' => 'field_61543393334bf',
+            'height' => 'field_61543393334c3',
+            'spacing_top' => 'field_61543393334c7',
+            'spacing_bottom' => 'field_61543393334cc'
+        ];
 
         if (is_array($posts) && !empty($posts)) {
             foreach ($posts as $post) {
-                $meta = get_post_meta($post->ID);
+
+                //Set field id scheme
+                if ($post->post_type == 'mod-section-full') {
+                    $fieldIDs = $fieldIDsFull;
+                } else {
+                    $fieldIDs = $fieldIDsSplitFeature;
+                }
 
                 foreach ($keysToMove as $from => $to) {
-                    if (!isset($meta[$to])) {
 
-                        //Translate image
-                        if ($to == 'image' && is_numeric($meta[$from])) {
-                            $meta[$from] = [
-                                'top' => 50,
-                                'left' => 50,
-                                'url' => wp_get_attachment_image_src($meta[$from])
-                            ];
-                        }
+                    //Old meta & defaults
+                    $oldMeta    = get_post_meta($post->ID, $from, true);
+                    $meta       = null;
 
-                        //Font-size
-                        if ($to == 'text_size' && $meta[$from] == 'normal') {
-                            $meta[$from] = 'normal' ? 'default' : 'large';
-                        }
-
-                        //Font-color
-                        if ($to == 'text_color') {
-                            $meta[$from] = 'text-color-dark' ? 'dark' : 'light';
-                        }
-
-                        //Height
-                        if ($to == 'height') {
-                            $meta[$from] = 'lg' ? 'full-screen' : 'content';
-                        }
-
-                        //Padding
-                        if ($to == 'spacing_top') {
-                            if ($meta[$from] = 'lg') {
-                                update_post_meta($postId, "spacing_bottom", 1);
-                                $meta[$from] = 1;
-                            } else {
-                                $meta[$from] = 0;
-                            }
-                        }
-
-                        update_post_meta($postId, $to, $meta[$from]);
+                    //Translate image
+                    if ($to == 'image' && is_numeric($oldMeta)) {
+                        $meta = [
+                            'top' => 50,
+                            'left' => 50,
+                            'id' => $oldMeta
+                        ];
                     }
+
+                    //Translate position
+                    if ($to == 'reverse_columns') {
+                        $meta = ($oldMeta == 'left') ? '0' : '1';
+                    }
+
+                    //Translate font-size
+                    if ($to == 'text_size') {
+                        $meta = ($oldMeta == 'normal') ? 'default' : 'large';
+                    }
+
+                    //Translate font-color
+                    if ($to == 'text_color') {
+                        $meta = ($oldMeta == 'text-color-dark') ? 'dark' : 'light';
+                    }
+
+                    //Translate height
+                    if ($to == 'height') {
+                        $meta = ($oldMeta == 'lg')  ? 'full-screen' : 'content';
+                    }
+
+                    //Translate padding
+                    if ($to == 'spacing_top') {
+                        if ($thisMeta = 'lg') {
+                            add_post_meta($post->ID, "spacing_bottom", 1, true);
+                            add_post_meta($post->ID, "_spacing_bottom", $fieldIDs['spacing_bottom'], true);
+                            $meta = 1;
+                        } else {
+                            $meta = 0;
+                        }
+                    }
+
+                    //No translate, just move
+                    if (is_null($meta)) {
+                        $meta = get_post_meta($post->ID, $from, true);
+                    }
+
+                    //Add new post meta, if not exist
+                    add_post_meta($post->ID, $to, $meta, true);
+                    update_post_meta($post->ID, '_' . $to, $fieldIDs[$to]);
+
+                    //Cleanup
+                    delete_post_meta($post->ID, $from);
                 }
             }
         }
@@ -177,3 +237,4 @@ class Upgrade
         return true;
     }
 }
+new Upgrade();
