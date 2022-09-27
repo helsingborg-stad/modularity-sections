@@ -48,11 +48,6 @@ class Upgrade
      */
     private function v_1($db): bool
     {
-
-        if (!isset($_GET['sectupd'])) {
-            return false;
-        }
-
         $posts = get_posts([
             'post_type' => [
                 'mod-section-full',
@@ -102,7 +97,6 @@ class Upgrade
 
         if (is_array($posts) && !empty($posts)) {
             foreach ($posts as $post) {
-
                 //Set field id scheme
                 if ($post->post_type == 'mod-section-full') {
                     $fieldIDs = $fieldIDsFull;
