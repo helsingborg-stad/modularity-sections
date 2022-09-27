@@ -37,9 +37,13 @@ $loader = new ModularitySections\Vendor\Psr4ClassLoader();
 $loader->addPrefix('ModularitySections', MODULARITYSECTIONS_PATH);
 $loader->addPrefix('ModularitySections', MODULARITYSECTIONS_PATH . 'source/php/');
 $loader->register();
+    
 
 // Start application
 new ModularitySections\App();
+
+// Upgrade database
+new \ModularitySections\Upgrade();
 
 // Acf auto import and export
 add_action('plugins_loaded', function () {
