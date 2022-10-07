@@ -1,5 +1,4 @@
 @segment([
-    'id'                => $sectionID,
     'title'             => $postTitle,
     'content'           => $text,
     'layout'            => 'split',
@@ -17,7 +16,7 @@
     'context'           => ['sectionsSplit', 'sections',  'sections.split', 'module.sections.split']
 ])
 
-    @if(is_array($submodules) && !empty($submodules))
+    @if(!empty($submodules) && is_array($submodules))
     {!! $submoduleRendered !!}
     @endif
 
