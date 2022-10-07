@@ -50,10 +50,11 @@ class App
      * @return array
      */
     public function blockData($viewData, $block, $module) {
-        if (strpos($block['name'], 'acf/section') === 0 && $block['align'] == 'full' && !is_admin()) {
+        if (strpos($block['name'] == "acf/section") === 0 && $block['align'] == 'full' && !is_admin()) {
             $viewData['stretch'] = true;
+        } else {
+            $viewData['stretch'] = false;
         }
-
         return $viewData;
     }
 
