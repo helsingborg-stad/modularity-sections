@@ -1,5 +1,5 @@
 @segment([
-    'title'             => $postTitle,
+    'title'             => !$hideTitle && !empty($postTitle) ? $postTitle : null,
     'content'           => $text,
     'layout'            => 'full-width',
     'background'        => $background_color,
@@ -9,10 +9,9 @@
     'textColor'         => $text_color,
     'textAlignment'     => $text_alignment,
     'textSize'          => $text_size,
-    'reverseColumns'    => $reverse_columns,
     'paddingTop'        => $spacing_top,
     'paddingBottom'     => $spacing_bottom,
-    'stretch'           => $stretch,
+    'stretch'           => (!is_admin() && isset($blockData) ? ((bool) $blockData['align'] == 'full') : $stretch),
     'context'           => ['sectionsFull', 'sections',  'sections.full', 'module.sections.full']
 ])
 

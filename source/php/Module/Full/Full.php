@@ -6,6 +6,9 @@ class Full extends \Modularity\Module
 {
     public $slug = 'section-full';
     public $supports = array();
+    public $blockSupports = array(
+        'align' => ['full']
+    );
 
     public function init()
     {
@@ -19,19 +22,26 @@ class Full extends \Modularity\Module
         $data = get_fields($this->ID);
 
         //Fetch image data
-        if(isset($data['image']) && is_array($data['image'])) {
-            $data['image']['url'] = wp_get_attachment_image_src($data['image']['id'], [1500, false])[0];
-        } elseif(isset($data['image']) && is_numeric($data['image'])) {
-            $imageId = $data['image']; 
-            $data['image'] = []; 
-            $data['image']['url']   = wp_get_attachment_image_src($imageId, [1500, false])[0];
-            $data['image']['top']   = false;
-            $data['image']['left']  = false;
+        if (isset($data['image']) && is_array($data['image'])) {
+            $data['image']['url'] = wp_get_attachment_image_src(
+                $data['image']['id'],
+                [1500, false]
+            )[0] ?? false;
+            $data['image'] = (object) $data['image'];
+        } elseif (isset($data['image']) && is_numeric($data['image'])) {
+            $data['image'] = (object) [
+                'url'   => wp_get_attachment_image_src($data['image'], [1500, false])[0],
+                'top'   => false,
+                'left' => false
+            ];
+        } else {
+            $data['image'] = (object) [
+                'url'   => false,
+                'top'   => false,
+                'left' => false
+            ];
         }
 
-        //Transform to object
-        $data['image'] = (object) $data['image']; 
-        
         //Send to view
         return $data;
     }
@@ -40,6 +50,7 @@ class Full extends \Modularity\Module
     {
         return "full.blade.php";
     }
+
 
     /**
      * Available "magic" methods for modules:

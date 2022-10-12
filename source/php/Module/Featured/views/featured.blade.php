@@ -1,5 +1,5 @@
 @segment([
-    'title'             => $postTitle,
+    'title'             => !$hideTitle && !empty($postTitle) ? $postTitle : null,
     'content'           => $text,
     'layout'            => 'featured',
     'background'        => $background_color,
@@ -12,7 +12,7 @@
     'reverseColumns'    => $reverse_columns,
     'paddingTop'        => $spacing_top,
     'paddingBottom'     => $spacing_bottom,
-    'stretch'           => $stretch,
+    'stretch'           => (!is_admin() && isset($blockData) ? ((bool) $blockData['align'] == 'full') : $stretch),
     'context'           => ['sectionsFeatured', 'sections',  'sections.featured', 'module.sections.featured']
 ])
 

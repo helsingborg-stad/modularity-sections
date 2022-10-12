@@ -18,27 +18,8 @@ class App
         //Add classes to mod element
         add_filter('Modularity/Display/BeforeModule', array($this, 'addClass'), 10, 4);
 
-        //Add full-width capabilty to blocks
-        add_filter('Modularity/Block/Settings', array($this, 'blockSettings'), 10, 2);
-
         //Add full width data to view
-        add_filter('Modularity/Block/Data', array($this, 'blockData'), 10, 3);
-
-        
-    }
-    
-    /**
-     * Allow full-width alignment on section blocks
-     *
-     * @param array $data
-     * @param string $slug
-     * @return array
-     */
-    public function blockSettings($data, $slug) {
-        if (strpos($slug, 'section') === 0 && isset($data['supports'])) {
-            $data['supports']['align'] = ['full'];
-        }
-        return $data;
+        add_filter('Modularity/Block/Data', array($this, 'blockData'), 20, 3);
     }
 
     /**
@@ -50,7 +31,7 @@ class App
      * @return array
      */
     public function blockData($viewData, $block, $module) {
-        if (strpos($block['name'] == "acf/section") === 0 && $block['align'] == 'full' && !is_admin()) {
+        if (strpos($block['name'], "acf/section") === 0 && $block['align'] == 'full' && !is_admin()) {
             $viewData['stretch'] = true;
         } else {
             $viewData['stretch'] = false;
