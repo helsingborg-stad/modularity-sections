@@ -1,4 +1,5 @@
 @segment([
+    'id'				=> $blockData['anchor'],
     'title'             => !$hideTitle && !empty($postTitle) ? $postTitle : null,
     'content'           => $text,
     'layout'            => 'split',
