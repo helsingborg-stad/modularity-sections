@@ -21,6 +21,8 @@ class Featured extends \Modularity\Module
     {
         $data = get_fields($this->ID);
 
+        $data['fallbackId'] = $this->slug . '-' . uniqid();
+
         //Fetch image data
         if (isset($data['image']) && is_array($data['image']) && isset($data['image']['id'])) {
             $data['image']['url'] = wp_get_attachment_image_src(
