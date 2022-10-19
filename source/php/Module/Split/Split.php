@@ -20,6 +20,8 @@ class Split extends \Modularity\Module
     public function data(): array
     {
         $data = get_fields($this->ID);
+    
+        $data['fallbackId'] = $this->slug . '-' . uniqid();
 
         //Fetch image data
         if (isset($data['image']) && is_array($data['image']) && isset($data['image']['id'])) {

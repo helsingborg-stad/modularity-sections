@@ -1,4 +1,5 @@
 @segment([
+    'id'            => isset( $blockData['anchor'] ) ? $blockData['anchor'] : $fallbackId,
     'title'             => !$hideTitle && !empty($postTitle) ? $postTitle : null,
     'content'           => $text,
     'layout'            => 'split',
