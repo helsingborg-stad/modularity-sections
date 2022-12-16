@@ -43,6 +43,8 @@ class Full extends \Modularity\Module
                 'left' => false
             ];
         }
+        
+        $data['text'] = apply_filters('the_content', $data['text']);
 
         //Send to view
         return $data;
