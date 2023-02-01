@@ -15,6 +15,8 @@ class Full extends \Modularity\Module
         $this->nameSingular = __("Section full", 'modularity-sections');
         $this->namePlural = __("Section full", 'modularity-sections');
         $this->description = __("Outputs a section.", 'modularity-sections');
+
+        add_filter( 'acf/prepare_field', array($this, 'acf_prepare_field'), 10, 2 );
     }
 
     public function data() : array
@@ -51,6 +53,15 @@ class Full extends \Modularity\Module
     public function template() : string
     {
         return "full.blade.php";
+    }
+
+    public function acf_prepare_field( $field ) {
+        if (get_post_type() == 'page') {
+            if ( $field['label'] === 'Buttons' ) {
+                return false;
+            }
+        }
+        return $field;
     }
 
 

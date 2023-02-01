@@ -98,7 +98,7 @@
                 'light' => __('Light', 'modularity-sections'),
                 'dark' => __('Dark', 'modularity-sections'),
             ),
-            'default_value' => 'dark',
+            'default_value' => __('dark', 'modularity-sections'),
             'allow_null' => 0,
             'multiple' => 0,
             'ui' => 0,
@@ -129,7 +129,7 @@
                 'default' => __('Default', 'modularity-sections'),
                 'large' => __('Large', 'modularity-sections'),
             ),
-            'default_value' => 'default',
+            'default_value' => __('default', 'modularity-sections'),
             'allow_null' => 0,
             'multiple' => 0,
             'ui' => 0,
@@ -164,7 +164,7 @@
                 'center' => __('Center', 'modularity-sections'),
                 'bottom' => __('Bottom', 'modularity-sections'),
             ),
-            'default_value' => 'center',
+            'default_value' => __('center', 'modularity-sections'),
             'allow_null' => 0,
             'multiple' => 0,
             'ui' => 0,
@@ -316,5 +316,6 @@
     'hide_on_screen' => '',
     'active' => true,
     'description' => '',
+    'show_in_rest' => false,
 ));
 }
