@@ -6,7 +6,6 @@
             "key": "field_6154339333491",
             "label": "Image",
             "name": "image",
-            "aria-label": "",
             "type": "focuspoint",
             "instructions": "",
             "required": 0,
@@ -28,8 +27,7 @@
             "key": "field_6154339333497",
             "label": "Text",
             "name": "text",
-            "aria-label": "",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -39,16 +37,15 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_61543393334b0",
             "label": "Text Color",
             "name": "text_color",
-            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -74,15 +71,12 @@
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "placeholder": ""
         },
         {
             "key": "field_61543393334b6",
             "label": "Text Size",
             "name": "text_size",
-            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -108,15 +102,12 @@
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "placeholder": ""
         },
         {
             "key": "field_61543393334bb",
             "label": "Text Alignment",
             "name": "text_alignment",
-            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -146,15 +137,12 @@
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "placeholder": ""
         },
         {
             "key": "field_61543393334bf",
             "label": "Background Color",
             "name": "background_color",
-            "aria-label": "",
             "type": "color_picker",
             "instructions": "",
             "required": 0,
@@ -172,7 +160,6 @@
             "key": "field_61543393334c3",
             "label": "Height",
             "name": "height",
-            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -198,15 +185,12 @@
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
+            "placeholder": ""
         },
         {
             "key": "field_61543393334c7",
             "label": "Spacing Top",
             "name": "spacing_top",
-            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -226,7 +210,6 @@
             "key": "field_61543393334cc",
             "label": "Spacing Bottom",
             "name": "spacing_bottom",
-            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -246,7 +229,6 @@
             "key": "field_61543393334d0",
             "label": "Full width",
             "name": "stretch",
-            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -287,7 +269,7 @@
                 {
                     "key": "field_63da36ef1e07a",
                     "label": "Button label",
-                    "name": "button_label",
+                    "name": "text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -307,7 +289,7 @@
                 {
                     "key": "field_63da375f1e07b",
                     "label": "Button link",
-                    "name": "button_link",
+                    "name": "href",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -327,7 +309,7 @@
                 {
                     "key": "field_63da37711e07c",
                     "label": "Button color",
-                    "name": "button_color",
+                    "name": "color",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
