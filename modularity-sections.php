@@ -25,6 +25,7 @@ define('MODULARITYSECTIONS_MODULE_PATH', MODULARITYSECTIONS_PATH . 'source/php/M
 define('MODULARITYSECTIONS_FULL_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Full/views');
 define('MODULARITYSECTIONS_SPLIT_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Split/views');
 define('MODULARITYSECTIONS_FEATURED_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Featured/views');
+define('MODULARITYSECTIONS_CARD_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Card/views');
 
 
 load_plugin_textdomain('modularity-sections', false, plugin_basename(dirname(__FILE__)) . '/languages');
@@ -53,6 +54,7 @@ add_action('plugins_loaded', function () {
     $acfExportManager->autoExport(array(
         'full' => 'group_6154339331c4e',
         'split-featured' => 'group_599fddb1da69a',
+        'card' => 'group_63ff1e1238bd3'
     ));
     $acfExportManager->import();
 });
@@ -74,6 +76,10 @@ add_action('plugins_loaded', function () {
             MODULARITYSECTIONS_MODULE_PATH . "/Featured/",
             'Featured'
         );
+        modularity_register_module(
+            MODULARITYSECTIONS_MODULE_PATH . "/Card/",
+            'Card'
+        );
     }
 });
 
@@ -81,5 +87,6 @@ add_filter('/Modularity/externalViewPath', function ($viewPaths) {
     $viewPaths['mod-section-split'] = MODULARITYSECTIONS_SPLIT_VIEW_PATH;
     $viewPaths['mod-section-full'] = MODULARITYSECTIONS_FULL_VIEW_PATH;
     $viewPaths['mod-section-featured'] = MODULARITYSECTIONS_FEATURED_VIEW_PATH;
+    $viewPaths['mod-section-card'] = MODULARITYSECTIONS_CARD_VIEW_PATH;
     return $viewPaths;
 });
