@@ -12,7 +12,8 @@
     'paddingTop' => $spacing_top,
     'paddingBottom' => $spacing_bottom,
     'stretch' => !is_admin() && isset($blockData) ? (bool) $blockData['align'] == 'full' : $stretch,
-    'context' => ['sectionsCard', 'sections', 'sections.card', 'module.sections.card']
+    'context' => ['sectionsCard', 'sections', 'sections.card', 'module.sections.card'],
+    'buttons' => !empty($buttons) ? $buttons : []
 ])
     @if (!empty($submodules) && is_array($submodules))
         {!! $submoduleRendered !!}
