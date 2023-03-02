@@ -9,7 +9,7 @@ class App
 
         //Add template dirs
         add_filter('Modularity/Module/TemplatePath', function ($paths) {
-            foreach (array('full', 'featured', 'split') as $module) {
+            foreach (array('full', 'featured', 'split', 'card') as $module) {
                 $paths[] = MODULARITYSECTIONS_MODULE_PATH . '/' . ucfirst($module) . '/views/';
             }
             return $paths;
