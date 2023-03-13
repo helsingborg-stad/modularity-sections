@@ -7,7 +7,7 @@ class Card extends \Modularity\Module
     public $slug = 'section-card';
     public $supports = array();
     public $blockSupports = array(
-        'align' => ['card']
+        'align' => ['full']
     );
 
     public function init()
