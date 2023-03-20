@@ -57,8 +57,8 @@
                 "id": ""
             },
             "choices": [
-                "Left",
-                "Right"
+                "Right",
+                "Left"
             ],
             "default_value": 1,
             "return_format": "value",

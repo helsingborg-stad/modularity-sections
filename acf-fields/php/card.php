@@ -60,8 +60,8 @@
                 'id' => '',
             ),
             'choices' => array(
-                0 => __('Left', 'modularity-sections'),
-                1 => __('Right', 'modularity-sections'),
+                0 => __('Right', 'modularity-sections'),
+                1 => __('Left', 'modularity-sections'),
             ),
             'default_value' => 1,
             'return_format' => 'value',
