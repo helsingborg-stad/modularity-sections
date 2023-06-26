@@ -19,7 +19,7 @@ class Full extends \Modularity\Module
 
     public function data() : array
     {
-        $data = get_fields($this->ID);
+        $data = $this->getFields();
 
         $data['fallbackId'] = $this->slug . '-' . uniqid();
 
