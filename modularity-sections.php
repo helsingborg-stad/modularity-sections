@@ -30,15 +30,11 @@ define('MODULARITYSECTIONS_CARD_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/C
 
 load_plugin_textdomain('modularity-sections', false, plugin_basename(dirname(__FILE__)) . '/languages');
 
-require_once MODULARITYSECTIONS_PATH . 'source/php/Vendor/Psr4ClassLoader.php';
+// Autoload from plugin
+if (file_exists(MODULARITYSECTIONS_PATH . 'vendor/autoload.php')) {
+    require_once MODULARITYSECTIONS_PATH . 'vendor/autoload.php';
+}
 require_once MODULARITYSECTIONS_PATH . 'Public.php';
-
-// Instantiate and register the autoloader
-$loader = new ModularitySections\Vendor\Psr4ClassLoader();
-$loader->addPrefix('ModularitySections', MODULARITYSECTIONS_PATH);
-$loader->addPrefix('ModularitySections', MODULARITYSECTIONS_PATH . 'source/php/');
-$loader->register();
-    
 
 // Start application
 new ModularitySections\App();
