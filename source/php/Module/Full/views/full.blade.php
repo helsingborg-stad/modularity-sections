@@ -1,11 +1,14 @@
+
+<?php var_dump($image); ?>
+
+
 @segment([
     'id'            => isset( $blockData['anchor'] ) ? $blockData['anchor'] : $fallbackId,
     'title'         => !$hideTitle && !empty($postTitle) ? $postTitle: null,
     'content'       => $text,
     'layout'        => 'full-width',
     'background'    => $background_color,
-    'image'         => $image ? $image->url: false,
-    'imageFocus'    => $image ? ['top' => $image->top, 'left' => $image->left]: false,
+    'image'         => $image,
     'height'        => $height,
     'textColor'     => $text_color,
     'textAlignment' => $text_alignment,

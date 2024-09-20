@@ -2,6 +2,10 @@
 
 namespace ModularitySections\Module\Full;
 
+use Modularity\Integrations\Component\ImageResolver;
+use Modularity\Integrations\Component\ImageFocusResolver;
+use ComponentLibrary\Integrations\Image\Image as ImageComponentContract;
+
 class Full extends \Modularity\Module
 {
     public $slug = 'section-full';
@@ -23,29 +27,31 @@ class Full extends \Modularity\Module
 
         $data['fallbackId'] = $this->slug . '-' . uniqid();
 
-        //Fetch image data
-        if (isset($data['image']) && is_array($data['image'])) {
-            $data['image']['url'] = wp_get_attachment_image_src(
-                $data['image']['id'],
-                [1500, false]
-            )[0] ?? false;
-            $data['image'] = (object) $data['image'];
-        } elseif (isset($data['image']) && is_numeric($data['image'])) {
-            $data['image'] = (object) [
-                'url'   => wp_get_attachment_image_src($data['image'], [1500, false])[0],
-                'top'   => false,
-                'left' => false
-            ];
-        } else {
-            $data['image'] = (object) [
-                'url'   => false,
-                'top'   => false,
-                'left' => false
+        $imageId = $this->getImageId($data['image']);
+
+        if($imageId) {
+            $data['image'] = [
+                'image' => ImageComponentContract::factory(
+                    (int) $imageId,
+                    [1024, false],
+                    new ImageResolver(),
+                    //new ImageFocusResolver($data['image'])
+                )
             ];
         }
 
         //Send to view
         return $data;
+    }
+
+    private function getImageId($image): ?int
+    {
+        if (is_array($image) && isset($image['id'])) {
+            return $image['id'];
+        } elseif (is_numeric($image)) {
+            return $image;
+        }
+        return null;
     }
 
     public function template() : string

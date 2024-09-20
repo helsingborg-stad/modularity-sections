@@ -23,24 +23,16 @@ class Card extends \Modularity\Module
 
         $data['fallbackId'] = $this->slug . '-' . uniqid();
 
-        //Fetch image data
-        if (isset($data['image']) && is_array($data['image'])) {
-            $data['image']['url'] = wp_get_attachment_image_src(
-                $data['image']['id'],
-                [1500, false]
-            )[0] ?? false;
-            $data['image'] = (object) $data['image'];
-        } elseif (isset($data['image']) && is_numeric($data['image'])) {
-            $data['image'] = (object) [
-                'url'   => wp_get_attachment_image_src($data['image'], [1500, false])[0],
-                'top'   => false,
-                'left' => false
-            ];
-        } else {
-            $data['image'] = (object) [
-                'url'   => false,
-                'top'   => false,
-                'left' => false
+        //Get image 
+        $imageId = $this->getImageId($data['image']);
+        if($imageId) {
+            $data['image'] = [
+                'image' => ImageComponentContract::factory(
+                    (int) $fields['mod_hero_background_image']['id'],
+                    [1024, false],
+                    new ImageResolver(),
+                    new ImageFocusResolver($data['image'])
+                )
             ];
         }
 

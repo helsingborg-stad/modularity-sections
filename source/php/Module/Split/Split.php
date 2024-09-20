@@ -2,6 +2,10 @@
 
 namespace ModularitySections\Module\Split;
 
+use Modularity\Integrations\Component\ImageResolver;
+use Modularity\Integrations\Component\ImageFocusResolver;
+use ComponentLibrary\Integrations\Image\Image as ImageComponentContract;
+
 class Split extends \Modularity\Module
 {
     public $slug = 'section-split';
@@ -20,32 +24,42 @@ class Split extends \Modularity\Module
     public function data(): array
     {
         $data = $this->getFields();
-    
         $data['fallbackId'] = $this->slug . '-' . uniqid();
 
-        //Fetch image data
-        if (isset($data['image']) && is_array($data['image']) && isset($data['image']['id'])) {
-            $data['image']['url'] = wp_get_attachment_image_src(
-                $data['image']['id'],
-                [960, false]
-            )[0];
-            $data['image'] = (object) $data['image'];
-        } elseif (isset($data['image']) && is_numeric($data['image'])) {
-            $data['image'] = (object) [
-                'url'   => wp_get_attachment_image_src($data['image'], [960, false])[0],
-                'top'   => false,
-                'left' => false
-            ];
-        } else {
-            $data['image'] = (object) [
-                'url'   => false,
-                'top'   => false,
-                'left' => false
+
+
+
+        //Get image 
+        $imageId = $this->getImageId($data['image']);
+
+      
+
+        if($imageId) {
+            $data['image'] = [
+                'image' => ImageComponentContract::factory(
+                    (int) $fields['mod_hero_background_image']['id'],
+                    [1024, false],
+                    new ImageResolver(),
+                    new ImageFocusResolver($data['image'])
+                )
             ];
         }
 
+        var_dump($data['image']);
+        die;
+
         //Send to view
         return $data;
+    }
+
+    private function getImageId($image): ?int
+    {
+        if (is_array($image) && isset($image['id'])) {
+            return $image['id'];
+        } elseif (is_numeric($image)) {
+            return $image;
+        }
+        return null;
     }
 
     public function template() : string
