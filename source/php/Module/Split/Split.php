@@ -2,10 +2,8 @@
 
 namespace ModularitySections\Module\Split;
 
-use Modularity\Integrations\Component\ImageResolver;
-use Modularity\Integrations\Component\ImageFocusResolver;
-use ComponentLibrary\Integrations\Image\Image as ImageComponentContract;
-class Split extends \Modularity\Module
+use ModularitySections\Section;
+class Split extends Section
 {
     public $slug = 'section-split';
     public $supports = array();
@@ -24,43 +22,14 @@ class Split extends \Modularity\Module
     {
         $data = $this->getFields();
     
-        $data['fallbackId'] = $this->slug . '-' . uniqid();
+        //Add fallback id
+        $data = $this->addFallbackId($this->slug, $data);
 
-        //Get image id
-        $imageId = $this->getImageId($data);
-
-        //Get image
-        if($imageId) {
-            $data['image'] = ImageComponentContract::factory(
-                    $imageId,
-                    [1920, false],
-                    new ImageResolver(),
-                    new ImageFocusResolver(
-                        isset($data['image']) && is_array($data['image']) ? $data['image']: null
-                    )
-            );
-        } else {
-            $data['image'] = false;
-        }
+        //Get image contract
+        $data = $this->getImageContract($data);
 
         //Send to view
         return $data;
-    }
-
-    /**
-     * Get image id from data array
-     * 
-     * @param array $data
-     * 
-     * @return int
-     */
-    private function getImageId(array $data): ?int {
-        if($data['image'] && is_array($data['image'])) {
-            return $data['image']['id'];
-        } elseif($data['image'] && is_numeric($data['image'])) {
-            return $data['image'];
-        }
-        return null;
     }
 
     public function template() : string
