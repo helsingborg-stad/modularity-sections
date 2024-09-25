@@ -2,6 +2,10 @@
 
 namespace ModularitySections\Module\Card;
 
+use Modularity\Integrations\Component\ImageResolver;
+use Modularity\Integrations\Component\ImageFocusResolver;
+use ComponentLibrary\Integrations\Image\Image as ImageComponentContract;
+
 class Card extends \Modularity\Module
 {
     public $slug = 'section-card';
@@ -20,32 +24,44 @@ class Card extends \Modularity\Module
     public function data(): array
     {
         $data = $this->getFields();
-
+    
         $data['fallbackId'] = $this->slug . '-' . uniqid();
 
-        //Fetch image data
-        if (isset($data['image']) && is_array($data['image'])) {
-            $data['image']['url'] = wp_get_attachment_image_src(
-                $data['image']['id'],
-                [1500, false]
-            )[0] ?? false;
-            $data['image'] = (object) $data['image'];
-        } elseif (isset($data['image']) && is_numeric($data['image'])) {
-            $data['image'] = (object) [
-                'url'   => wp_get_attachment_image_src($data['image'], [1500, false])[0],
-                'top'   => false,
-                'left' => false
-            ];
+        //Get image id
+        $imageId = $this->getImageId($data);
+
+        //Get image
+        if($imageId) {
+            $data['image'] = ImageComponentContract::factory(
+                    $imageId,
+                    [1920, false],
+                    new ImageResolver(),
+                    new ImageFocusResolver(
+                        isset($data['image']) && is_array($data['image']) ? $data['image']: null
+                    )
+            );
         } else {
-            $data['image'] = (object) [
-                'url'   => false,
-                'top'   => false,
-                'left' => false
-            ];
+            $data['image'] = false;
         }
 
         //Send to view
         return $data;
+    }
+
+    /**
+     * Get image id from data array
+     * 
+     * @param array $data
+     * 
+     * @return int
+     */
+    private function getImageId(array $data): ?int {
+        if($data['image'] && is_array($data['image'])) {
+            return $data['image']['id'];
+        } elseif($data['image'] && is_numeric($data['image'])) {
+            return $data['image'];
+        }
+        return null;
     }
 
     public function template(): string
