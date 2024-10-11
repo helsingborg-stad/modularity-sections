@@ -12,6 +12,7 @@
     'paddingTop'    => $spacing_top,
     'paddingBottom' => $spacing_bottom,
     'stretch'       => !is_admin() && isset($blockData) ? (bool) $blockData['align'] == 'full' : $stretch,
+    'hasPlaceholder' => false,
     'context'       => ['sectionsFull', 'sections', 'sections.full', 'module.sections.full']
 ])
     @if (!empty($submodules) && is_array($submodules))
