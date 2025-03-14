@@ -27,8 +27,9 @@ define('MODULARITYSECTIONS_SPLIT_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/
 define('MODULARITYSECTIONS_FEATURED_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Featured/views');
 define('MODULARITYSECTIONS_CARD_VIEW_PATH', MODULARITYSECTIONS_MODULE_PATH . '/Card/views');
 
-
-load_plugin_textdomain('modularity-sections', false, plugin_basename(dirname(__FILE__)) . '/languages');
+add_action('init', function () {
+    load_plugin_textdomain('modularity-sections', false, plugin_basename(dirname(__FILE__)) . '/languages');
+});
 
 // Autoload from plugin
 if (file_exists(MODULARITYSECTIONS_PATH . 'vendor/autoload.php')) {
