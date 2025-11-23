@@ -19,7 +19,7 @@ class Featured extends Section
     }
     public function data(): array
     {
-        $data = $this->getFields();
+        $data = $this->getFields() ?: [];
     
         //Add fallback id
         $data = $this->addFallbackId($this->slug, $data);
