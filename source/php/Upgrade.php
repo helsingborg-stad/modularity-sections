@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularitySections;
 
 /**
@@ -23,7 +25,7 @@ class Upgrade
         /*add_action('init', array($this, 'reset'), 1);*/
 
         //Production hook
-        add_action('wp', array($this, 'initUpgrade'), 10);
+        add_action('wp', [$this, 'initUpgrade'], 10);
     }
 
     /**
@@ -52,13 +54,13 @@ class Upgrade
             'post_type' => [
                 'mod-section-full',
                 'mod-section-split',
-                'mod-section-featured'
+                'mod-section-featured',
             ],
-            'numberposts' => -1
+            'numberposts' => -1,
         ]);
 
         //key = from, value = to
-        $keysToMove = array(
+        $keysToMove = [
             'mod_section_content' => 'text',
             'bgimg_mod_section_background_image' => 'image',
             'font_mod_section_fontsize' => 'text_size',
@@ -66,8 +68,8 @@ class Upgrade
             'mod_section_height' => 'height',
             'mod_section_padding' => 'spacing_top',
             'bgimg_mod_section_background_color' => 'background_color',
-            'mod_section_image_position' => 'reverse_columns'
-        );
+            'mod_section_image_position' => 'reverse_columns',
+        ];
 
         $fieldIDsSplitFeature = [
             'image' => 'field_60d1a90e5551a',
@@ -79,7 +81,7 @@ class Upgrade
             'background_color' => 'field_60d1a9295551b',
             'height' => 'field_60d1a9935551d',
             'spacing_top' => 'field_60d2f7b110b0b',
-            'spacing_bottom' => 'field_60d2f7cc10b0c'
+            'spacing_bottom' => 'field_60d2f7cc10b0c',
         ];
 
         $fieldIDsFull = [
@@ -92,7 +94,7 @@ class Upgrade
             'background_color' => 'field_61543393334bf',
             'height' => 'field_61543393334c3',
             'spacing_top' => 'field_61543393334c7',
-            'spacing_bottom' => 'field_61543393334cc'
+            'spacing_bottom' => 'field_61543393334cc',
         ];
 
         if (is_array($posts) && !empty($posts)) {
@@ -105,45 +107,44 @@ class Upgrade
                 }
 
                 foreach ($keysToMove as $from => $to) {
-
                     //Old meta & defaults
-                    $oldMeta    = get_post_meta($post->ID, $from, true);
-                    $meta       = null;
+                    $oldMeta = get_post_meta($post->ID, $from, true);
+                    $meta = null;
 
                     //Translate image
                     if ($to == 'image' && is_numeric($oldMeta)) {
                         $meta = [
                             'top' => 50,
                             'left' => 50,
-                            'id' => $oldMeta
+                            'id' => $oldMeta,
                         ];
                     }
 
                     //Translate position
                     if ($to == 'reverse_columns') {
-                        $meta = ($oldMeta == 'left') ? '0' : '1';
+                        $meta = $oldMeta == 'left' ? '0' : '1';
                     }
 
                     //Translate font-size
                     if ($to == 'text_size') {
-                        $meta = ($oldMeta == 'normal') ? 'default' : 'large';
+                        $meta = $oldMeta == 'normal' ? 'default' : 'large';
                     }
 
                     //Translate font-color
                     if ($to == 'text_color') {
-                        $meta = ($oldMeta == 'text-color-dark') ? 'dark' : 'light';
+                        $meta = $oldMeta == 'text-color-dark' ? 'dark' : 'light';
                     }
 
                     //Translate height
                     if ($to == 'height') {
-                        $meta = ($oldMeta == 'lg')  ? 'full-screen' : 'content';
+                        $meta = $oldMeta == 'lg' ? 'full-screen' : 'content';
                     }
 
                     //Translate padding
                     if ($to == 'spacing_top') {
                         if ($thisMeta = 'lg') {
-                            add_post_meta($post->ID, "spacing_bottom", 1, true);
-                            add_post_meta($post->ID, "_spacing_bottom", $fieldIDs['spacing_bottom'], true);
+                            add_post_meta($post->ID, 'spacing_bottom', 1, true);
+                            add_post_meta($post->ID, '_spacing_bottom', $fieldIDs['spacing_bottom'], true);
                             $meta = 1;
                         } else {
                             $meta = 0;
@@ -231,4 +232,5 @@ class Upgrade
         return true;
     }
 }
+
 new Upgrade();

@@ -6,10 +6,7 @@
 node_modules/
 
 # ignore vendor dependency directories
-vendor/
-
-# ignore composer lock file
-composer.lock
+/vendor/
 
 # ignore jekyll build directory
 /_site
@@ -54,3 +51,4 @@ Thumbs.db
 !.gitignore
 !.editorconfig
 !/languages/
+!.vscode

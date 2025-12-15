@@ -1,25 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularitySections;
 
 class App
 {
     public function __construct()
     {
-
         //Add template dirs
-        add_filter('Modularity/Module/TemplatePath', function ($paths) {
-            foreach (array('full', 'featured', 'split', 'card') as $module) {
+        add_filter('Modularity/Module/TemplatePath', static function ($paths) {
+            foreach (['full', 'featured', 'split', 'card'] as $module) {
                 $paths[] = MODULARITYSECTIONS_MODULE_PATH . '/' . ucfirst($module) . '/views/';
             }
             return $paths;
         });
 
         //Add classes to mod element
-        add_filter('Modularity/Display/BeforeModule', array($this, 'addClass'), 10, 4);
+        add_filter('Modularity/Display/BeforeModule', [$this, 'addClass'], 10, 4);
 
         //Add full width data to view
-        add_filter('Modularity/Block/Data', array($this, 'blockData'), 20, 3);
+        add_filter('Modularity/Block/Data', [$this, 'blockData'], 20, 3);
     }
 
     /**
@@ -30,8 +31,9 @@ class App
      * @param [object] $module
      * @return array
      */
-    public function blockData($viewData, $block, $module) {
-        if (strpos($block['name'], "acf/section") === 0 && $block['align'] == 'full' && !is_admin()) {
+    public function blockData($viewData, $block, $module)
+    {
+        if (str_starts_with($block['name'], 'acf/section') && $block['align'] == 'full' && !is_admin()) {
             $viewData['stretch'] = true;
         } else {
             $viewData['stretch'] = false;
@@ -45,8 +47,8 @@ class App
      */
     public function addClass($markup, $args, $moduleType, $moduleId)
     {
-        if (in_array(str_replace("mod-section-", "", $moduleType), array('full', 'featured', 'split'))) {
-            $markup = str_replace($moduleType . " ", $moduleType . " u-margin--0 ", $markup);
+        if (in_array(str_replace('mod-section-', '', $moduleType), ['full', 'featured', 'split'])) {
+            $markup = str_replace($moduleType . ' ', $moduleType . ' u-margin--0 ', $markup);
         }
 
         return $markup;
