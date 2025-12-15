@@ -1,27 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularitySections\Module\Full;
 
 use ModularitySections\Section;
+
 class Full extends Section
 {
     public $slug = 'section-full';
-    public $supports = array();
-    public $blockSupports = array(
-        'align' => ['full']
-    );
+    public $supports = [];
+    public $blockSupports = [
+        'align' => ['full'],
+    ];
 
     public function init()
     {
-        $this->nameSingular = __("Section full", 'modularity-sections');
-        $this->namePlural = __("Section full", 'modularity-sections');
-        $this->description = __("Outputs a section.", 'modularity-sections');
+        $this->nameSingular = __('Section full', 'modularity-sections');
+        $this->namePlural = __('Section full', 'modularity-sections');
+        $this->description = __('Outputs a section.', 'modularity-sections');
     }
 
     public function data(): array
     {
         $data = $this->getFields();
-    
+
         //Add fallback id
         $data = $this->addFallbackId($this->slug, $data);
 
@@ -34,14 +37,13 @@ class Full extends Section
 
     /**
      * Set template
-     * 
+     *
      * @return string
      */
-    public function template() : string
+    public function template(): string
     {
-        return "full.blade.php";
+        return 'full.blade.php';
     }
-
 
     /**
      * Available "magic" methods for modules:

@@ -1,27 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularitySections\Module\Split;
 
 use ModularitySections\Section;
+
 class Split extends Section
 {
     public $slug = 'section-split';
-    public $supports = array();
-    public $blockSupports = array(
-        'align' => ['full']
-    );
+    public $supports = [];
+    public $blockSupports = [
+        'align' => ['full'],
+    ];
 
     public function init()
     {
-        $this->nameSingular = __("Section split", 'modularity-sections');
-        $this->namePlural = __("Section split", 'modularity-sections');
-        $this->description = __("Outputs a section.", 'modularity-sections');
+        $this->nameSingular = __('Section split', 'modularity-sections');
+        $this->namePlural = __('Section split', 'modularity-sections');
+        $this->description = __('Outputs a section.', 'modularity-sections');
     }
 
     public function data(): array
     {
         $data = $this->getFields();
-    
+
         //Add fallback id
         $data = $this->addFallbackId($this->slug, $data);
 
@@ -32,9 +35,9 @@ class Split extends Section
         return $data;
     }
 
-    public function template() : string
+    public function template(): string
     {
-        return "split.blade.php";
+        return 'split.blade.php';
     }
 
     /**

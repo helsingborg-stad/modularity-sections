@@ -1,27 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularitySections\Module\Card;
 
-use ModularitySections\Section; 
+use ModularitySections\Section;
+
 class Card extends Section
 {
     public $slug = 'section-card';
-    public $supports = array();
-    public $blockSupports = array(
-        'align' => ['full']
-    );
+    public $supports = [];
+    public $blockSupports = [
+        'align' => ['full'],
+    ];
 
     public function init()
     {
-        $this->nameSingular = __("Section card", 'modularity-sections');
-        $this->namePlural = __("Section card", 'modularity-sections');
-        $this->description = __("Outputs a section.", 'modularity-sections');
+        $this->nameSingular = __('Section card', 'modularity-sections');
+        $this->namePlural = __('Section card', 'modularity-sections');
+        $this->description = __('Outputs a section.', 'modularity-sections');
     }
 
     public function data(): array
     {
         $data = $this->getFields();
-    
+
         //Add fallback id
         $data = $this->addFallbackId($this->slug, $data);
 
@@ -32,12 +35,10 @@ class Card extends Section
         return $data;
     }
 
-
     public function template(): string
     {
-        return "card.blade.php";
+        return 'card.blade.php';
     }
-
 
     /**
      * Available "magic" methods for modules:

@@ -1,26 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularitySections\Module\Featured;
 
 use ModularitySections\Section;
+
 class Featured extends Section
 {
     public $slug = 'section-featured';
-    public $supports = array();
-    public $blockSupports = array(
-        'align' => ['full']
-    );
+    public $supports = [];
+    public $blockSupports = [
+        'align' => ['full'],
+    ];
 
     public function init()
     {
-        $this->nameSingular = __("Section featured", 'modularity-sections');
-        $this->namePlural = __("Section featured", 'modularity-sections');
-        $this->description = __("Outputs a module.", 'modularity-sections');
+        $this->nameSingular = __('Section featured', 'modularity-sections');
+        $this->namePlural = __('Section featured', 'modularity-sections');
+        $this->description = __('Outputs a module.', 'modularity-sections');
     }
+
     public function data(): array
     {
         $data = $this->getFields();
-    
+
         //Add fallback id
         $data = $this->addFallbackId($this->slug, $data);
 
@@ -33,7 +37,7 @@ class Featured extends Section
 
     public function template(): string
     {
-        return "featured.blade.php";
+        return 'featured.blade.php';
     }
 
     /**

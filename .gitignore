@@ -6,10 +6,7 @@
 node_modules/
 
 # ignore vendor dependency directories
-vendor/
-
-# ignore composer lock file
-composer.lock
+/vendor/
 
 # ignore jekyll build directory
 /_site
@@ -46,6 +43,11 @@ Thumbs.db
 *.tar
 *.zip
 
+/assets/
+
+phpunit-log.xml
+phpunit-testdox.txt
+
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
@@ -54,3 +56,4 @@ Thumbs.db
 !.gitignore
 !.editorconfig
 !/languages/
+!.vscode

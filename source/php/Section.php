@@ -1,66 +1,70 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ModularitySections;
 
-use Modularity\Integrations\Component\ImageResolver;
-use Modularity\Integrations\Component\ImageFocusResolver;
 use ComponentLibrary\Integrations\Image\Image as ImageComponentContract;
+use Modularity\Integrations\Component\ImageFocusResolver;
+use Modularity\Integrations\Component\ImageResolver;
 
 class Section extends \Modularity\Module
 {
+    /**
+     * Creates a unique id for the module
+     *
+     * @param string $slug
+     * @param array $data
+     *
+     * @return array
+     */
+    public function addFallbackId(string $slug, array $data)
+    {
+        $data['fallbackId'] = $slug . '-' . uniqid();
+        return $data;
+    }
 
-  /**
-   * Creates a unique id for the module
-   * 
-   * @param string $slug
-   * @param array $data
-   * 
-   * @return array
-   */
-  public function addFallbackId(string $slug, array $data) {
-      $data['fallbackId'] = $slug . '-' . uniqid();
-      return $data;
-  }
+    /**
+     * Replaces image array with image contract
+     *
+     * @param array $data
+     */
+    public function getImageContract(array $data)
+    {
+        //Get image id
+        $imageId = $this->getImageId($data);
 
-  /** 
-   * Replaces image array with image contract
-   * 
-   * @param array $data
-   */
-  public function getImageContract(array $data) {
-    //Get image id
-    $imageId = $this->getImageId($data);
-
-    //Get image
-    if($imageId) {
-        $data['image'] = ImageComponentContract::factory(
+        //Get image
+        if ($imageId) {
+            $data['image'] = ImageComponentContract::factory(
                 $imageId,
                 [1920, false],
                 new ImageResolver(),
                 new ImageFocusResolver(
-                    isset($data['image']) && is_array($data['image']) ? $data['image']: null
-                )
-        );
-    } else {
-        $data['image'] = false;
+                    isset($data['image']) && is_array($data['image']) ? $data['image'] : null,
+                ),
+            );
+        } else {
+            $data['image'] = false;
+        }
+
+        return $data;
     }
 
-    return $data;
-  }
-
-  /**
-   * Get image id from data array
-   * 
-   * @param array $data
-   * 
-   * @return int
-   */
-  private function getImageId(array $data): ?int {
-      if($data['image'] && is_array($data['image'])) {
-          return $data['image']['id'];
-      } elseif($data['image'] && is_numeric($data['image'])) {
-          return $data['image'];
-      }
-      return null;
-  }
+    /**
+     * Get image id from data array
+     *
+     * @param array $data
+     *
+     * @return int
+     */
+    private function getImageId(array $data): null|int
+    {
+        if ($data['image'] && is_array($data['image'])) {
+            return (int) $data['image']['id'];
+        } elseif ($data['image'] && is_numeric($data['image'])) {
+            return (int) $data['image'];
+        }
+        return null;
+    }
 }
