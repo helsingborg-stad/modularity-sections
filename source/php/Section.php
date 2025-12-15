@@ -61,9 +61,9 @@ class Section extends \Modularity\Module
     private function getImageId(array $data): null|int
     {
         if ($data['image'] && is_array($data['image'])) {
-            return $data['image']['id'];
+            return (int) $data['image']['id'];
         } elseif ($data['image'] && is_numeric($data['image'])) {
-            return $data['image'];
+            return (int) $data['image'];
         }
         return null;
     }
