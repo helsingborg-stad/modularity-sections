@@ -7,12 +7,12 @@
     'image'             => $image,
     'height'            => $height,
     'textColor'         => $text_color,
-    'textAlignment'     => $text_alignment,
+    'textAlignment'     => $text_alignment ?? 'center',
     'textSize'          => $text_size,
     'reverseColumns'    => $reverse_columns,
     'paddingTop'        => $spacing_top,
     'paddingBottom'     => $spacing_bottom,
-    'stretch'           => (!is_admin() && isset($blockData) ? ((bool) $blockData['align'] == 'full') : $stretch),
+    'stretch'           => !is_admin() && isset($blockData) ? (($blockData['align'] ?? '') === 'full') : (bool) ($stretch ?? false),
     'context'           => ['sectionsSplit', 'sections',  'sections.split', 'module.sections.split']
 ])
 
