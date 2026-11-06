@@ -9,7 +9,7 @@
     'reverseColumns' => $reverse_columns,
     'paddingTop' => $spacing_top,
     'paddingBottom' => $spacing_bottom,
-    'stretch' => !is_admin() && isset($blockData) ? (bool) $blockData['align'] == 'full' : $stretch,
+    'stretch' => !is_admin() && isset($blockData) ? (($blockData['align'] ?? '') === 'full') : (bool) ($stretch ?? false),
     'context' => ['sectionsCard', 'sections', 'sections.card', 'module.sections.card'],
     'buttons' => !empty($buttons) ? $buttons : [],
     'hasPlaceholder' => true,
