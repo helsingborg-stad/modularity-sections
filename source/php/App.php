@@ -21,6 +21,60 @@ class App
 
         //Add full width data to view
         add_filter('Modularity/Block/Data', [$this, 'blockData'], 20, 3);
+
+        // The theme provides the optional palette selector and role resolver.
+        foreach (['field_61543393334bf', 'field_60d1a9295551b'] as $key) {
+            add_filter('acf/load_value/key=' . $key, [$this, 'normalizePaletteValue']);
+            add_filter('acf/load_field/key=' . $key, [$this, 'describePaletteField']);
+        }
+        foreach (['field_61543393334b0', 'field_60d1a9555551c'] as $key) {
+            add_filter('acf/load_field/key=' . $key, [$this, 'describeLegacyTextField']);
+        }
+        add_filter('ComponentLibrary/Component/Segment/Data', [$this, 'applyPalettePair']);
+    }
+
+    public function describePaletteField(array $field): array
+    {
+        if (class_exists(\Municipio\Admin\Acf\PaletteColorChoices::class)) {
+            $field['label'] = __('Color scheme', 'modularity-sections');
+            $field['instructions'] = __('A color scheme sets both background and text color.', 'modularity-sections');
+        }
+        return $field;
+    }
+
+    public function describeLegacyTextField(array $field): array
+    {
+        if (class_exists(\Municipio\Admin\Acf\PaletteColorChoices::class)) {
+            $field['instructions'] = __('Used only when no color scheme is selected.', 'modularity-sections');
+        }
+        return $field;
+    }
+
+    public function normalizePaletteValue($value)
+    {
+        if (!is_string($value) || $value === '' || !is_callable([\Municipio\Helper\ColorSwatches::class, 'normalizeColorPairRole'])) {
+            return $value;
+        }
+
+        return \Municipio\Helper\ColorSwatches::normalizeColorPairRole($value) ?? $value;
+    }
+
+    public function applyPalettePair(array $data): array
+    {
+        $context = $data['context'] ?? [];
+        $context = is_array($context) ? $context : [$context];
+        if (!in_array('sections', $context, true) || !is_string($data['background'] ?? null)
+            || !is_callable([\Municipio\Helper\ColorSwatches::class, 'normalizeColorPairRole'])) {
+            return $data;
+        }
+
+        $role = \Municipio\Helper\ColorSwatches::normalizeColorPairRole($data['background']);
+        if ($role !== null) {
+            $data['background'] = $role;
+            $data['textColor'] = '';
+        }
+
+        return $data;
     }
 
     /**

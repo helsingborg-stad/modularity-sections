@@ -158,6 +158,7 @@
             'label' => __('Background Color', 'modularity-sections'),
             'name' => 'background_color',
             'type' => 'color_picker',
+            'municipio_palette_color' => true,
             'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
