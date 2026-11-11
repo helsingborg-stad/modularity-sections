@@ -19,20 +19,18 @@ class AppTest extends TestCase
     {
         class_alias(NoPaletteColorSwatches::class, 'Municipio\\Helper\\ColorSwatches');
         $section = ['context' => ['sections'], 'background' => '#ffffff', 'textColor' => 'dark'];
-        self::assertSame('#ffffff', $this->app()->normalizePaletteValue('#ffffff'));
         self::assertSame($section, $this->app()->applyPalettePair($section));
     }
 
     #[RunInSeparateProcess]
-    public function testMapsLegacyColorsAndUsesThePairForSections(): void
+    public function testUsesSavedPairsWithoutTransformingLegacyColors(): void
     {
         require_once __DIR__ . '/Tests/Fixtures/ColorSwatches.php';
-        self::assertSame('secondary', $this->app()->normalizePaletteValue('#ffffff'));
-        self::assertSame('', $this->app()->normalizePaletteValue(''));
-        self::assertSame('unknown', $this->app()->normalizePaletteValue('unknown'));
-        $section = ['context' => ['sections'], 'background' => '#ffffff', 'textColor' => 'dark'];
-        self::assertSame(['context' => ['sections'], 'background' => 'secondary', 'textColor' => ''], $this->app()->applyPalettePair($section));
+        $section = ['context' => ['sections'], 'background' => 'primary', 'textColor' => 'dark'];
+        self::assertSame(['context' => ['sections'], 'background' => 'primary', 'textColor' => ''], $this->app()->applyPalettePair($section));
         $section['context'] = ['other'];
+        self::assertSame($section, $this->app()->applyPalettePair($section));
+        $section = ['context' => ['sections'], 'background' => '#ffffff', 'textColor' => 'dark'];
         self::assertSame($section, $this->app()->applyPalettePair($section));
         $section = ['context' => ['sections'], 'background' => '', 'textColor' => 'light'];
         self::assertSame($section, $this->app()->applyPalettePair($section));
